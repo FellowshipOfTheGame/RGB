@@ -5,6 +5,14 @@ using UnityEngine;
 [ExecuteInEditMode]
 public class ShipController : MonoBehaviour
 {
+    // --------------------------------------- ENUMS -------------------------------------- //
+    public enum eShip
+    {
+        DEFENSE,
+        ATTACK,
+        SUPPORT
+    }
+
     // -------------------------------- PUBLIC ATTRIBUTES -------------------------------- //
     // Dimensions
     [Header("Dimensions")]
@@ -21,7 +29,7 @@ public class ShipController : MonoBehaviour
     public bool m_useMomentum = true;
 
     [Header("Change")]
-    public AnimationCurve m_dashSpeed = new AnimationCurve(new Keyframe(0, 1), new Keyframe(1, 0));
+    public AnimationCurve m_changeSpeed = new AnimationCurve(new Keyframe(0, 1), new Keyframe(1, 0));
     public float m_changeDuration = 0.1f;
     public float m_changeCoolDownDuration = 1;
 
@@ -42,11 +50,12 @@ public class ShipController : MonoBehaviour
     // LOCOMOTION: WALK
     private Vector2 m_flySpeed = new Vector2(0, 0);
 
-    // LOCOMOTION: DASH
+    // LOCOMOTION: CHANGE
     private float m_changeTimer         = 0;
     private bool  m_changeFoward        = true;
     private bool  m_changeBackward      = false;
     private float m_changeCooldownTimer = 0;
+    private eShip m_ship                = eShip.ATTACK;
 
     // COMBAT
     private bool isAttacking = false;
@@ -88,6 +97,33 @@ public class ShipController : MonoBehaviour
                 print("pew pew");
                 isAttacking = false;
             }
+
+            // change ships
+            if (m_changeFoward && m_changeTimer==0)
+            {
+                m_changeCooldownTimer = m_changeCoolDownDuration;
+                m_changeTimer = m_changeCoolDownDuration;
+
+                if (m_ship == eShip.SUPPORT)
+                    m_ship = eShip.DEFENSE;
+                else
+                    m_ship++;
+
+                StartCoroutine(ChangeCooldown());
+            }    
+            if (m_changeBackward && m_changeTimer==0)
+            {
+                m_changeCooldownTimer = m_changeCoolDownDuration;
+                m_changeTimer = m_changeCoolDownDuration;
+
+                if (m_ship == eShip.DEFENSE)
+                    m_ship = eShip.SUPPORT;
+                else
+                    m_ship--;
+
+                StartCoroutine(ChangeCooldown());
+            }
+                
         }
 
         // update position
@@ -131,21 +167,6 @@ public class ShipController : MonoBehaviour
         RaycastHit hitInfo;
         Vector3 direction = _endPos - _startPos;
         Vector3 finalEndPos = _endPos;
-
-        /*if (direction.y < 0)
-        {
-            //if (Physics.Raycast(_startPos, direction + m_collisionEpsilon * direction.normalized, out hitInfo, direction.magnitude + m_collisionEpsilon, ~(1 << this.gameObject.layer)))
-            if (Physics.Raycast(_startPos, direction + m_collisionEpsilon * direction.normalized, out hitInfo, direction.magnitude + m_collisionEpsilon))
-            {
-                Ground gnd = hitInfo.collider.gameObject.GetComponent<Ground>();
-                { 
-                    if (gnd != null)
-                    {
-                        finalEndPos.y = gnd.SurfaceY() + m_collisionEpsilon;
-                    }
-                }
-            }
-        }*/
 
         finalEndPos.x = Mathf.Clamp(finalEndPos.x, SceneMgr.MinX + m_width / 2, SceneMgr.MaxX - m_width / 2);
         finalEndPos.y = Mathf.Clamp(finalEndPos.y, SceneMgr.MinY, SceneMgr.MaxY - m_height);
@@ -212,5 +233,13 @@ public class ShipController : MonoBehaviour
         }
 
         return animate;
+    }
+
+    // ======================================================================================
+    private IEnumerator ChangeCooldown ()
+    {
+        yield return new WaitForSeconds(m_changeCooldownTimer);
+        m_changeTimer = 0;
+        m_changeCooldownTimer = 0;
     }
 }
