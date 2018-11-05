@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 2998154329759175640}
   - component: {fileID: 2885501577723648081}
   - component: {fileID: 8875654113848159565}
+  - component: {fileID: 4723968228723979711}
+  - component: {fileID: 161134383076929265}
   - component: {fileID: 5357069773567797790}
   - component: {fileID: 8208255445599653284}
   - component: {fileID: 1588227444610072095}
@@ -31,7 +33,7 @@ Transform:
   m_GameObject: {fileID: 6658535161591884227}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -91,13 +93,43 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6658535161591884227}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9bcb01e621672a244a1bfe711000b5ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifetime: 0.1
+  lifetime: 10
   destroyOnImpact: 0
+  baseDamage: 1
+--- !u!114 &4723968228723979711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6658535161591884227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a4850a57196a2945b1f79785a3e5687, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 1
+  invincible: 1
+--- !u!114 &161134383076929265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6658535161591884227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58e1846f23a14e140be136dfc76ed945, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 3
+  intensity: 0.5
+  statusEffect: {fileID: 11400000, guid: af138e2f772f730479cb1817c0910260, type: 2}
 --- !u!58 &5357069773567797790
 CircleCollider2D:
   m_ObjectHideFlags: 0

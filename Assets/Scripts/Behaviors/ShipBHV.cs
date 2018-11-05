@@ -4,13 +4,12 @@ using UnityEngine;
 
 
 [RequireComponent(typeof(Sprite))] // Obriga o objeto a ter uma sprite
+[RequireComponent(typeof(HealthBHV))]
 //[RequireComponent(typeof(ShipController))] // Obriga a nave a ter um controller (seja de player ou enemy)
 
 public class ShipBHV : MonoBehaviour
 {
-    public int health;
     public float speed;
-    public bool invincible;
     public List<WeaponBHV> weapon1 = new List<WeaponBHV>();
     
     // Start is called before the first frame update
@@ -32,4 +31,10 @@ public class ShipBHV : MonoBehaviour
             w.Fire();
         }
     }
+
+    public void AddEffect(StatusEffectSO statusEffect, float duration, float intensity)
+    {
+        StartCoroutine(statusEffect.RunEffect (gameObject, duration, intensity));
+    }
+
 }

@@ -2,19 +2,26 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(HealthBHV))]
 public class ProjectileBHV : MonoBehaviour
 {
     public float lifetime = 20;
     public bool destroyOnImpact = true;
     protected Rigidbody2D rigidBody;
+    protected HealthBHV health;
     protected float speed;
     protected float acceleration;
+    public float baseDamage = 1;
+    protected float damage;
+    protected float intensityMult;
     protected float creationTime;
     protected List<string> tagsToHit = null;
+    protected StatusEffect[] statusEffects;
 
     private void Awake()
     {
         rigidBody = GetComponent<Rigidbody2D>();
+        statusEffects = GetComponents<StatusEffect>();
     }
     // Start is called before the first frame update
     void Start()
@@ -33,15 +40,17 @@ public class ProjectileBHV : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rigidBody.velocity = Vector2.up * speed;
+        rigidBody.velocity = transform.up * speed;
         speed += acceleration;
     }
 
-    public void Shoot (float speed, float acceleration, List<string> tags)
+    public void Shoot (float speed, float acceleration, float intensityMult, List<string> tags)
     {
         this.speed = speed;
         this.acceleration = acceleration;
         this.tagsToHit = tags;
+        this.intensityMult = intensityMult;
+        damage = baseDamage * intensityMult;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -62,11 +71,29 @@ public class ProjectileBHV : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        if (other != null)
+        {
+            HealthBHV otherHealth = other.GetComponent<HealthBHV>();
+            if (otherHealth != null)
+            {
+                otherHealth.TakeDamage(damage);
+            }
+            ApplyStatusEffects (other);
+        }
     }
 
     private void EndEffect()
     {
         Destroy(gameObject);
     }
+
+    private void ApplyStatusEffects(Collider2D other)
+    {
+        for (int i = 0; i < statusEffects.Length; i++)
+        {
+            statusEffects[i].Effect(other.gameObject);
+        }
+    }
+
 
 }

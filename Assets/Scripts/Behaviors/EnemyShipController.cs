@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(ShipBHV))]
-public class PlayerShipController : MonoBehaviour
+public class EnemyShipController : MonoBehaviour
 {
     private ShipBHV ship;
     // Start is called before the first frame update
@@ -15,9 +15,6 @@ public class PlayerShipController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.Space))
-        {
-            ship.Fire1();
-        }
+        ship.Fire1();
     }
 }

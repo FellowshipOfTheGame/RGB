@@ -36,7 +36,7 @@ public class WeaponBHV : MonoBehaviour
         {
             shootTimer = 0;
             GameObject projectile = Instantiate(projectilePrefab, transform.position, transform.rotation);
-            projectile.GetComponent<ProjectileBHV>().Shoot(projectileSpeed, projectileAcceleration, tagsToHit);
+            projectile.GetComponent<ProjectileBHV>().Shoot(projectileSpeed, projectileAcceleration, intensityMult, tagsToHit);
         }
         
     }
