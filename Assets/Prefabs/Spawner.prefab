@@ -48,7 +48,69 @@ MonoBehaviour:
   - {fileID: 6047526965575512565, guid: 80c75ef2fed66544c843079ec16c0216, type: 3}
   - {fileID: 4236186796499339385, guid: cf88e73bedc20404d98bd669af7f7c59, type: 3}
   spawnTime: 5
-  xstartPosition: -14
-  xendPosition: 14
-  ystartPosition: 6
-  yendPosition: 6
+  enemyYAxis:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 6
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 6
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  enemyXAxis:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0.5
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.4
+      value: 5
+      inSlope: 23.2227
+      outSlope: 49.999996
+      tangentMode: 65
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.6
+      value: 15
+      inSlope: 49.999996
+      outSlope: 0.12567507
+      tangentMode: 5
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.4340193
+    - serializedVersion: 3
+      time: 1
+      value: 17.5
+      inSlope: 9.421119
+      outSlope: 0
+      tangentMode: 65
+      weightedMode: 0
+      inWeight: 0.30520487
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4

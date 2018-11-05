@@ -13,14 +13,13 @@ public class Spawner : MonoBehaviour
     [SerializeField]
     private float spawnTime; //Time between spawns
 
-    public float xstartPosition;
-    public float xendPosition;
-
-    public float ystartPosition;
-    public float yendPosition;
-
     private float xposition;
     private float yposition;
+
+    //Animation curve used to modify the enemy's spawn probability at the given axis.
+    // The X-axis of each curve is a normalized value 0-1. The Y-axis of each curve defines the spawn limits on that axis.
+    public AnimationCurve enemyYAxis;
+    public AnimationCurve enemyXAxis;
 
     private void Start()
     {
@@ -38,15 +37,6 @@ public class Spawner : MonoBehaviour
         return chosen = enemiesPrefab[nbr];
     }
 
-    //Function that generate a coordinate
-    float Choose_Coordinate(float startPosition, float endPosition)
-    {
-        float coordinate;
-        //generate a coordinate given a function
-        coordinate = Random.Range(startPosition, endPosition);
-
-        return coordinate;
-    }
 
     IEnumerator SpawnRoutine()
     {
@@ -54,10 +44,10 @@ public class Spawner : MonoBehaviour
         {
             //Need to choose which enemy to spawn
             enemy = Choose_Enemy();
-    
+
             //Need to choose a position in which to spawn the enemy
-            xposition = Choose_Coordinate(xstartPosition, xendPosition);
-            yposition = Choose_Coordinate(ystartPosition, yendPosition);
+            xposition = enemyXAxis.Evaluate(Random.value);
+            yposition = enemyYAxis.Evaluate(Random.value);
       
             //With the enemy and its position the last thing to be done is spawn
             Instantiate(enemy, new Vector3(xposition, yposition, 0), Quaternion.identity);
