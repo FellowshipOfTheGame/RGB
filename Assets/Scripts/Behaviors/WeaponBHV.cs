@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class WeaponBHV : MonoBehaviour
 {
+    public WeaponSO weaponSettings;
     private int upgradeLevel = 1;
     public float fireRate;
     public float intensityMult; // Multiplicador de intensidade: dano/raio
@@ -16,7 +17,7 @@ public class WeaponBHV : MonoBehaviour
     public List<string> tagsToHit = new List<string>();
 
     //private float shootDeltaTime;
-    private float shootTimer = 0;
+    protected float shootTimer = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -28,9 +29,12 @@ public class WeaponBHV : MonoBehaviour
     void Update()
     {
         shootTimer += Time.deltaTime;
+
+        if (weaponSettings != null) weaponSettings.LoadToWeapon(this); // FIXME: local provisório
+
     }
 
-    public void Fire()
+    public virtual void Fire()
     {
         if (shootTimer >= 1 / fireRate)
         {

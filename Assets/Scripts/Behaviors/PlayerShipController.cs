@@ -19,5 +19,6 @@ public class PlayerShipController : MonoBehaviour
         {
             ship.Fire1();
         }
+        transform.position += new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")) * ship.speed;
     }
 }

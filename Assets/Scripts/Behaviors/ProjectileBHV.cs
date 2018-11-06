@@ -40,7 +40,7 @@ public class ProjectileBHV : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rigidBody.velocity = transform.up * speed;
+        rigidBody.velocity = new Vector2(rigidBody.velocity.x, transform.up.y * speed);
         speed += acceleration;
     }
 

@@ -11,12 +11,11 @@ GameObject:
   - component: {fileID: 2998154329759175640}
   - component: {fileID: 2885501577723648081}
   - component: {fileID: 8875654113848159565}
-  - component: {fileID: 2664790107229837758}
+  - component: {fileID: 3474716137645781797}
   - component: {fileID: 1794516416801752915}
   - component: {fileID: 8208255445599653284}
-  - component: {fileID: 6457630711468935320}
   m_Layer: 0
-  m_Name: Proj_Def_Main 1
+  m_Name: Proj_Att_Main2
   m_TagString: PlayerProjectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -73,7 +72,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: fdb5de271b8cbff47b21da470b5186f3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 316f560a9c10c8049885e67a28f260e5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -97,9 +96,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lifetime: 4
-  destroyOnImpact: 0
-  baseDamage: 1
---- !u!114 &2664790107229837758
+  destroyOnImpact: 1
+  baseDamage: 10
+--- !u!114 &3474716137645781797
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -112,7 +111,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
-  invincible: 1
+  invincible: 0
 --- !u!61 &1794516416801752915
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -126,18 +125,18 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.25726652}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.5, y: 1.25}
+    oldSize: {x: 0.5, y: 1}
     newSize: {x: 0.16, y: 0.16}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.4, y: 0.5}
+  m_Size: {x: 0.4, y: 1}
   m_EdgeRadius: 0
 --- !u!50 &8208255445599653284
 Rigidbody2D:
@@ -160,20 +159,3 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &6457630711468935320
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6658535161591884227}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cdfd28ec6cb43e94d82d74e5a068f9a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  expandRateX: 1.02
-  expandRateY: 1
-  maxScaleX: 10
-  maxScaleY: 10
-  expandMode: 1
