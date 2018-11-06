@@ -98,7 +98,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lifetime: 4
   destroyOnImpact: 0
-  baseDamage: 1
+  baseDamage: 2
 --- !u!114 &2664790107229837758
 MonoBehaviour:
   m_ObjectHideFlags: 0

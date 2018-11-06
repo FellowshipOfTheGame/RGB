@@ -5,13 +5,21 @@ using UnityEngine;
 
 [RequireComponent(typeof(Sprite))] // Obriga o objeto a ter uma sprite
 [RequireComponent(typeof(HealthBHV))]
+[RequireComponent(typeof(EnergyGeneratorBHV))]
 //[RequireComponent(typeof(ShipController))] // Obriga a nave a ter um controller (seja de player ou enemy)
 
 public class ShipBHV : MonoBehaviour
 {
     public float speed;
     public List<WeaponBHV> weapon1 = new List<WeaponBHV>();
-    
+
+    private EnergyGeneratorBHV generator;
+
+    private void Awake()
+    {
+        generator = GetComponent<EnergyGeneratorBHV>();
+    }
+
     // Start is called before the first frame update
     void Start()
     {

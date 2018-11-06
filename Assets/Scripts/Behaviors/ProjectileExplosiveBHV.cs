@@ -18,7 +18,7 @@ public class ProjectileExplosiveBHV : ProjectileBHV
 
     protected override void Impact(Collider2D other = null)
     {
-        base.Impact();
+        base.Impact(other);
         GameObject childProjectile = Instantiate(childProjectilePrefab, transform.position, transform.rotation);
         childProjectile.transform.localScale *= radiusScale * intensityMult;
         childProjectile.GetComponent<ProjectileBHV>().Shoot(0f, 0f, intensityMult,tagsToHit);

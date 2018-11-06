@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d7e402b8647c92408e0b9056ea99b7a, type: 3}
   m_Name: Wep_Sup_Base
   m_EditorClassIdentifier: 
-  level: 1
+  level: 2
   fireRate:
     baseValue: 2
     curve:
@@ -75,24 +75,33 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
   drainedPower:
-    baseValue: 1
+    baseValue: 7
     curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
         time: 0
         value: 0
-        inSlope: 0
+        inSlope: 1
         outSlope: 1
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 1
+        outSlope: 0.1
         tangentMode: 69
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 10
-        value: 10
-        inSlope: 1
-        outSlope: 0
+        time: 11
+        value: 2
+        inSlope: 0.1
+        outSlope: 3.999999
         tangentMode: 69
         weightedMode: 0
         inWeight: 0.33333334

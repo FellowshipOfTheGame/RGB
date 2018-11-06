@@ -14,22 +14,23 @@ public class WeaponMultipleBHV : WeaponBHV
         {
             return;
         }
-        if (shootTimer >= 1 / fireRate)
+        base.Fire();
+    }
+
+    protected override void InstantiateProjectile()
+    {
+        Vector2 transfPosition = transform.position;
+        transfPosition += gunsTransformPositions[startGun];
+        Debug.Log("Transform.position: " + transform.position);
+        Debug.Log("GunsTransf.position: " + gunsTransformPositions[startGun]);
+        Debug.Log("Transf.position: " + transfPosition);
+        GameObject projectile = Instantiate(projectilePrefab, transfPosition, transform.rotation);
+        projectile.GetComponent<Rigidbody2D>().velocity = new Vector2(gunsTransformPositions[startGun].x * horizontalSpeed, 0f);
+        projectile.GetComponent<ProjectileBHV>().Shoot(projectileSpeed, projectileAcceleration, intensityMult, tagsToHit);
+        startGun++;
+        if (startGun >= gunsTransformPositions.Count)
         {
-            shootTimer = 0;
-            Vector2 transfPosition = transform.position;
-            transfPosition += gunsTransformPositions[startGun];
-            Debug.Log("Transform.position: " + transform.position);
-            Debug.Log("GunsTransf.position: " + gunsTransformPositions[startGun]);
-            Debug.Log("Transf.position: " + transfPosition);
-            GameObject projectile = Instantiate(projectilePrefab, transfPosition, transform.rotation);
-            projectile.GetComponent<Rigidbody2D>().velocity = new Vector2(gunsTransformPositions[startGun].x * horizontalSpeed, 0f);
-            projectile.GetComponent<ProjectileBHV>().Shoot(projectileSpeed, projectileAcceleration, intensityMult, tagsToHit);
-            startGun++;
-            if (startGun >= gunsTransformPositions.Count)
-            {
-                startGun = 0;
-            }
+            startGun = 0;
         }
     }
 }

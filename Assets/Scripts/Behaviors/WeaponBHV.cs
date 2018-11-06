@@ -13,11 +13,18 @@ public class WeaponBHV : MonoBehaviour
     public float projectileAcceleration;
     public GameObject projectilePrefab;
 
+    private EnergyGeneratorBHV generator;
+
     [TagSelector]
     public List<string> tagsToHit = new List<string>();
 
     //private float shootDeltaTime;
     protected float shootTimer = 0;
+
+    private void Awake()
+    {
+        generator = GetComponentInParent<EnergyGeneratorBHV>();
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -29,24 +36,40 @@ public class WeaponBHV : MonoBehaviour
     void Update()
     {
         shootTimer += Time.deltaTime;
-
+        
         if (weaponSettings != null) weaponSettings.LoadToWeapon(this); // FIXME: local provisório
 
     }
 
     public virtual void Fire()
     {
+        SincronizeShots();
         if (shootTimer >= 1 / fireRate)
         {
-            shootTimer = 0;
-            GameObject projectile = Instantiate(projectilePrefab, transform.position, transform.rotation);
-            projectile.GetComponent<ProjectileBHV>().Shoot(projectileSpeed, projectileAcceleration, intensityMult, tagsToHit);
+            if (generator.Consume(drainedPower))
+            {
+                shootTimer %= (1/fireRate);
+                InstantiateProjectile();
+            }  
         }
-        
     }
 
     public void Upgrade()
     {
 
+    }
+
+    private void SincronizeShots ()
+    {
+        if (shootTimer > 2 * (1 / fireRate)) // para corrigir sincronia entre os tiros
+        {
+            shootTimer = 2 * (1 / fireRate) + 0.000001f; // soma valor pequeno para evitar que resultado seja menor (ponto flutuante)
+        }
+    }
+
+    protected virtual void InstantiateProjectile ()
+    {
+        GameObject projectile = Instantiate(projectilePrefab, transform.position, transform.rotation);
+        projectile.GetComponent<ProjectileBHV>().Shoot(projectileSpeed, projectileAcceleration, intensityMult, tagsToHit);
     }
 }
