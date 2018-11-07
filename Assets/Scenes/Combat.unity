@@ -522,6 +522,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  impactDamage: 1
+  tagsToImpact: []
   weapon1:
   - {fileID: 427788013}
 --- !u!212 &227153728
@@ -761,6 +763,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  impactDamage: 1
+  tagsToImpact: []
   weapon1:
   - {fileID: 862512888}
 --- !u!212 &229295680
@@ -1204,6 +1208,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  impactDamage: 1
+  tagsToImpact: []
   weapon1:
   - {fileID: 728830052}
 --- !u!212 &292120531
@@ -1589,6 +1595,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  impactDamage: 1
+  tagsToImpact: []
   weapon1:
   - {fileID: 916197757}
 --- !u!212 &434916182
@@ -2055,6 +2063,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  impactDamage: 1
+  tagsToImpact: []
   weapon1:
   - {fileID: 831038926}
 --- !u!212 &561114992
@@ -2295,6 +2305,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  impactDamage: 1
+  tagsToImpact: []
   weapon1:
   - {fileID: 1814076606}
 --- !u!212 &582317850
@@ -2535,6 +2547,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  impactDamage: 1
+  tagsToImpact: []
   weapon1:
   - {fileID: 1631270811}
 --- !u!212 &640723352
@@ -2879,6 +2893,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  impactDamage: 1
+  tagsToImpact: []
   weapon1:
   - {fileID: 141558307}
 --- !u!212 &734519959
@@ -3374,6 +3390,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  impactDamage: 1
+  tagsToImpact: []
   weapon1:
   - {fileID: 38365797}
 --- !u!212 &987145030
@@ -3780,6 +3798,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  impactDamage: 1
+  tagsToImpact: []
   weapon1:
   - {fileID: 2136508888}
 --- !u!212 &1071095838
@@ -4191,6 +4211,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  impactDamage: 1
+  tagsToImpact: []
   weapon1:
   - {fileID: 1319285671}
 --- !u!212 &1172637107
@@ -4524,6 +4546,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  impactDamage: 1
+  tagsToImpact: []
   weapon1:
   - {fileID: 264540309}
 --- !u!212 &1274300162
@@ -4731,6 +4755,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 27e3b12a1d1602e4db5872debd4e7a05, type: 2}
   - {fileID: 11400000, guid: b4bf8f41cb3a0104a90363c02f1c776f, type: 2}
   levelText: {fileID: 1734091100}
+  ships:
+  - {fileID: 1651095591}
+  - {fileID: 1811830199}
+  - {fileID: 2136772200}
 --- !u!4 &1372690886
 Transform:
   m_ObjectHideFlags: 0
@@ -5038,6 +5066,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  impactDamage: 1
+  tagsToImpact: []
   weapon1:
   - {fileID: 2038524699}
 --- !u!212 &1447261189
@@ -5416,6 +5446,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  impactDamage: 1
+  tagsToImpact: []
   weapon1:
   - {fileID: 1867603628}
 --- !u!212 &1605049525
@@ -5512,8 +5544,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1609689795}
   - component: {fileID: 1609689794}
+  - component: {fileID: 1609689796}
   m_Layer: 0
-  m_Name: KillZone
+  m_Name: Combat Zone (Kill on Exit)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5543,7 +5576,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 44, y: 25}
+  m_Size: {x: 43, y: 24}
   m_EdgeRadius: 0
 --- !u!4 &1609689795
 Transform:
@@ -5559,6 +5592,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1609689796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1609689793}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d213bcac75f138f479b74ff275445a73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1631270810
 GameObject:
   m_ObjectHideFlags: 0
@@ -5649,6 +5694,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  impactDamage: 1
+  tagsToImpact: []
   weapon1:
   - {fileID: 872974734}
   - {fileID: 1093741988}
@@ -6175,6 +6222,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  impactDamage: 1
+  tagsToImpact: []
   weapon1:
   - {fileID: 1467020263}
 --- !u!212 &1811830203
@@ -6538,6 +6587,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  impactDamage: 1
+  tagsToImpact: []
   weapon1:
   - {fileID: 262470853}
 --- !u!212 &1880678876
@@ -6794,6 +6845,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  impactDamage: 1
+  tagsToImpact: []
   weapon1:
   - {fileID: 1449044810}
 --- !u!212 &1978146815
@@ -7293,6 +7346,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  impactDamage: 1
+  tagsToImpact: []
   weapon1:
   - {fileID: 1013610555}
 --- !u!212 &2136772204

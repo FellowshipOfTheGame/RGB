@@ -11,11 +11,20 @@ public class DemoManager : MonoBehaviour
     public Text levelText;
     private float timer = 0;
 
+    public List<GameObject> ships;
+    private int shipIndex = 0;
+
+
     // Start is called before the first frame update
     void Start()
     {
         UpdateWeapons();
         UpdateText();
+        foreach (GameObject s in ships)
+        {
+            s.gameObject.SetActive(false);
+        }
+        ships[shipIndex].SetActive(true);
     }
 
     // Update is called once per frame
@@ -33,6 +42,37 @@ public class DemoManager : MonoBehaviour
             UpdateWeapons();
             UpdateText();
         }
+        //Input
+        if (Input.GetKeyDown (KeyCode.S)) //previous ship
+        {
+            Transform transf = ships[shipIndex].transform;
+            shipIndex--;
+            if (shipIndex < 0)
+            {
+                shipIndex = ships.Count-1;
+            }
+            ChangeShip(transf);
+        }
+        if (Input.GetKeyDown (KeyCode.D)) // next ship
+        {
+            Transform transf = ships[shipIndex].transform;
+            shipIndex++;
+            if (shipIndex == ships.Count)
+            {
+                shipIndex = 0;  
+            }
+            ChangeShip(transf);
+        }
+    }
+
+    private void ChangeShip (Transform transf)
+    {
+        foreach(GameObject s in ships)
+        {
+            s.SetActive(false);
+        }
+        ships[shipIndex].SetActive(true);
+        ships[shipIndex].transform.position = transf.position;
     }
 
     void UpdateText ()
