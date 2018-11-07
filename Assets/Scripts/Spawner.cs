@@ -13,8 +13,8 @@ public class Spawner : MonoBehaviour
     [SerializeField]
     private float spawnTime; //Time between spawns
 
-    private float xposition;
-    private float yposition;
+    private float xPosition;
+    private float yPosition;
 
     //Animation curve used to modify the enemy's spawn probability at the given axis.
     // The X-axis of each curve is a normalized value 0-1. The Y-axis of each curve defines the spawn limits on that axis.
@@ -26,13 +26,13 @@ public class Spawner : MonoBehaviour
         StartCoroutine(SpawnRoutine());
     }
 
-    //Function that decide which enemy to choose from
+    //Function that decides which enemy to choose from
     GameObject Choose_Enemy()
     {
         //guarda o retorno para o objeto inimigo escolhido
         GameObject chosen;
         //gerando um numero aleatorio para escolher o inimigo
-        int nbr = Random.Range(0, 2);
+        int nbr = Random.Range(0, enemiesPrefab.Length);
       
         return chosen = enemiesPrefab[nbr];
     }
@@ -46,11 +46,11 @@ public class Spawner : MonoBehaviour
             enemy = Choose_Enemy();
 
             //Need to choose a position in which to spawn the enemy
-            xposition = enemyXAxis.Evaluate(Random.value);
-            yposition = enemyYAxis.Evaluate(Random.value);
+            xPosition = enemyXAxis.Evaluate(Random.value);
+            yPosition = enemyYAxis.Evaluate(Random.value);
       
             //With the enemy and its position the last thing to be done is spawn
-            Instantiate(enemy, new Vector3(xposition, yposition, 0), Quaternion.identity);
+            Instantiate(enemy, new Vector3(transform.position.x + xPosition, transform.position.y + yPosition, 0), transform.rotation);
 
             yield return new WaitForSeconds(spawnTime);
 

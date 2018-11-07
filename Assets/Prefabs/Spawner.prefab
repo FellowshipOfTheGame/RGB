@@ -44,16 +44,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemiesPrefab:
-  - {fileID: 8816761342105773895, guid: 57c6075b6fafcca4d9d4357ad7d7a6a7, type: 3}
-  - {fileID: 6047526965575512565, guid: 80c75ef2fed66544c843079ec16c0216, type: 3}
-  - {fileID: 4236186796499339385, guid: cf88e73bedc20404d98bd669af7f7c59, type: 3}
+  - {fileID: 9198899965536013235, guid: 9890e1ecbbcb7cd4a850cbb07d7b2040, type: 3}
+  - {fileID: 9198899965536013235, guid: 9890e1ecbbcb7cd4a850cbb07d7b2040, type: 3}
+  - {fileID: 9198899965536013235, guid: 9890e1ecbbcb7cd4a850cbb07d7b2040, type: 3}
   spawnTime: 5
   enemyYAxis:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 6
+      value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -62,7 +62,7 @@ MonoBehaviour:
       outWeight: 0.33333334
     - serializedVersion: 3
       time: 1
-      value: 6
+      value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 34

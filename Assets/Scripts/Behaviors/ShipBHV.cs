@@ -11,6 +11,10 @@ using UnityEngine;
 public class ShipBHV : MonoBehaviour
 {
     public float speed;
+    public float impactDamage = 1f;
+    [TagSelector]
+    public List<string> tagsToImpact = new List<string>();
+
     public List<WeaponBHV> weapon1 = new List<WeaponBHV>();
 
     private EnergyGeneratorBHV generator;
@@ -23,13 +27,18 @@ public class ShipBHV : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        GetComponent<Rigidbody2D>().velocity = transform.up * speed;
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+    private void FixedUpdate()
+    {
+        //transform.position += transform.up * speed;
     }
 
     public void Fire1 () // Fires with main weapon
@@ -43,6 +52,17 @@ public class ShipBHV : MonoBehaviour
     public void AddEffect(StatusEffectSO statusEffect, float duration, float intensity)
     {
         StartCoroutine(statusEffect.RunEffect (gameObject, duration, intensity));
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (tagsToImpact.Contains(collision.tag)) {
+            HealthBHV other = collision.GetComponent<HealthBHV>();
+            if (other != null)
+            {
+                other.TakeDamage(impactDamage);
+            }
+        }
     }
 
 }

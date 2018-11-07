@@ -27,6 +27,7 @@ public class ProjectileBHV : MonoBehaviour
     void Start()
     {
         creationTime = Time.time;
+        rigidBody.velocity += (Vector2)transform.up * speed;
     }
 
     // Update is called once per frame
@@ -40,8 +41,7 @@ public class ProjectileBHV : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rigidBody.velocity = new Vector2(rigidBody.velocity.x, transform.up.y * speed);
-        speed += acceleration;
+        rigidBody.velocity += (Vector2)transform.up * acceleration;
     }
 
     public void Shoot (float speed, float acceleration, float intensityMult, List<string> tags)

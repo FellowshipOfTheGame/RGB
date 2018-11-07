@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// DEPRECATED. USE ShipController BEHAVIOR INSTEAD
+
 [RequireComponent(typeof(ShipBHV))]
 public class PlayerShipController : MonoBehaviour
 {
@@ -19,6 +21,6 @@ public class PlayerShipController : MonoBehaviour
         {
             ship.Fire1();
         }
-        transform.position += new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")) * ship.speed;
+        //transform.position += new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")) * ship.speed;
     }
 }

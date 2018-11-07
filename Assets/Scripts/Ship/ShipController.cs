@@ -47,6 +47,9 @@ public class ShipController : MonoBehaviour
     public bool m_useDebugMode = false;
 
     // -------------------------------- PRIVATE ATTRIBUTES ------------------------------- //
+    // SHIP
+    private ShipBHV ship;
+
     // LOCOMOTION: WALK
     private Vector2 m_flySpeed = new Vector2(0, 0);
 
@@ -70,7 +73,7 @@ public class ShipController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        ship = GetComponent<ShipBHV>();
     }
 
     // Update is called once per frame
@@ -95,6 +98,7 @@ public class ShipController : MonoBehaviour
             {
                 isAttacking = true;
                 print("pew pew");
+                ship.Fire1();
                 isAttacking = false;
             }
 
