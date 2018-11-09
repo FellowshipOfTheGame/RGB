@@ -18,6 +18,9 @@ public class WeaponSO : ScriptableObject
     public WeaponProperty drainedPower; // Energia drenada do gerador
     public WeaponProperty projectileSpeed;
     public WeaponProperty projectileAcceleration;
+    public WeaponProperty upgradeCost;
+
+    public WeaponSO childWeapon;
 
     public void LoadToWeapon (WeaponBHV weapon)
     {
@@ -48,8 +51,18 @@ public class WeaponSO : ScriptableObject
         return projectileSpeed.curve.Evaluate(level) * projectileSpeed.baseValue;
     }
 
-    private float ProjectileAcceleration (float xPoint)
+    private float ProjectileAcceleration(float xPoint)
     {
         return projectileAcceleration.curve.Evaluate(level) * projectileAcceleration.baseValue;
+    }
+
+    // FIXME: improviso pra Mostra
+    public void Upgrade ()
+    {
+        level++;
+        if (childWeapon != null)
+        {
+            childWeapon.level++;
+        }
     }
 }

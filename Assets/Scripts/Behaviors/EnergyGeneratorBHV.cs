@@ -9,6 +9,8 @@ public class EnergyGeneratorBHV : MonoBehaviour
     public AnimationCurve capacityCurve;
     public float basePower;
     public AnimationCurve powerCurve;
+    public float baseCost;
+    public AnimationCurve costCurve;
 
     [SerializeField]
     private float maxCapacity;
