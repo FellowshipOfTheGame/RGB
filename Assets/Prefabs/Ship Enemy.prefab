@@ -43,7 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 844253cb43f311046850e7fa44b57bcc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponSettings: {fileID: 0}
+  equipmentData: {fileID: 0}
   fireRate: 3
   intensityMult: 1
   drainedPower: 1
@@ -184,57 +184,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bda65676f874e6746b5591f4fbb3e274, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: 1
-  baseCapacity: 100
-  capacityCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 1
-      tangentMode: 69
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 10
-      value: 10
-      inSlope: 1
-      outSlope: 0
-      tangentMode: 69
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  basePower: 5
-  powerCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 1
-      tangentMode: 69
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 10
-      value: 10
-      inSlope: 1
-      outSlope: 0
-      tangentMode: 69
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
+  equipmentData: {fileID: 0}
   maxCapacity: 0
   energy: 0
   power: 0

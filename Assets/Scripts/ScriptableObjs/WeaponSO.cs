@@ -3,66 +3,48 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu]
-public class WeaponSO : ScriptableObject
+public class WeaponSO : EquipmentSO
 {
-    [System.Serializable]
-    public struct WeaponProperty
-    {
-        public float baseValue;
-        public AnimationCurve curve;
-    }
-
-    public int level = 1;
-    public WeaponProperty fireRate;
-    public WeaponProperty intensityMult; // Multiplicador de intensidade: dano/raio
-    public WeaponProperty drainedPower; // Energia drenada do gerador
-    public WeaponProperty projectileSpeed;
-    public WeaponProperty projectileAcceleration;
-    public WeaponProperty upgradeCost;
+    
+    public EquipmentProperty fireRate;
+    public EquipmentProperty intensityMult; // Multiplicador de intensidade: dano/raio
+    public EquipmentProperty drainedPower; // Energia drenada do gerador
+    public EquipmentProperty projectileSpeed;
+    public EquipmentProperty projectileAcceleration;
 
     public WeaponSO childWeapon;
 
-    public void LoadToWeapon (WeaponBHV weapon)
-    {
-        weapon.fireRate = FireRate(level);
-        weapon.intensityMult = IntensityMult(level);
-        weapon.drainedPower = DrainedPower(level);
-        weapon.projectileSpeed = ProjectileSpeed(level);
-        weapon.projectileAcceleration = ProjectileAcceleration(level);
-    }
-
-    private float FireRate(float level)
+    public float FireRate ()
     {
         return fireRate.curve.Evaluate(level) * fireRate.baseValue;
     }
 
-    private float IntensityMult (float xPoint)
+    public float IntensityMult ()
     {
         return intensityMult.curve.Evaluate(level) * intensityMult.baseValue;
     }
 
-    private float DrainedPower (float xPoint)
+    public float DrainedPower ()
     {
         return drainedPower.curve.Evaluate(level) * drainedPower.baseValue;
     }
 
-    private float ProjectileSpeed (float xPoint)
+    public float ProjectileSpeed ()
     {
         return projectileSpeed.curve.Evaluate(level) * projectileSpeed.baseValue;
     }
 
-    private float ProjectileAcceleration(float xPoint)
+    public float ProjectileAcceleration ()
     {
         return projectileAcceleration.curve.Evaluate(level) * projectileAcceleration.baseValue;
     }
 
-    // FIXME: improviso pra Mostra
-    public void Upgrade ()
+    public override void Upgrade ()
     {
-        level++;
+        base.Upgrade();
         if (childWeapon != null)
         {
-            childWeapon.level++;
+            childWeapon.level = level;
         }
     }
 }

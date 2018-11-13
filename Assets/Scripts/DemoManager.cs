@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class DemoManager : MonoBehaviour
 {
+    public static bool debugMode = true;
+    public bool resetLevels = true;
     public int weaponsLevel = 1;
     public float upgradeDelay = 3f;
     public List<WeaponSO> weapons = new List<WeaponSO>();
@@ -14,6 +16,21 @@ public class DemoManager : MonoBehaviour
     public List<GameObject> ships;
     private int shipIndex = 0;
 
+
+    private void Awake()
+    {
+        if (resetLevels)
+        {
+
+            for (int i = 0; i < 3; i++)
+            {
+                for (int j = 0; j < 2; j++)
+                {
+                    Player.Instance.inventories[i].equipments[j].level = 1;
+                }
+            }
+        }
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -84,7 +101,7 @@ public class DemoManager : MonoBehaviour
     {
         foreach (WeaponSO w in weapons)
         {
-            w.level = weaponsLevel;
+            //w.level = weaponsLevel;
         }
     }
 }

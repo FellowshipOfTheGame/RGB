@@ -306,3 +306,53 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
+  - m_Name: 
+    m_Curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0.3
+        outSlope: 0.3
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 11
+        value: 4
+        inSlope: 0.3
+        outSlope: 0.3
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  - m_Name: 
+    m_Curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0.38981664
+        tangentMode: 1
+        weightedMode: 3
+        inWeight: 0
+        outWeight: 1
+      - serializedVersion: 3
+        time: 10
+        value: 1000
+        inSlope: 111
+        outSlope: 2
+        tangentMode: 69
+        weightedMode: 3
+        inWeight: 0.0035385555
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4

@@ -12,7 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d7e402b8647c92408e0b9056ea99b7a, type: 3}
   m_Name: Wep_Atk_Base2
   m_EditorClassIdentifier: 
-  level: 1
+  equipmentName: Weapon
+  sprite: {fileID: 21300000, guid: 0fe7634257e6ede40b09beacfa12bdb6, type: 3}
+  level: 10
+  maxLevel: 10
+  upgradeCost:
+    baseValue: 0
+    curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
   fireRate:
     baseValue: 2
     curve:
@@ -161,3 +172,4 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
+  childWeapon: {fileID: 0}

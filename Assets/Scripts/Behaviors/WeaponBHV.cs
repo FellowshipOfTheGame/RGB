@@ -2,14 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WeaponBHV : MonoBehaviour
+public class WeaponBHV : EquipmentBHV
 {
-    public WeaponSO weaponSettings;
-    private int upgradeLevel = 1;
+    [SerializeField]
     public float fireRate;
+    [SerializeField]
     public float intensityMult; // Multiplicador de intensidade: dano/raio
+    [SerializeField]
     public float drainedPower; // Energia drenada do gerador
+    [SerializeField]
     public float projectileSpeed;
+    [SerializeField]
     public float projectileAcceleration;
     public GameObject projectilePrefab;
 
@@ -27,18 +30,29 @@ public class WeaponBHV : MonoBehaviour
     }
 
     // Start is called before the first frame update
-    void Start()
+    protected override void Start()
     {
-        
+        base.Start();
     }
 
     // Update is called once per frame
     void Update()
     {
         shootTimer += Time.deltaTime;
-        
-        if (weaponSettings != null) weaponSettings.LoadToWeapon(this); // FIXME: local provisório
+        //if (DemoManager.debugMode) UpdateEquipmentAttributes(); // FIXME: local provisório
+    }
 
+    protected override void UpdateEquipmentAttributes()
+    {
+        if (equipmentData == null)
+        {
+            return;
+        }
+        fireRate = ((WeaponSO)equipmentData).FireRate();
+        intensityMult = ((WeaponSO)equipmentData).IntensityMult();
+        drainedPower = ((WeaponSO)equipmentData).DrainedPower();
+        projectileSpeed = ((WeaponSO)equipmentData).ProjectileSpeed();
+        projectileAcceleration = ((WeaponSO)equipmentData).ProjectileAcceleration();
     }
 
     public virtual void Fire()
@@ -52,11 +66,6 @@ public class WeaponBHV : MonoBehaviour
                 InstantiateProjectile();
             }  
         }
-    }
-
-    public void Upgrade()
-    {
-
     }
 
     private void SincronizeShots ()

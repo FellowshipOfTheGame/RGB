@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class UIScroller : MonoBehaviour
 {
     public int startIndex = 0;
-    public int elementWidth = 900;
+    
     [Range(0, 1)]
     public float lerpFactor = 0.1f;
 
@@ -19,20 +19,24 @@ public class UIScroller : MonoBehaviour
     [SerializeField]
     private Vector2 targetPosition;
     private RectTransform rectTransform;
+    private float elementWidth;
 
-    private float centralIndex;
+    public delegate void OnIndexChangeDelegate(int indexFrom);
+    public event OnIndexChangeDelegate OnIndexChange;
+
 
     private void Awake()
     {
         layoutGroup = GetComponent<HorizontalOrVerticalLayoutGroup>();
+        rectTransform = GetComponent<RectTransform>();
+        elementWidth = transform.GetChild(0).GetComponent<RectTransform>().sizeDelta.x;
+        currentIndex = startIndex;
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        currentIndex = startIndex;
-        centralIndex = (transform.childCount - 1) / 2;
-        rectTransform = GetComponent<RectTransform>();
+        
     }
 
     // Update is called once per frame
@@ -41,28 +45,43 @@ public class UIScroller : MonoBehaviour
         if (Input.GetKeyDown(leftKey))
         {
             //move to left element
-            currentIndex--;
-            if (currentIndex < 0)
+            if (currentIndex > 0)
             {
-                currentIndex++;
+                currentIndex--;
+                targetPosition = TargetPosition(currentIndex);
+                OnIndexChange?.Invoke(currentIndex + 1);
             }
-            targetPosition = TargetPosition(currentIndex);
         }
         if (Input.GetKeyDown(rightKey))
         {
             //move to right element
-            currentIndex++;
-            if (currentIndex >= transform.childCount)
+            if (currentIndex < transform.childCount - 1)
             {
-                currentIndex--;
+                currentIndex++;
+                targetPosition = TargetPosition(currentIndex);
+                OnIndexChange?.Invoke(currentIndex - 1);
             }
-            targetPosition = TargetPosition(currentIndex);
         }
+    }
+
+    private void OnEnable()
+    {
+        Invoke("TargetPositionToCurrent", Time.fixedDeltaTime);
+    }
+
+    private void OnDisable()
+    {
+        transform.localPosition = targetPosition;
     }
 
     private void FixedUpdate()
     {
         LerpToTargetPosition(targetPosition);
+    }
+
+    private void TargetPositionToCurrent()
+    {
+        targetPosition = TargetPosition(currentIndex);
     }
 
     private Vector2 TargetPosition (int targetIndex)
@@ -77,4 +96,6 @@ public class UIScroller : MonoBehaviour
         float distanceX = tgtPosition.x - transform.localPosition.x;
         transform.localPosition = Vector2.Lerp(transform.localPosition, tgtPosition, lerpFactor);
     }
+
 }
+

@@ -2,16 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnergyGeneratorBHV : MonoBehaviour
+public class EnergyGeneratorBHV : EquipmentBHV
 {
-    public int level;
-    public float baseCapacity;
-    public AnimationCurve capacityCurve;
-    public float basePower;
-    public AnimationCurve powerCurve;
-    public float baseCost;
-    public AnimationCurve costCurve;
-
     [SerializeField]
     private float maxCapacity;
     [SerializeField]
@@ -20,23 +12,31 @@ public class EnergyGeneratorBHV : MonoBehaviour
     private float power;
 
     // Start is called before the first frame update
-    void Start()
+    protected override void Start()
     {
-        maxCapacity = capacityCurve.Evaluate(level) * baseCapacity;
+        base.Start();
         energy = maxCapacity;
-        power = powerCurve.Evaluate(level) * basePower;
     }
 
     // Update is called once per frame
     void Update()
     {
-        maxCapacity = capacityCurve.Evaluate(level) * baseCapacity; // FIXME: remove - debug only
-        power = powerCurve.Evaluate(level) * basePower; // FIXME: remove - debug only
+        //if (DemoManager.debugMode) UpdateEquipmentAttributes(); // FIXME: remove - debug only
         energy += power;
         if (energy > maxCapacity)
         {
             energy = maxCapacity;
         }
+    }
+
+    protected override void UpdateEquipmentAttributes()
+    {
+        if (equipmentData == null)
+        {
+            return;
+        }
+        maxCapacity = ((GeneratorSO)equipmentData).Capacity();
+        power = ((GeneratorSO)equipmentData).Power();
     }
 
     public bool Consume (float energyValue)
@@ -48,4 +48,5 @@ public class EnergyGeneratorBHV : MonoBehaviour
         energy -= energyValue;
         return true;
     }
+
 }
