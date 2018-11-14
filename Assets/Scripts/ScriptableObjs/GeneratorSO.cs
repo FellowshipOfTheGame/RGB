@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Generator-specific equipment data.
+/// </summary>
 [CreateAssetMenu(fileName = "Generator", menuName = "Generator")]
 public class GeneratorSO : EquipmentSO
 {
@@ -10,11 +13,11 @@ public class GeneratorSO : EquipmentSO
 
     public float Capacity ()
     {
-        return capacity.baseValue * capacity.curve.Evaluate(level);
+        return capacity.baseValue * capacity.curve.Evaluate(Level);
     }
 
     public float Power()
     {
-        return power.baseValue * power.curve.Evaluate(level);
+        return power.baseValue * power.curve.Evaluate(Level);
     }
 }

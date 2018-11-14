@@ -2,12 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StatusEffect : MonoBehaviour
+/// <summary>
+/// This component defines the methods and attributes to add a StatusEffect to a target.
+/// </summary>
+public class StatusEffector : MonoBehaviour
 {
+    [Header("Status Effect")]
+    public StatusEffectSO statusEffect;
+    [Header("Properties")]
     public float duration = 1.0f;
     public float intensity = 1.0f;
+
     //public bool permanent = false;
-    public StatusEffectSO statusEffect;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -20,7 +27,10 @@ public class StatusEffect : MonoBehaviour
     {
         
     }
-
+    /// <summary>
+    /// Adds StatusEffect defined by the statusEffect property to the target.
+    /// </summary>
+    /// <param name="other">Target game object.</param>
     public void Effect(GameObject other) {
         ShipBHV ship = other.GetComponent<ShipBHV>();
         if (ship != null)

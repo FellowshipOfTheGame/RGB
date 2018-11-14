@@ -2,14 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Defines an explosive projectile behavior.
+/// </summary>
 public class ProjectileExplosiveBHV : ProjectileBHV
 {
     public GameObject childProjectilePrefab;
     public float radiusScale = 1;
 
+    private const float STOP_VELOCITY_THRESHOLD = 0.01f;
+
     private void Update()
     {
-        if (rigidBody.velocity.y < 0)
+        // Calls Impact() if velocity reaches zero
+        if (rigidBody.velocity.magnitude < STOP_VELOCITY_THRESHOLD)
         {
             Impact();
             Debug.Log("Velocity 0, Explode");

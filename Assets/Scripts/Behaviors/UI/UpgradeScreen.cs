@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Handles equipment upgrades UI
+/// </summary>
 public class UpgradeScreen : MonoBehaviour
 {
     public UIScroller shipScroller;
-    public UIScroller[] equipmentScrollers;
-    public JointShipController shipController;
-
+    public UIScroller[] equipmentScrollers; // Equipment scroller for each ship
 
 
     // Start is called before the first frame update
@@ -22,16 +23,25 @@ public class UpgradeScreen : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            //Player.Instance.Upgrade(Player.Instance.inventories[shipScroller.currentIndex].equipments[equipmentScrollers[shipScroller.currentIndex].currentIndex]);
-            equipmentScrollers[shipScroller.currentIndex].transform.GetChild(equipmentScrollers[shipScroller.currentIndex].currentIndex).GetComponent<UIEqUpgrader>().equipmentData.Upgrade();
+            UpgradeSelected();
         }
     }
 
-    private void SetUpgrade(int shipIndex, int equipmentIndex)
+    // Upgrades selected ship-equipment
+    private void UpgradeSelected()
     {
-        equipmentScrollers[shipScroller.currentIndex].transform.GetChild(equipmentIndex);
+        //TODO: define best way to call the upgrade
+        //Player.Instance.Upgrade(Player.Instance.inventories[shipScroller.currentIndex].equipments[equipmentScrollers[shipScroller.currentIndex].currentIndex]);
+        equipmentScrollers[shipScroller.currentIndex].transform.GetChild(equipmentScrollers[shipScroller.currentIndex].currentIndex).GetComponent<UIEqUpgrader>().equipmentData.Upgrade();
     }
 
+
+    //private void SetUpgrade(int shipIndex, int equipmentIndex)
+    //{
+    //    equipmentScrollers[shipScroller.currentIndex].transform.GetChild(equipmentIndex);
+    //}
+
+    // Triggered by ship's index change event.
     private void OnShipIndexChange(int indexFrom)
     {
         // Ativa apenas os equipamentos da nave selecionada

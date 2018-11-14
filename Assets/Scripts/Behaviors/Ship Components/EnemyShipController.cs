@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// This component defines the behavior and actions of a non-player-controlled ship.
+/// </summary>
 [RequireComponent(typeof(ShipBHV))]
 public class EnemyShipController : MonoBehaviour
 {
@@ -15,6 +18,6 @@ public class EnemyShipController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        ship.Fire1();
+        ship.Fire1(); // tries to shoot
     }
 }

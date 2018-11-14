@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+/// <summary>
+/// Base class for ship equipment data.
+/// </summary>
 public abstract class EquipmentSO : ScriptableObject
 {
     [System.Serializable]
@@ -15,34 +19,55 @@ public abstract class EquipmentSO : ScriptableObject
     public string equipmentName;
     public Sprite sprite;
 
-    [Header("Settings")]
-    public int level = 1;
-    public int maxLevel = 10;
-    public EquipmentProperty upgradeCost;
+    [Header("Children Equipments")]
+    public List<EquipmentSO> childrenEquipments;
 
-    
+    [Header("Settings")]
+    [SerializeField]
+    private int level = 1;
+    public int maxLevel = 10;
+    [SerializeField]
+    private EquipmentProperty upgradeCost = new EquipmentProperty();
+
 
     public delegate void UpgradeDelegate ();
-    public event UpgradeDelegate OnUpgrade;
+    public event UpgradeDelegate OnLevelUpdate;
+
+    public int Level
+    {
+        get
+        {
+            return level;
+        }
+        protected set
+        {
+            level = Mathf.Min(value, maxLevel);
+            OnLevelUpdate?.Invoke();
+        }
+    }
 
     public float GetUpgradeCost ()
     {
-        return upgradeCost.baseValue * upgradeCost.curve.Evaluate(level + 1);
+        float cost = upgradeCost.baseValue * upgradeCost.curve.Evaluate(level + 1);
+        cost = (int)(cost / 100) * 100;
+        return cost;
     }
 
-    public virtual void Upgrade()
+    public void Upgrade()
     {
-        level++;
-        if (level > maxLevel)
+        Level++;
+        foreach (EquipmentSO c in childrenEquipments)
         {
-            level = maxLevel;
+            c.Upgrade();
         }
-        if (OnUpgrade == null)
+    }
+
+    public void SetLevel (int level)
+    {
+        Level = level;
+        foreach (EquipmentSO c in childrenEquipments)
         {
-            Debug.Log("Delegate null");
-        } else
-        {
-            OnUpgrade();
+            c.SetLevel(level);
         }
     }
 

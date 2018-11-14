@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   equipmentName: Generator
   sprite: {fileID: 21300000, guid: 4eadeae5efdb4cf49af39a19049b463b, type: 3}
-  level: 1
+  level: 10
   maxLevel: 10
   upgradeCost:
     baseValue: 100

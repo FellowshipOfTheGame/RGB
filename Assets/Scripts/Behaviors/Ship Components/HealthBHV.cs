@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+/// <summary>
+/// Component for objects that can be damaged.
+/// </summary>
 public class HealthBHV : MonoBehaviour
 {
     public float health = 1;
@@ -19,6 +23,9 @@ public class HealthBHV : MonoBehaviour
         
     }
 
+    /// <summary>
+    /// Adds damage to the HealthBHV component.
+    /// </summary>
     public bool TakeDamage (float damage)
     {
         if (invincible)
@@ -36,6 +43,7 @@ public class HealthBHV : MonoBehaviour
         }
     }
 
+    // Define o comportamento de morte do objeto
     private void Kill ()
     {
         // animãção, etc

@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// DEPRECATED. USE ShipController BEHAVIOR INSTEAD
-
+/// <summary>
+/// DEPRECATED. Use 'ShipController' behavior instead.
+/// </summary>
 [RequireComponent(typeof(ShipBHV))]
 public class PlayerShipController : MonoBehaviour
 {

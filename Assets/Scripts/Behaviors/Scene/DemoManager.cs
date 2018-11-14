@@ -11,6 +11,9 @@ public class DemoManager : MonoBehaviour
     public float upgradeDelay = 3f;
     public List<WeaponSO> weapons = new List<WeaponSO>();
     public Text levelText;
+
+    public UpgradeScreen upgradeScreen;
+
     private float timer = 0;
 
     public List<GameObject> ships;
@@ -21,12 +24,11 @@ public class DemoManager : MonoBehaviour
     {
         if (resetLevels)
         {
-
             for (int i = 0; i < 3; i++)
             {
                 for (int j = 0; j < 2; j++)
                 {
-                    Player.Instance.inventories[i].equipments[j].level = 1;
+                    Player.Instance.inventories[i].equipments[j].SetLevel(1);
                 }
             }
         }
@@ -79,6 +81,10 @@ public class DemoManager : MonoBehaviour
                 shipIndex = 0;  
             }
             ChangeShip(transf);
+        }
+        if (Input.GetKeyDown(KeyCode.U))
+        {
+            upgradeScreen.gameObject.SetActive(!upgradeScreen.gameObject.activeInHierarchy);
         }
     }
 

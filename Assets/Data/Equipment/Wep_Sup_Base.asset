@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6d7e402b8647c92408e0b9056ea99b7a, type: 3}
-  m_Name: Wep_Atk_Base1
+  m_Name: Wep_Sup_Base
   m_EditorClassIdentifier: 
   equipmentName: Weapon
   sprite: {fileID: 21300000, guid: 0fe7634257e6ede40b09beacfa12bdb6, type: 3}
-  level: 2
+  level: 1
   maxLevel: 10
   upgradeCost:
     baseValue: 100
@@ -43,7 +43,7 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
   fireRate:
-    baseValue: 5
+    baseValue: 2
     curve:
       serializedVersion: 2
       m_Curve:
@@ -60,15 +60,15 @@ MonoBehaviour:
         time: 1
         value: 1
         inSlope: 1
-        outSlope: 0.22222222
+        outSlope: 0.055555556
         tangentMode: 69
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 10
-        value: 3
-        inSlope: 0.22222222
+        value: 1.5
+        inSlope: 0.055555556
         outSlope: 3.999999
         tangentMode: 69
         weightedMode: 0
@@ -104,23 +104,32 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
   drainedPower:
-    baseValue: 0.8
+    baseValue: 7
     curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 1
-        inSlope: 0
-        outSlope: 0
+        value: 0
+        inSlope: 1
+        outSlope: 1
         tangentMode: 34
         weightedMode: 0
         inWeight: 0
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 10
+        time: 1
         value: 1
-        inSlope: -0
+        inSlope: 1
+        outSlope: 0.1
+        tangentMode: 69
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 11
+        value: 2
+        inSlope: 0.1
         outSlope: 3.999999
         tangentMode: 69
         weightedMode: 0
@@ -130,7 +139,7 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
   projectileSpeed:
-    baseValue: 40
+    baseValue: 20
     curve:
       serializedVersion: 2
       m_Curve:
@@ -156,7 +165,7 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
   projectileAcceleration:
-    baseValue: 0
+    baseValue: -0.4
     curve:
       serializedVersion: 2
       m_Curve:
@@ -181,4 +190,4 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-  childWeapon: {fileID: 11400000, guid: 66812f449a3573d4e80095da298e1f63, type: 2}
+  childWeapon: {fileID: 0}

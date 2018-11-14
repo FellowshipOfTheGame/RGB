@@ -3,9 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
+/// <summary>
+/// Handles upgrade UI for each individual equipment data.
+/// </summary>
 public class UIEqUpgrader : MonoBehaviour
 {
+    [Header("Equipment")]
     public EquipmentSO equipmentData;
+    [Header("Internal References")]
     public Text title;
     public Text cost;
     public Image image;
@@ -13,7 +19,7 @@ public class UIEqUpgrader : MonoBehaviour
     private void Awake()
     {
         transform.parent.GetComponent<UIScroller>().OnIndexChange += OnIndexChange;
-        if (equipmentData != null) equipmentData.OnUpgrade += OnUpgrade;
+        if (equipmentData != null) equipmentData.OnLevelUpdate += OnUpgrade;
     }
 
     // Start is called before the first frame update
@@ -35,11 +41,11 @@ public class UIEqUpgrader : MonoBehaviour
         {
             return;
         }
-        title.text = equipmentData.equipmentName + " Level " + equipmentData.level;
-        if (equipmentData.level < equipmentData.maxLevel)
+        title.text = equipmentData.equipmentName + " Level " + equipmentData.Level;
+        if (equipmentData.Level < equipmentData.maxLevel)
         {
-            string s = System.String.Format("{0:n0}", (equipmentData.upgradeCost.baseValue * equipmentData.upgradeCost.curve.Evaluate(equipmentData.level + 1)));
-            cost.text = "$" + s;
+            string s = System.String.Format("{0:n0}", (equipmentData.GetUpgradeCost()));
+            cost.text = "$ " + s;
         }
         else
         {

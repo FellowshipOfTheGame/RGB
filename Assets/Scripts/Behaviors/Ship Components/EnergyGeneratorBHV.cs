@@ -2,14 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Defines specific behaviours for the equipment type: EnergyGenerator. They include values of 'power' and 'capacity'.
+/// </summary>
 public class EnergyGeneratorBHV : EquipmentBHV
 {
-    [SerializeField]
-    private float maxCapacity;
-    [SerializeField]
-    private float energy;
-    [SerializeField]
-    private float power;
+    [Header("Attributes - alternative to data-defined")]
+    public float maxCapacity;
+    public float energy;
+    public float power;
 
     // Start is called before the first frame update
     protected override void Start()
@@ -39,6 +40,11 @@ public class EnergyGeneratorBHV : EquipmentBHV
         power = ((GeneratorSO)equipmentData).Power();
     }
 
+    /// <summary>
+    /// Consumes energy from the generator.
+    /// </summary>
+    /// <param name="energyValue">Ammount of energy to be deducted from current value.</param>
+    /// <returns>Returns whether that ammount of energy was avaiable or not.</returns>
     public bool Consume (float energyValue)
     {
         if (energyValue > energy)

@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
+/// <summary>
+/// Generic UI scroller.
+/// </summary>
 public class UIScroller : MonoBehaviour
 {
     public int startIndex = 0;

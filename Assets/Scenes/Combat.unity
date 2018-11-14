@@ -7610,6 +7610,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 27e3b12a1d1602e4db5872debd4e7a05, type: 2}
   - {fileID: 11400000, guid: b4bf8f41cb3a0104a90363c02f1c776f, type: 2}
   levelText: {fileID: 1734091100}
+  upgradeScreen: {fileID: 1310527702}
   ships:
   - {fileID: 1651095591}
   - {fileID: 1811830199}

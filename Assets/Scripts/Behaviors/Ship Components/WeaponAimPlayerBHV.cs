@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// This component adds an Autoaim behaviour that targets the player.
+/// </summary>
 public class WeaponAimPlayerBHV : MonoBehaviour
 {
     private GameObject player;
@@ -23,6 +26,7 @@ public class WeaponAimPlayerBHV : MonoBehaviour
     {
         if (player != null)
         {
+            // TODO: use an event to listen to weapon Fire() and trigger aimming
             weapons.transform.up = player.transform.position - transform.position;
         }
     }
