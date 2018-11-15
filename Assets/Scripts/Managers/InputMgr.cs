@@ -80,7 +80,7 @@ public class InputMgr : MonoBehaviour
     // ======================================================================================
     public static bool GetButton(int _player, eButton _button)
     {
-        if (_player > 4 || _player <= 0)
+        if (_player > 1 || _player <= 0)
             return false;
 
 #if UNITY_EDITOR
@@ -114,7 +114,7 @@ public class InputMgr : MonoBehaviour
     // ======================================================================================
     public static float GetAxis(int _player, eAxis _axis)
     {
-        if (_player > 4 || _player <= 0)
+        if (_player > 1 || _player <= 0)
             return 0f;
 
 

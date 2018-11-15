@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[ExecuteInEditMode]
+
 public class ShipController : MonoBehaviour
 {
     // --------------------------------------- ENUMS -------------------------------------- //
