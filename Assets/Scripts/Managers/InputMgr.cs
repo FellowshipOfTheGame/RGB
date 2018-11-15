@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
+#if !UNITY_WEBGL
 using XInputDotNetPure; // Required in C#
+#endif
 
 public class InputMgr : MonoBehaviour
 {
@@ -78,6 +80,7 @@ public class InputMgr : MonoBehaviour
     }
     
     // ======================================================================================
+    // TODO: Explain: what is the '_player' parameter?
     public static bool GetButton(int _player, eButton _button)
     {
         if (_player > 4 || _player <= 0)
@@ -90,6 +93,9 @@ public class InputMgr : MonoBehaviour
         }
 #endif
 
+#if UNITY_WEBGL
+        return GetDebugButton(_button);
+#else
         GamePadState gamePadState = GamePad.GetState( (PlayerIndex) (_player - 1) );
 
         switch (_button)
@@ -109,7 +115,8 @@ public class InputMgr : MonoBehaviour
         }
 
         return false;
-}
+#endif
+    }
 
     // ======================================================================================
     public static float GetAxis(int _player, eAxis _axis)
@@ -125,6 +132,10 @@ public class InputMgr : MonoBehaviour
         }
 #endif
 
+#if UNITY_WEBGL
+        return GetDebugAxis(_axis);
+#else
+
         GamePadState gamePadState = GamePad.GetState( (PlayerIndex) (_player - 1) );
 
         switch (_axis)
@@ -137,12 +148,14 @@ public class InputMgr : MonoBehaviour
         }
 
         return 0f;
+#endif
     }
 
 
     // ======================================================================================
     // PRIVATE METHODS
     // ======================================================================================
+#if !UNITY_WEBGL
     private static bool GetButton(GamePadState _gamePadState, eXBoxButton _xboxButton)
     {
         switch (_xboxButton)
@@ -186,6 +199,7 @@ public class InputMgr : MonoBehaviour
 
         return false;
     }
+#endif
 
     //// ======================================================================================
 
@@ -216,8 +230,10 @@ public class InputMgr : MonoBehaviour
         switch (_axis)
         {
             case eAxis.VERTICAL:
+                return Input.GetAxisRaw("Vertical");
                 return (Input.GetKey(KeyCode.UpArrow) ? 1.0f : 0) - (Input.GetKey(KeyCode.DownArrow) ? 1.0f : 0);
             case eAxis.HORIZONTAL:
+                return Input.GetAxisRaw("Horizontal");
                 return (Input.GetKey(KeyCode.RightArrow) ? 1.0f : 0) - (Input.GetKey(KeyCode.LeftArrow) ? 1.0f : 0);
         }
 

@@ -1,3 +1,4 @@
+#if !UNITY_WEBGL
 using UnityEngine;
 using XInputDotNetPure; // Required in C#
 
@@ -72,3 +73,4 @@ public class XInputTestCS : MonoBehaviour
         GUI.Label(new Rect(0, 0, Screen.width, Screen.height), text);
     }
 }
+#endif

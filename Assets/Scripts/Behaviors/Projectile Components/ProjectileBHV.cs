@@ -113,4 +113,12 @@ public class ProjectileBHV : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Terminates the object.
+    /// </summary
+    public void EndEffect()
+    {
+        Destroy(gameObject);
+    }
+
 }

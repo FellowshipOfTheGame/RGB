@@ -219,7 +219,10 @@ public class ShipController : MonoBehaviour
             nextSpeed.y = nextSpeed.y >= 0 ? Mathf.Clamp(nextSpeed.y, 0, m_maxFlySpeed) : Mathf.Clamp(nextSpeed.y, -m_maxFlySpeed, 0);
         }
 
-        this.transform.position += Vector3.right * GameMgr.DeltaTime * nextSpeed.x + Vector3.up* GameMgr.DeltaTime * nextSpeed.y;
+        //this.transform.position += Vector3.right * GameMgr.DeltaTime * nextSpeed.x + Vector3.up* GameMgr.DeltaTime * nextSpeed.y;
+        // Corrects diagonal fly speed
+        nextSpeed = nextSpeed.normalized * Mathf.Min(nextSpeed.magnitude, m_maxFlySpeed);
+        transform.position += (Vector3)nextSpeed * GameMgr.DeltaTime;
 
         // Flying Anim State
         float nextSpeedMagX = Mathf.Abs(nextSpeed.x);
