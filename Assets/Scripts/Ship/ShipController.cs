@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[ExecuteInEditMode]
 public class ShipController : MonoBehaviour
 {
     // --------------------------------------- ENUMS -------------------------------------- //
@@ -71,14 +70,16 @@ public class ShipController : MonoBehaviour
 
     // -------------------------------- PUBLIC METHODS ------------------------------- //
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
+        Debug.Log("Awake");
         ship = GetComponent<ShipBHV>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        Debug.Log("Update");
         float horizontal = 0, vertical = 0;
         bool doAttack = false, doChange = false;
 

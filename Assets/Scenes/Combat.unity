@@ -384,15 +384,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   equipmentData: {fileID: 0}
+  projectilePrefab: {fileID: 6658535161591884227, guid: 244fea80c3d2bde4f98f53a3db260e69,
+    type: 3}
+  tagsToHit:
+  - Player
   fireRate: 3
   intensityMult: 1
   drainedPower: 1
   projectileSpeed: 7
   projectileAcceleration: 0
-  projectilePrefab: {fileID: 6658535161591884227, guid: 244fea80c3d2bde4f98f53a3db260e69,
-    type: 3}
-  tagsToHit:
-  - Player
 --- !u!4 &38365798
 Transform:
   m_ObjectHideFlags: 0
@@ -475,9 +475,9 @@ RectTransform:
   m_Father: {fileID: 2027285908}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 1050, y: -192}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &67975856
@@ -890,15 +890,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   equipmentData: {fileID: 0}
+  projectilePrefab: {fileID: 6658535161591884227, guid: 244fea80c3d2bde4f98f53a3db260e69,
+    type: 3}
+  tagsToHit:
+  - Player
   fireRate: 3
   intensityMult: 1
   drainedPower: 1
   projectileSpeed: 7
   projectileAcceleration: 0
-  projectilePrefab: {fileID: 6658535161591884227, guid: 244fea80c3d2bde4f98f53a3db260e69,
-    type: 3}
-  tagsToHit:
-  - Player
 --- !u!4 &141558308
 Transform:
   m_ObjectHideFlags: 0
@@ -1392,15 +1392,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   equipmentData: {fileID: 0}
+  projectilePrefab: {fileID: 6658535161591884227, guid: 244fea80c3d2bde4f98f53a3db260e69,
+    type: 3}
+  tagsToHit:
+  - Player
   fireRate: 3
   intensityMult: 0
   drainedPower: 0
   projectileSpeed: 7
   projectileAcceleration: 0
-  projectilePrefab: {fileID: 6658535161591884227, guid: 244fea80c3d2bde4f98f53a3db260e69,
-    type: 3}
-  tagsToHit:
-  - Player
 --- !u!4 &262470854
 Transform:
   m_ObjectHideFlags: 0
@@ -1445,15 +1445,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   equipmentData: {fileID: 0}
+  projectilePrefab: {fileID: 6658535161591884227, guid: 244fea80c3d2bde4f98f53a3db260e69,
+    type: 3}
+  tagsToHit:
+  - Player
   fireRate: 3
   intensityMult: 1
   drainedPower: 1
   projectileSpeed: 7
   projectileAcceleration: 0
-  projectilePrefab: {fileID: 6658535161591884227, guid: 244fea80c3d2bde4f98f53a3db260e69,
-    type: 3}
-  tagsToHit:
-  - Player
 --- !u!4 &264540310
 Transform:
   m_ObjectHideFlags: 0
@@ -1538,7 +1538,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 2900, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &279812717
 MonoBehaviour:
@@ -2245,9 +2245,9 @@ RectTransform:
   m_Father: {fileID: 279812716}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 1050, y: -192}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &322843525
@@ -2422,9 +2422,9 @@ RectTransform:
   m_Father: {fileID: 1797315365}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 1850, y: -192}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &425719550
@@ -2530,15 +2530,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   equipmentData: {fileID: 0}
+  projectilePrefab: {fileID: 6658535161591884227, guid: 244fea80c3d2bde4f98f53a3db260e69,
+    type: 3}
+  tagsToHit:
+  - Player
   fireRate: 3
   intensityMult: 1
   drainedPower: 1
   projectileSpeed: 7
   projectileAcceleration: 0
-  projectilePrefab: {fileID: 6658535161591884227, guid: 244fea80c3d2bde4f98f53a3db260e69,
-    type: 3}
-  tagsToHit:
-  - Player
 --- !u!4 &427788014
 Transform:
   m_ObjectHideFlags: 0
@@ -3231,9 +3231,9 @@ RectTransform:
   m_Father: {fileID: 279812716}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 1850, y: -192}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &553481151
@@ -3728,9 +3728,9 @@ RectTransform:
   m_Father: {fileID: 1869031562}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 750, y: -192}
   m_SizeDelta: {x: 900, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &637939279
@@ -4296,15 +4296,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   equipmentData: {fileID: 0}
+  projectilePrefab: {fileID: 6658535161591884227, guid: 244fea80c3d2bde4f98f53a3db260e69,
+    type: 3}
+  tagsToHit:
+  - Player
   fireRate: 3
   intensityMult: 1
   drainedPower: 1
   projectileSpeed: 7
   projectileAcceleration: 0
-  projectilePrefab: {fileID: 6658535161591884227, guid: 244fea80c3d2bde4f98f53a3db260e69,
-    type: 3}
-  tagsToHit:
-  - Player
 --- !u!4 &728830053
 Transform:
   m_ObjectHideFlags: 0
@@ -4700,15 +4700,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   equipmentData: {fileID: 0}
+  projectilePrefab: {fileID: 6658535161591884227, guid: 244fea80c3d2bde4f98f53a3db260e69,
+    type: 3}
+  tagsToHit:
+  - Player
   fireRate: 3
   intensityMult: 1
   drainedPower: 1
   projectileSpeed: 7
   projectileAcceleration: 0
-  projectilePrefab: {fileID: 6658535161591884227, guid: 244fea80c3d2bde4f98f53a3db260e69,
-    type: 3}
-  tagsToHit:
-  - Player
 --- !u!4 &831038927
 Transform:
   m_ObjectHideFlags: 0
@@ -4940,15 +4940,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   equipmentData: {fileID: 0}
+  projectilePrefab: {fileID: 6658535161591884227, guid: 244fea80c3d2bde4f98f53a3db260e69,
+    type: 3}
+  tagsToHit:
+  - Player
   fireRate: 3
   intensityMult: 0
   drainedPower: 0
   projectileSpeed: 7
   projectileAcceleration: 0
-  projectilePrefab: {fileID: 6658535161591884227, guid: 244fea80c3d2bde4f98f53a3db260e69,
-    type: 3}
-  tagsToHit:
-  - Player
 --- !u!4 &862512889
 Transform:
   m_ObjectHideFlags: 0
@@ -5044,15 +5044,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   equipmentData: {fileID: 11400000, guid: c3bd89b373c80354784f8908f0d9ece8, type: 2}
+  projectilePrefab: {fileID: 6658535161591884227, guid: 7548e264acf752946b06259e0e0e2b61,
+    type: 3}
+  tagsToHit:
+  - Enemy
   fireRate: 5
   intensityMult: 1
   drainedPower: 1
   projectileSpeed: 25
   projectileAcceleration: 0
-  projectilePrefab: {fileID: 6658535161591884227, guid: 7548e264acf752946b06259e0e0e2b61,
-    type: 3}
-  tagsToHit:
-  - Enemy
 --- !u!1 &916197756
 GameObject:
   m_ObjectHideFlags: 0
@@ -5083,15 +5083,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   equipmentData: {fileID: 0}
+  projectilePrefab: {fileID: 6658535161591884227, guid: 244fea80c3d2bde4f98f53a3db260e69,
+    type: 3}
+  tagsToHit:
+  - Player
   fireRate: 3
   intensityMult: 1
   drainedPower: 1
   projectileSpeed: 7
   projectileAcceleration: 0
-  projectilePrefab: {fileID: 6658535161591884227, guid: 244fea80c3d2bde4f98f53a3db260e69,
-    type: 3}
-  tagsToHit:
-  - Player
 --- !u!4 &916197758
 Transform:
   m_ObjectHideFlags: 0
@@ -5141,9 +5141,9 @@ RectTransform:
   m_Father: {fileID: 1869031562}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 3550, y: -192}
   m_SizeDelta: {x: 900, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &925398314
@@ -5716,9 +5716,9 @@ RectTransform:
   m_Father: {fileID: 1797315365}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 1050, y: -192}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1005431758
@@ -5824,15 +5824,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   equipmentData: {fileID: 11400000, guid: b4bf8f41cb3a0104a90363c02f1c776f, type: 2}
+  projectilePrefab: {fileID: 7578785111674155956, guid: f85e2a9bea92cba41826fca3ebb93a87,
+    type: 3}
+  tagsToHit:
+  - Enemy
   fireRate: 2
   intensityMult: 1
   drainedPower: 1
   projectileSpeed: 20
   projectileAcceleration: -0.4
-  projectilePrefab: {fileID: 7578785111674155956, guid: f85e2a9bea92cba41826fca3ebb93a87,
-    type: 3}
-  tagsToHit:
-  - Enemy
 --- !u!4 &1013610556
 Transform:
   m_ObjectHideFlags: 0
@@ -6348,15 +6348,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   equipmentData: {fileID: 11400000, guid: c3bd89b373c80354784f8908f0d9ece8, type: 2}
+  projectilePrefab: {fileID: 6658535161591884227, guid: 7548e264acf752946b06259e0e0e2b61,
+    type: 3}
+  tagsToHit:
+  - Enemy
   fireRate: 5
   intensityMult: 1
   drainedPower: 1
   projectileSpeed: 25
   projectileAcceleration: 0
-  projectilePrefab: {fileID: 6658535161591884227, guid: 7548e264acf752946b06259e0e0e2b61,
-    type: 3}
-  tagsToHit:
-  - Enemy
 --- !u!1 &1124294777
 GameObject:
   m_ObjectHideFlags: 0
@@ -6506,15 +6506,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   equipmentData: {fileID: 11400000, guid: c3bd89b373c80354784f8908f0d9ece8, type: 2}
+  projectilePrefab: {fileID: 6658535161591884227, guid: 7548e264acf752946b06259e0e0e2b61,
+    type: 3}
+  tagsToHit:
+  - Enemy
   fireRate: 5
   intensityMult: 1
   drainedPower: 1
   projectileSpeed: 25
   projectileAcceleration: 0
-  projectilePrefab: {fileID: 6658535161591884227, guid: 7548e264acf752946b06259e0e0e2b61,
-    type: 3}
-  tagsToHit:
-  - Enemy
 --- !u!1 &1166757577
 GameObject:
   m_ObjectHideFlags: 0
@@ -7374,7 +7374,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1310527701
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7413,7 +7413,6 @@ MonoBehaviour:
   - {fileID: 1797315366}
   - {fileID: 279812717}
   - {fileID: 2027285909}
-  shipController: {fileID: 92351242}
 --- !u!1 &1319285670
 GameObject:
   m_ObjectHideFlags: 0
@@ -7444,15 +7443,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   equipmentData: {fileID: 0}
+  projectilePrefab: {fileID: 6658535161591884227, guid: 244fea80c3d2bde4f98f53a3db260e69,
+    type: 3}
+  tagsToHit:
+  - Player
   fireRate: 3
   intensityMult: 1
   drainedPower: 1
   projectileSpeed: 7
   projectileAcceleration: 0
-  projectilePrefab: {fileID: 6658535161591884227, guid: 244fea80c3d2bde4f98f53a3db260e69,
-    type: 3}
-  tagsToHit:
-  - Player
 --- !u!4 &1319285672
 Transform:
   m_ObjectHideFlags: 0
@@ -7729,9 +7728,9 @@ RectTransform:
   m_Father: {fileID: 1869031562}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 2150, y: -192}
   m_SizeDelta: {x: 900, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1407773674
@@ -8166,15 +8165,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   equipmentData: {fileID: 0}
+  projectilePrefab: {fileID: 6658535161591884227, guid: 244fea80c3d2bde4f98f53a3db260e69,
+    type: 3}
+  tagsToHit:
+  - Player
   fireRate: 3
   intensityMult: 1
   drainedPower: 1
   projectileSpeed: 7
   projectileAcceleration: 0
-  projectilePrefab: {fileID: 6658535161591884227, guid: 244fea80c3d2bde4f98f53a3db260e69,
-    type: 3}
-  tagsToHit:
-  - Player
 --- !u!4 &1449044811
 Transform:
   m_ObjectHideFlags: 0
@@ -8219,16 +8218,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   equipmentData: {fileID: 11400000, guid: 27e3b12a1d1602e4db5872debd4e7a05, type: 2}
-  fireRate: 2.5
-  intensityMult: 1
-  drainedPower: 1
-  projectileSpeed: 15
-  projectileAcceleration: 0
   projectilePrefab: {fileID: 6658535161591884227, guid: 70142d1ef72044444af2a127143860d2,
     type: 3}
   tagsToHit:
   - Enemy
   - EnemyProjectile
+  fireRate: 2.5
+  intensityMult: 1
+  drainedPower: 1
+  projectileSpeed: 15
+  projectileAcceleration: 0
 --- !u!4 &1467020264
 Transform:
   m_ObjectHideFlags: 0
@@ -8388,9 +8387,9 @@ RectTransform:
   m_Father: {fileID: 279812716}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 1450, y: -192}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1502332312
@@ -8947,15 +8946,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   equipmentData: {fileID: 0}
+  projectilePrefab: {fileID: 6658535161591884227, guid: 244fea80c3d2bde4f98f53a3db260e69,
+    type: 3}
+  tagsToHit:
+  - Player
   fireRate: 3
   intensityMult: 1
   drainedPower: 1
   projectileSpeed: 7
   projectileAcceleration: 0
-  projectilePrefab: {fileID: 6658535161591884227, guid: 244fea80c3d2bde4f98f53a3db260e69,
-    type: 3}
-  tagsToHit:
-  - Player
 --- !u!4 &1631270812
 Transform:
   m_ObjectHideFlags: 0
@@ -9007,9 +9006,9 @@ RectTransform:
   m_Father: {fileID: 2027285908}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 1850, y: -192}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1631426122
@@ -9122,9 +9121,9 @@ RectTransform:
   m_Father: {fileID: 1797315365}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 1450, y: -192}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1632676021
@@ -9410,7 +9409,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_width: 0.1
   m_height: 0.1
-  m_maxFlySpeed: 12
+  m_maxFlySpeed: 13
   m_flyAcc: 100
   m_flyAccDown: 8
   m_useMomentum: 1
@@ -9853,7 +9852,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 2900, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1797315366
 MonoBehaviour:
@@ -9967,14 +9966,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1811830199}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1ee0ba539de1b43488035a0584614e95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_width: 0.1
   m_height: 0.1
-  m_maxFlySpeed: 12
+  m_maxFlySpeed: 13
   m_flyAcc: 100
   m_flyAccDown: 8
   m_useMomentum: 1
@@ -10169,15 +10168,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   equipmentData: {fileID: 0}
+  projectilePrefab: {fileID: 6658535161591884227, guid: 244fea80c3d2bde4f98f53a3db260e69,
+    type: 3}
+  tagsToHit:
+  - Player
   fireRate: 3
   intensityMult: 1
   drainedPower: 1
   projectileSpeed: 7
   projectileAcceleration: 0
-  projectilePrefab: {fileID: 6658535161591884227, guid: 244fea80c3d2bde4f98f53a3db260e69,
-    type: 3}
-  tagsToHit:
-  - Player
 --- !u!4 &1814076607
 Transform:
   m_ObjectHideFlags: 0
@@ -10375,15 +10374,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   equipmentData: {fileID: 0}
+  projectilePrefab: {fileID: 6658535161591884227, guid: 244fea80c3d2bde4f98f53a3db260e69,
+    type: 3}
+  tagsToHit:
+  - Player
   fireRate: 3
   intensityMult: 1
   drainedPower: 1
   projectileSpeed: 7
   projectileAcceleration: 0
-  projectilePrefab: {fileID: 6658535161591884227, guid: 244fea80c3d2bde4f98f53a3db260e69,
-    type: 3}
-  tagsToHit:
-  - Player
 --- !u!4 &1867603629
 Transform:
   m_ObjectHideFlags: 0
@@ -10437,7 +10436,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 4300, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1869031563
 MonoBehaviour:
@@ -10788,9 +10787,9 @@ RectTransform:
   m_Father: {fileID: 2027285908}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 1450, y: -192}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1927829299
@@ -11132,19 +11131,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   equipmentData: {fileID: 11400000, guid: 66812f449a3573d4e80095da298e1f63, type: 2}
+  projectilePrefab: {fileID: 6658535161591884227, guid: 4d8060afe6a691449898886661c732fd,
+    type: 3}
+  tagsToHit:
+  - Enemy
   fireRate: 0
   intensityMult: 0
   drainedPower: 0
   projectileSpeed: 0
   projectileAcceleration: 0
-  projectilePrefab: {fileID: 6658535161591884227, guid: 4d8060afe6a691449898886661c732fd,
-    type: 3}
-  tagsToHit:
-  - Enemy
   gunsTransformPositions:
   - {x: -0.9, y: 0}
   - {x: 0.9, y: 0}
-  horizontalSpeed: 5
+  lateralSpeed: 1
 --- !u!1 &2002510448
 GameObject:
   m_ObjectHideFlags: 0
@@ -11293,7 +11292,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 2900, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2027285909
 MonoBehaviour:
@@ -11381,15 +11380,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   equipmentData: {fileID: 0}
+  projectilePrefab: {fileID: 6658535161591884227, guid: 244fea80c3d2bde4f98f53a3db260e69,
+    type: 3}
+  tagsToHit:
+  - Player
   fireRate: 3
   intensityMult: 1
   drainedPower: 1
   projectileSpeed: 7
   projectileAcceleration: 0
-  projectilePrefab: {fileID: 6658535161591884227, guid: 244fea80c3d2bde4f98f53a3db260e69,
-    type: 3}
-  tagsToHit:
-  - Player
 --- !u!4 &2038524700
 Transform:
   m_ObjectHideFlags: 0
@@ -11617,15 +11616,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   equipmentData: {fileID: 0}
+  projectilePrefab: {fileID: 6658535161591884227, guid: 244fea80c3d2bde4f98f53a3db260e69,
+    type: 3}
+  tagsToHit:
+  - Player
   fireRate: 3
   intensityMult: 1
   drainedPower: 1
   projectileSpeed: 7
   projectileAcceleration: 0
-  projectilePrefab: {fileID: 6658535161591884227, guid: 244fea80c3d2bde4f98f53a3db260e69,
-    type: 3}
-  tagsToHit:
-  - Player
 --- !u!4 &2136508889
 Transform:
   m_ObjectHideFlags: 0
@@ -11696,14 +11695,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2136772200}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1ee0ba539de1b43488035a0584614e95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_width: 0.1
   m_height: 0.1
-  m_maxFlySpeed: 12
+  m_maxFlySpeed: 13
   m_flyAcc: 100
   m_flyAccDown: 8
   m_useMomentum: 1

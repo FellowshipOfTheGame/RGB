@@ -68,7 +68,7 @@ public class InputMgr : MonoBehaviour
     // --------------------------------- PUBLIC ATTRIBUTES ------------------------------- //
 
     // --------------------------------- PRIVATE ATTRIBUTES ------------------------------ //
-    private static InputMgr m_manager;
+    private static InputMgr m_manager = null;
 
     // ======================================================================================
     // PUBLIC MEMBERS
@@ -83,6 +83,7 @@ public class InputMgr : MonoBehaviour
     // TODO: Explain: what is the '_player' parameter?
     public static bool GetButton(int _player, eButton _button)
     {
+        Debug.Log("GetButton");
         if (_player > 4 || _player <= 0)
             return false;
 
@@ -124,7 +125,7 @@ public class InputMgr : MonoBehaviour
         if (_player > 4 || _player <= 0)
             return 0f;
 
-
+        Debug.Log("GetAxis");
 #if UNITY_EDITOR
         if (_player == 1 && m_manager.m_debugMode)
         {
