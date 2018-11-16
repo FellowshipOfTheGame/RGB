@@ -83,7 +83,6 @@ public class InputMgr : MonoBehaviour
     // TODO: Explain: what is the '_player' parameter?
     public static bool GetButton(int _player, eButton _button)
     {
-        Debug.Log("GetButton");
         if (_player > 4 || _player <= 0)
             return false;
 
@@ -125,7 +124,6 @@ public class InputMgr : MonoBehaviour
         if (_player > 4 || _player <= 0)
             return 0f;
 
-        Debug.Log("GetAxis");
 #if UNITY_EDITOR
         if (_player == 1 && m_manager.m_debugMode)
         {
@@ -211,15 +209,15 @@ public class InputMgr : MonoBehaviour
             case eButton.ATTACK:
                 return Input.GetKey(KeyCode.Space);
             case eButton.SPECIAL:
-                return Input.GetKey(KeyCode.Z);
+                return Input.GetKey(KeyCode.F);
             case eButton.CHANGEB:
-                return Input.GetKey(KeyCode.X);
+                return Input.GetKey(KeyCode.Q);
             case eButton.CHANGEF:
-                return Input.GetKey(KeyCode.C);
+                return Input.GetKey(KeyCode.E);
             case eButton.PAUSE:
-                return Input.GetKey(KeyCode.Space);
+                return Input.GetKey(KeyCode.T);
             case eButton.CANCEL:
-                return Input.GetKey(KeyCode.S);
+                return Input.GetKey(KeyCode.R);
         }
 
         return false;
@@ -232,10 +230,10 @@ public class InputMgr : MonoBehaviour
         {
             case eAxis.VERTICAL:
                 return Input.GetAxisRaw("Vertical");
-                return (Input.GetKey(KeyCode.UpArrow) ? 1.0f : 0) - (Input.GetKey(KeyCode.DownArrow) ? 1.0f : 0);
+                //return (Input.GetKey(KeyCode.UpArrow) ? 1.0f : 0) - (Input.GetKey(KeyCode.DownArrow) ? 1.0f : 0);
             case eAxis.HORIZONTAL:
                 return Input.GetAxisRaw("Horizontal");
-                return (Input.GetKey(KeyCode.RightArrow) ? 1.0f : 0) - (Input.GetKey(KeyCode.LeftArrow) ? 1.0f : 0);
+                //return (Input.GetKey(KeyCode.RightArrow) ? 1.0f : 0) - (Input.GetKey(KeyCode.LeftArrow) ? 1.0f : 0);
         }
 
         return 0f;

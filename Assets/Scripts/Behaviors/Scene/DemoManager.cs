@@ -39,11 +39,11 @@ public class DemoManager : MonoBehaviour
     {
         UpdateWeapons();
         UpdateText();
-        foreach (GameObject s in ships)
-        {
-            s.gameObject.SetActive(false);
-        }
-        ships[shipIndex].SetActive(true);
+        //foreach (GameObject s in ships)
+        //{
+        //    s.gameObject.SetActive(false);
+        //}
+        //ships[shipIndex].SetActive(true);
     }
 
     // Update is called once per frame
@@ -62,7 +62,7 @@ public class DemoManager : MonoBehaviour
             UpdateText();
         }
         //Input
-        if (Input.GetKeyDown (KeyCode.S)) //previous ship
+        if (Input.GetKeyDown (KeyCode.T)) //previous ship
         {
             Transform transf = ships[shipIndex].transform;
             shipIndex--;
@@ -72,7 +72,7 @@ public class DemoManager : MonoBehaviour
             }
             ChangeShip(transf);
         }
-        if (Input.GetKeyDown (KeyCode.D)) // next ship
+        if (Input.GetKeyDown (KeyCode.Y)) // next ship
         {
             Transform transf = ships[shipIndex].transform;
             shipIndex++;

@@ -10,7 +10,7 @@ public class ProjectileExplosiveBHV : ProjectileBHV
     public GameObject childProjectilePrefab;
     public float radiusScale = 1;
 
-    private const float STOP_VELOCITY_THRESHOLD = 0.01f;
+    private const float STOP_VELOCITY_THRESHOLD = 1.0f;
 
     private void Update()
     {

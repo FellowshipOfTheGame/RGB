@@ -7,8 +7,8 @@ public class ShipController : MonoBehaviour
     // --------------------------------------- ENUMS -------------------------------------- //
     public enum eShip
     {
-        DEFENSE,
         ATTACK,
+        DEFENSE,
         SUPPORT
     }
 
@@ -46,8 +46,10 @@ public class ShipController : MonoBehaviour
     public bool m_useDebugMode = false;
 
     // -------------------------------- PRIVATE ATTRIBUTES ------------------------------- //
-    // SHIP
-    private ShipBHV ship;
+    // SHIPS
+    private List<ShipBHV> m_ships = new List<ShipBHV>();
+    private int m_shipIndex = 0;
+    public Transform[] transforms = new Transform[3];
 
     // LOCOMOTION: WALK
     private Vector2 m_flySpeed = new Vector2(0, 0);
@@ -72,14 +74,28 @@ public class ShipController : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        Debug.Log("Awake");
-        ship = GetComponent<ShipBHV>();
+        foreach (ShipBHV ship in GetComponentsInChildren<ShipBHV>(true))
+        {
+            m_ships.Add(ship);
+        }
+    }
+
+    private void Start()
+    {
+        for (int i = 0; i < m_ships.Count; i++)
+        {
+            m_ships[i].transform.position = transforms[i].position;
+            if (i != 0)
+            {
+                m_ships[i].transform.localScale = 0.5f * Vector2.one;
+                m_ships[i].gameObject.GetComponent<Collider2D>().enabled = false;
+            }
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("Update");
         float horizontal = 0, vertical = 0;
         bool doAttack = false, doChange = false;
 
@@ -97,42 +113,57 @@ public class ShipController : MonoBehaviour
             // get attack input
             if (InputMgr.GetButton(1, InputMgr.eButton.ATTACK) && !isAttacking)
             {
-                isAttacking = true;
-                print("pew pew");
-                ship.Fire1();
-                isAttacking = false;
+                Fire();
             }
 
             // change ships
             if (m_changeFoward && m_changeTimer==0)
             {
-                m_changeCooldownTimer = m_changeCoolDownDuration;
-                m_changeTimer = m_changeCoolDownDuration;
-
-                if (m_ship == eShip.SUPPORT)
-                    m_ship = eShip.DEFENSE;
-                else
-                    m_ship++;
-
-                StartCoroutine(ChangeCooldown());
+                ChangeShip(1);
             }    
             if (m_changeBackward && m_changeTimer==0)
             {
-                m_changeCooldownTimer = m_changeCoolDownDuration;
-                m_changeTimer = m_changeCoolDownDuration;
-
-                if (m_ship == eShip.DEFENSE)
-                    m_ship = eShip.SUPPORT;
-                else
-                    m_ship--;
-
-                StartCoroutine(ChangeCooldown());
+                ChangeShip(-1);
             }
                 
         }
 
         // update position
         UpdateTransform(horizontal, vertical);
+    }
+
+    // ======================================================================================
+    private void Fire()
+    {
+        isAttacking = true;
+        m_ships[m_shipIndex].Fire1();
+        isAttacking = false;
+    }
+    // ======================================================================================
+    private void ChangeShip(int direction)
+    {
+        m_changeCooldownTimer = m_changeCoolDownDuration;
+        m_changeTimer = m_changeCoolDownDuration;
+
+        //Transform transf = m_ships[m_shipIndex].transform;
+        int mainShip = m_shipIndex;
+
+        m_shipIndex += direction;
+        if (m_shipIndex > 2) m_shipIndex = 0;
+        if (m_shipIndex < 0) m_shipIndex = 2;
+
+        for (int i = 0; i < m_ships.Count; i++)
+        {
+            m_ships[i].gameObject.GetComponent<Collider2D>().enabled = false;
+            //m_ships[i].transform.position = transforms[i].position;
+            m_ships[i].transform.localScale = 0.5f * Vector2.one;
+        }
+        m_ships[m_shipIndex].gameObject.GetComponent<Collider2D>().enabled = true;
+        m_ships[m_shipIndex].transform.localScale = Vector2.one;
+        m_ships[mainShip].transform.position = m_ships[m_shipIndex].transform.position;
+        m_ships[m_shipIndex].transform.position = transforms[0].position;
+
+        StartCoroutine(ChangeCooldown());
     }
 
     // ======================================================================================
