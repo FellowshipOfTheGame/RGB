@@ -44,15 +44,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   equipmentData: {fileID: 0}
+  projectilePrefab: {fileID: 6658535161591884227, guid: 244fea80c3d2bde4f98f53a3db260e69,
+    type: 3}
+  tagsToHit:
+  - Player
   fireRate: 1
   intensityMult: 1
   drainedPower: 1
   projectileSpeed: 15
   projectileAcceleration: 0
-  projectilePrefab: {fileID: 6658535161591884227, guid: 244fea80c3d2bde4f98f53a3db260e69,
-    type: 3}
-  tagsToHit:
-  - Player
 --- !u!1 &9198899965536013235
 GameObject:
   m_ObjectHideFlags: 0

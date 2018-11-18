@@ -704,6 +704,9 @@ MonoBehaviour:
     m_RotationOrder: 4
   m_changeDuration: 0.1
   m_changeCoolDownDuration: 1
+  m_positionLerpFactor: 0.15
+  m_scaleLerpFactor: 0.15
+  m_invulnerabilityTime: 0.1
   AttackCooldown: 0.4
   ShotOffset: {x: 0, y: 0}
   ShotHitbox: {x: 0, y: 0}
@@ -3160,7 +3163,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 48
   orthographic: 1
   orthographic size: 12
   m_Depth: -1
@@ -6593,7 +6596,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1160763335}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1, y: -1, z: 0}
+  m_LocalPosition: {x: 0.52, y: -0.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1724094972}
@@ -8051,7 +8054,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1446637873}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1724094972}
@@ -8792,7 +8795,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1604691662}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1, y: -1, z: 0}
+  m_LocalPosition: {x: -0.52, y: -0.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1724094972}
@@ -9500,7 +9503,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a4850a57196a2945b1f79785a3e5687, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 300000
+  health: 333
   invincible: 0
 --- !u!114 &1651095598
 MonoBehaviour:
@@ -9546,51 +9549,16 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1651095591}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ee0ba539de1b43488035a0584614e95, type: 3}
+  m_Script: {fileID: 11500000, guid: 7492ecf436072e442b10cce23e3ba19c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_width: 0.1
-  m_height: 0.1
-  m_maxFlySpeed: 13
-  m_flyAcc: 100
-  m_flyAccDown: 8
-  m_useMomentum: 1
-  m_changeSpeed:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  m_changeDuration: 0.1
-  m_changeCoolDownDuration: 1
-  AttackCooldown: 0.4
-  ShotOffset: {x: 0, y: 0}
-  ShotHitbox: {x: 0, y: 0}
-  m_useDebugMode: 0
-  transforms:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  duration: 0.1
+  imageDuration: 0.15
+  frequency: 120
+  initialAlpha: 0.8
+  zPositionOffset: 1
 --- !u!1 &1688759580
 GameObject:
   m_ObjectHideFlags: 0
@@ -10147,51 +10115,16 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1811830199}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ee0ba539de1b43488035a0584614e95, type: 3}
+  m_Script: {fileID: 11500000, guid: 7492ecf436072e442b10cce23e3ba19c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_width: 0.1
-  m_height: 0.1
-  m_maxFlySpeed: 13
-  m_flyAcc: 100
-  m_flyAccDown: 8
-  m_useMomentum: 1
-  m_changeSpeed:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  m_changeDuration: 0.1
-  m_changeCoolDownDuration: 1
-  AttackCooldown: 0.4
-  ShotOffset: {x: 0, y: 0}
-  ShotHitbox: {x: 0, y: 0}
-  m_useDebugMode: 0
-  transforms:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  duration: 0.1
+  imageDuration: 0.15
+  frequency: 120
+  initialAlpha: 0.8
+  zPositionOffset: 1
 --- !u!114 &1811830202
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10284,7 +10217,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a4850a57196a2945b1f79785a3e5687, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 300
+  health: 333
   invincible: 0
 --- !u!114 &1811830206
 MonoBehaviour:
@@ -11880,51 +11813,16 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2136772200}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ee0ba539de1b43488035a0584614e95, type: 3}
+  m_Script: {fileID: 11500000, guid: 7492ecf436072e442b10cce23e3ba19c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_width: 0.1
-  m_height: 0.1
-  m_maxFlySpeed: 13
-  m_flyAcc: 100
-  m_flyAccDown: 8
-  m_useMomentum: 1
-  m_changeSpeed:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  m_changeDuration: 0.1
-  m_changeCoolDownDuration: 1
-  AttackCooldown: 0.4
-  ShotOffset: {x: 0, y: 0}
-  ShotHitbox: {x: 0, y: 0}
-  m_useDebugMode: 0
-  transforms:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  duration: 0.1
+  imageDuration: 0.15
+  frequency: 120
+  initialAlpha: 0.8
+  zPositionOffset: 1
 --- !u!114 &2136772203
 MonoBehaviour:
   m_ObjectHideFlags: 0

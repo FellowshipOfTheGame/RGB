@@ -31,6 +31,9 @@ public class ShipController : MonoBehaviour
     public AnimationCurve m_changeSpeed = new AnimationCurve(new Keyframe(0, 1), new Keyframe(1, 0));
     public float m_changeDuration = 0.1f;
     public float m_changeCoolDownDuration = 1;
+    public float m_positionLerpFactor = 0.5f;
+    public float m_scaleLerpFactor = 0.5f;
+    public float m_invulnerabilityTime = 0.2f;
 
     //COMBAT
     [Header("Combat")]
@@ -50,6 +53,7 @@ public class ShipController : MonoBehaviour
     private List<ShipBHV> m_ships = new List<ShipBHV>();
     private int m_shipIndex = 0;
     public Transform[] transforms = new Transform[3];
+    private Vector2 centralPosition = Vector2.zero;
 
     // LOCOMOTION: WALK
     private Vector2 m_flySpeed = new Vector2(0, 0);
@@ -77,6 +81,7 @@ public class ShipController : MonoBehaviour
         foreach (ShipBHV ship in GetComponentsInChildren<ShipBHV>(true))
         {
             m_ships.Add(ship);
+            ship.GetComponent<HealthBHV>().OnKilled += OnShipKilled; // adds listener for the ships' deaths
         }
     }
 
@@ -90,7 +95,9 @@ public class ShipController : MonoBehaviour
                 m_ships[i].transform.localScale = 0.5f * Vector2.one;
                 m_ships[i].gameObject.GetComponent<Collider2D>().enabled = false;
             }
+            centralPosition += (Vector2)transforms[i].localPosition;
         }
+        centralPosition /= m_ships.Count;
     }
 
     // Update is called once per frame
@@ -135,33 +142,51 @@ public class ShipController : MonoBehaviour
     // ======================================================================================
     private void Fire()
     {
+        if (m_ships[m_shipIndex] == null)
+        {
+            return;
+        }
         isAttacking = true;
         m_ships[m_shipIndex].Fire1();
         isAttacking = false;
     }
     // ======================================================================================
-    private void ChangeShip(int direction)
+    private void ChangeShip(int direction = 1)
     {
         m_changeCooldownTimer = m_changeCoolDownDuration;
         m_changeTimer = m_changeCoolDownDuration;
-
-        //Transform transf = m_ships[m_shipIndex].transform;
         int mainShip = m_shipIndex;
-
-        m_shipIndex += direction;
-        if (m_shipIndex > 2) m_shipIndex = 0;
-        if (m_shipIndex < 0) m_shipIndex = 2;
+        m_shipIndex = (m_shipIndex + direction + m_ships.Count) % m_ships.Count;
 
         for (int i = 0; i < m_ships.Count; i++)
         {
+            if (m_ships[i] == null)
+            {
+                continue;
+            }
             m_ships[i].gameObject.GetComponent<Collider2D>().enabled = false;
-            //m_ships[i].transform.position = transforms[i].position;
-            m_ships[i].transform.localScale = 0.5f * Vector2.one;
+            transforms[i].localPosition = Quaternion.Euler(new Vector3(0, 0, -120*direction)) * (transforms[i].localPosition - (Vector3)centralPosition) + (Vector3)centralPosition;
         }
-        m_ships[m_shipIndex].gameObject.GetComponent<Collider2D>().enabled = true;
-        m_ships[m_shipIndex].transform.localScale = Vector2.one;
-        m_ships[mainShip].transform.position = m_ships[m_shipIndex].transform.position;
-        m_ships[m_shipIndex].transform.position = transforms[0].position;
+        if (m_ships[m_shipIndex] != null)
+        {
+            Invoke("ReactivateMainShipCollider", m_invulnerabilityTime);
+        }
+        else
+        {
+            ChangeShip(direction);
+            return;
+        }
+
+        if (mainShip != m_shipIndex) // if ships were really changed
+        {
+            foreach (ShipBHV s in m_ships)
+            {
+                if (s != null)
+                {
+                    s.GetComponent<SpriteTrack>().enabled = true;
+                }
+            }
+        }
 
         StartCoroutine(ChangeCooldown());
     }
@@ -180,6 +205,26 @@ public class ShipController : MonoBehaviour
 
         Vector3 finalPos = this.transform.position;
         Vector3 deltaPos = finalPos - initialPos;
+
+
+        for (int i = 0; i < m_ships.Count; i++)
+        {
+            if (m_ships[i] == null)
+            {
+                continue;
+            }
+            float zPositionChange = 1.0f;
+            if (i == m_shipIndex)
+            {
+                m_ships[i].transform.localScale = Vector2.Lerp(m_ships[i].transform.localScale, Vector2.one, m_scaleLerpFactor);
+            }
+            else
+            {
+                m_ships[i].transform.localScale = Vector2.Lerp(m_ships[i].transform.localScale, 0.5f * Vector2.one, m_scaleLerpFactor);
+                zPositionChange *= -1;
+            }
+            m_ships[i].transform.localPosition = Vector3.Lerp(m_ships[i].transform.localPosition, transforms[i].position - transform.position + zPositionChange * Vector3.forward, m_positionLerpFactor);
+        }
     }
 
     // ======================================================================================
@@ -281,4 +326,36 @@ public class ShipController : MonoBehaviour
         m_changeTimer = 0;
         m_changeCooldownTimer = 0;
     }
+    // ======================================================================================
+    private void OnShipKilled(HealthBHV healthBHV)
+    {
+        
+        Debug.Log("Ship killed.");
+        //m_ships.Remove(healthBHV.GetComponent<ShipBHV>());
+        for (int i = 0; i < m_ships.Count; i++)
+        {
+            if (m_ships[i] == healthBHV.GetComponent<ShipBHV>())
+            {
+                m_ships[i] = null;
+            }
+        }
+        Debug.Log("Ship removed.");
+        //ChangeShip(1);
+        Invoke("ForceReplaceDestroyedShip", 1.0f);
+        Debug.Log("Ship changed.");
+    }
+    // ======================================================================================
+    private void ForceReplaceDestroyedShip()
+    {
+        if (m_ships[m_shipIndex] == null)
+        {
+            ChangeShip();
+        }
+    }
+    // ======================================================================================
+    private void ReactivateMainShipCollider()
+    {
+        m_ships[m_shipIndex].GetComponent<Collider2D>().enabled = true;
+    }
+
 }

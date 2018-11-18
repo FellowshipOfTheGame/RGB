@@ -11,6 +11,9 @@ public class HealthBHV : MonoBehaviour
     public float health = 1;
     public bool invincible = false;
 
+    public delegate void OnKilledDelegate(HealthBHV healthBHV);
+    public event OnKilledDelegate OnKilled;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -47,6 +50,8 @@ public class HealthBHV : MonoBehaviour
     private void Kill ()
     {
         // animãção, etc
-        Destroy(gameObject);
+        Debug.Log("Killed!");
+        OnKilled?.Invoke(this); // triggers event
+        Destroy(gameObject);//, 2*Time.deltaTime);
     }
 }

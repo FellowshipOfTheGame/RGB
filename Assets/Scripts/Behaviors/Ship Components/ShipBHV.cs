@@ -23,7 +23,6 @@ public class ShipBHV : MonoBehaviour
     [Header("Weapons")]
     public List<WeaponBHV> weapon1 = new List<WeaponBHV>();
 
-
     private EnergyGeneratorBHV generator;
 
     private void Awake()
