@@ -34,6 +34,7 @@ public class ShipController : MonoBehaviour
     public float m_positionLerpFactor = 0.5f;
     public float m_scaleLerpFactor = 0.5f;
     public float m_invulnerabilityTime = 0.2f;
+    public Transform[] transforms = new Transform[3];
 
     //COMBAT
     [Header("Combat")]
@@ -52,7 +53,6 @@ public class ShipController : MonoBehaviour
     // SHIPS
     private List<ShipBHV> m_ships = new List<ShipBHV>();
     private int m_shipIndex = 0;
-    public Transform[] transforms = new Transform[3];
     private Vector2 centralPosition = Vector2.zero;
 
     // LOCOMOTION: WALK
@@ -177,7 +177,7 @@ public class ShipController : MonoBehaviour
             return;
         }
 
-        if (mainShip != m_shipIndex) // if ships were really changed
+        if (m_ships[mainShip] != null && mainShip != m_shipIndex) // if ships were really changed
         {
             foreach (ShipBHV s in m_ships)
             {

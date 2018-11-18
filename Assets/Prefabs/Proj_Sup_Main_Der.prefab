@@ -127,9 +127,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58e1846f23a14e140be136dfc76ed945, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  statusEffect: {fileID: 11400000, guid: af138e2f772f730479cb1817c0910260, type: 2}
   duration: 3
   intensity: 0.5
-  statusEffect: {fileID: 11400000, guid: af138e2f772f730479cb1817c0910260, type: 2}
 --- !u!58 &5357069773567797790
 CircleCollider2D:
   m_ObjectHideFlags: 0
