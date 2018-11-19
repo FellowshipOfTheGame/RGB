@@ -19,6 +19,10 @@ public class InputMgr : MonoBehaviour
         ATTACK,
         CHANGEF,
         CHANGEB,
+        LEFT,
+        RIGHT,
+        UP,
+        DOWN,
         PAUSE
     }
 
@@ -218,6 +222,14 @@ public class InputMgr : MonoBehaviour
                 return Input.GetKey(KeyCode.T);
             case eButton.CANCEL:
                 return Input.GetKey(KeyCode.R);
+            case eButton.LEFT:
+                return Input.GetKey(KeyCode.A);
+            case eButton.RIGHT:
+                return Input.GetKey(KeyCode.D);
+            case eButton.UP:
+                return Input.GetKey(KeyCode.W);
+            case eButton.DOWN:
+                return Input.GetKey(KeyCode.S);
         }
 
         return false;

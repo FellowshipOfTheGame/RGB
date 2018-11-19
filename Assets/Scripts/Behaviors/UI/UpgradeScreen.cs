@@ -21,6 +21,7 @@ public class UpgradeScreen : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // TODO: there's no GetButtonDown on InputMgr
         if (Input.GetKeyDown(KeyCode.Space))
         {
             UpgradeSelected();
@@ -57,6 +58,5 @@ public class UpgradeScreen : MonoBehaviour
                 equipmentScrollers[i].gameObject.SetActive(false);
             }
         }
-
     }
 }

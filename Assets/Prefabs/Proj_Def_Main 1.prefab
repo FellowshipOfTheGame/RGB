@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 1794516416801752915}
   - component: {fileID: 8208255445599653284}
   - component: {fileID: 6457630711468935320}
+  - component: {fileID: 1499486240270087824}
   m_Layer: 0
   m_Name: Proj_Def_Main 1
   m_TagString: PlayerProjectile
@@ -177,3 +178,20 @@ MonoBehaviour:
   maxScaleX: 10
   maxScaleY: 10
   expandMode: 1
+--- !u!114 &1499486240270087824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6658535161591884227}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7492ecf436072e442b10cce23e3ba19c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 0
+  imageDuration: 0.2
+  frequency: 60
+  initialAlpha: 0.193
+  zPositionOffset: 0

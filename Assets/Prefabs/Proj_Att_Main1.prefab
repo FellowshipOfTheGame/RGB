@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3474716137645781797}
   - component: {fileID: 1794516416801752915}
   - component: {fileID: 8208255445599653284}
+  - component: {fileID: 4058860482341715375}
   m_Layer: 0
   m_Name: Proj_Att_Main1
   m_TagString: PlayerProjectile
@@ -159,3 +160,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &4058860482341715375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6658535161591884227}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7492ecf436072e442b10cce23e3ba19c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 0
+  imageDuration: 0.3
+  frequency: 120
+  initialAlpha: 0.3
+  zPositionOffset: 0

@@ -17,6 +17,10 @@ public class UIScroller : MonoBehaviour
     public KeyCode leftKey;
     public KeyCode rightKey;
 
+    // FIXME: there's no GetButtonDown on InputMgr
+    public InputMgr.eButton leftButton;
+    public InputMgr.eButton rightButton;
+
     public HorizontalOrVerticalLayoutGroup layoutGroup;
 
     public int currentIndex;

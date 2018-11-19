@@ -44,15 +44,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   equipmentData: {fileID: 0}
+  projectilePrefab: {fileID: 6658535161591884227, guid: 244fea80c3d2bde4f98f53a3db260e69,
+    type: 3}
+  tagsToHit:
+  - Player
   fireRate: 3
   intensityMult: 1
   drainedPower: 1
   projectileSpeed: 7
   projectileAcceleration: 0
-  projectilePrefab: {fileID: 6658535161591884227, guid: 244fea80c3d2bde4f98f53a3db260e69,
-    type: 3}
-  tagsToHit:
-  - Player
 --- !u!1 &9198899965536013235
 GameObject:
   m_ObjectHideFlags: 0
@@ -127,7 +127,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 1e4f98a04ef73e64a8f7a29648ac22b6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -185,9 +185,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   equipmentData: {fileID: 0}
-  maxCapacity: 0
-  energy: 0
-  power: 0
+  maxCapacity: 200
+  energy: 200
+  power: 2
 --- !u!61 &9198899965536013234
 BoxCollider2D:
   m_ObjectHideFlags: 0

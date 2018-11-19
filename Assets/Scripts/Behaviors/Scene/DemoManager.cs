@@ -7,6 +7,7 @@ public class DemoManager : MonoBehaviour
 {
     public static bool debugMode = true;
     public bool resetLevels = true;
+    public int startLevels = 1;
     public int weaponsLevel = 1;
     public float upgradeDelay = 3f;
     public List<WeaponSO> weapons = new List<WeaponSO>();
@@ -28,7 +29,7 @@ public class DemoManager : MonoBehaviour
             {
                 for (int j = 0; j < 2; j++)
                 {
-                    Player.Instance.inventories[i].equipments[j].SetLevel(1);
+                    Player.Instance.inventories[i].equipments[j].SetLevel(startLevels);
                 }
             }
         }
@@ -62,26 +63,26 @@ public class DemoManager : MonoBehaviour
             UpdateText();
         }
         //Input
-        if (Input.GetKeyDown (KeyCode.T)) //previous ship
-        {
-            Transform transf = ships[shipIndex].transform;
-            shipIndex--;
-            if (shipIndex < 0)
-            {
-                shipIndex = ships.Count-1;
-            }
-            ChangeShip(transf);
-        }
-        if (Input.GetKeyDown (KeyCode.Y)) // next ship
-        {
-            Transform transf = ships[shipIndex].transform;
-            shipIndex++;
-            if (shipIndex == ships.Count)
-            {
-                shipIndex = 0;  
-            }
-            ChangeShip(transf);
-        }
+        //if (Input.GetKeyDown (KeyCode.T)) //previous ship
+        //{
+        //    Transform transf = ships[shipIndex].transform;
+        //    shipIndex--;
+        //    if (shipIndex < 0)
+        //    {
+        //        shipIndex = ships.Count-1;
+        //    }
+        //    ChangeShip(transf);
+        //}
+        //if (Input.GetKeyDown (KeyCode.Y)) // next ship
+        //{
+        //    Transform transf = ships[shipIndex].transform;
+        //    shipIndex++;
+        //    if (shipIndex == ships.Count)
+        //    {
+        //        shipIndex = 0;  
+        //    }
+        //    ChangeShip(transf);
+        //}
         if (Input.GetKeyDown(KeyCode.U))
         {
             upgradeScreen.gameObject.SetActive(!upgradeScreen.gameObject.activeInHierarchy);
