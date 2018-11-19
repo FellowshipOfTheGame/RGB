@@ -12,7 +12,7 @@ public class WeaponAimPlayerBHV : MonoBehaviour
 
     private void Awake()
     {
-        player = GameObject.FindWithTag("Player");
+        player = Player.Instance.gameObject;
         weapons = transform.GetChild(0).gameObject;
     }
     // Start is called before the first frame update
