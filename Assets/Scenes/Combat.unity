@@ -9725,6 +9725,7 @@ GameObject:
   - component: {fileID: 1651095596}
   - component: {fileID: 1651095599}
   - component: {fileID: 1651095600}
+  - component: {fileID: 1651095601}
   m_Layer: 0
   m_Name: __Ship Attack
   m_TagString: Player
@@ -9808,7 +9809,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1651095591}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -1.23}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1166757578}
@@ -9921,6 +9922,25 @@ MonoBehaviour:
   frequency: 120
   initialAlpha: 0.8
   zPositionOffset: 1
+--- !u!95 &1651095601
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1651095591}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 673d669db7b635e4191e24bf84388bfc, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1688759580
 GameObject:
   m_ObjectHideFlags: 0
