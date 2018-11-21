@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
-    
     [SerializeField]
     private GameObject[] enemiesPrefab;//Vector with the prefabs of all the enemies
 
@@ -13,13 +12,19 @@ public class Spawner : MonoBehaviour
     [SerializeField]
     private float spawnTime; //Time between spawns
 
-    private float xPosition;
-    private float yPosition;
+
+    private float spawnPosition;
 
     //Animation curve used to modify the enemy's spawn probability at the given axis.
-    // The X-axis of each curve is a normalized value 0-1. The Y-axis of each curve defines the spawn limits on that axis.
-    public AnimationCurve enemyYAxis;
-    public AnimationCurve enemyXAxis;
+    // The X-axis of each curve is a normalized value 0-1. The Y-axis of each curve is a value between -1 and 1 (inclusive).
+    public AnimationCurve[] spawningCurves;
+
+    //There will be 'n' curves n = spawningCurves.lenght. The designer will have to choose which curve he wants.
+    public int wantedCurve;
+
+    //After getting a random value from the spawnCurve, we will have to multiply that value between -1 and 1 by the amplitude,
+    //that way the enemy will spawn inside an desirable region
+    public float amplitude;
 
     private void Start()
     {
@@ -45,12 +50,14 @@ public class Spawner : MonoBehaviour
             //Need to choose which enemy to spawn
             enemy = Choose_Enemy();
 
+            //getting a value from the curve
+            float evaluatedPosition = spawningCurves[wantedCurve].Evaluate(Random.value);
+
             //Need to choose a position in which to spawn the enemy
-            xPosition = enemyXAxis.Evaluate(Random.value);
-            yPosition = enemyYAxis.Evaluate(Random.value);
+            spawnPosition =  evaluatedPosition * amplitude;
       
             //With the enemy and its position the last thing to be done is spawn
-            Instantiate(enemy, new Vector3(transform.position.x + xPosition, transform.position.y + yPosition, 0), transform.rotation);
+            Instantiate(enemy, new Vector3(transform.position.x + spawnPosition, transform.position.y, 0), transform.rotation);
 
             yield return new WaitForSeconds(spawnTime);
 
