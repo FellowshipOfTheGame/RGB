@@ -57,7 +57,7 @@ public class Spawner : MonoBehaviour
             spawnPosition =  evaluatedPosition * amplitude;
       
             //With the enemy and its position the last thing to be done is spawn
-            Instantiate(enemy, new Vector3(transform.position.x + spawnPosition, transform.position.y, 0), transform.rotation);
+            Instantiate(enemy, new Vector3(transform.position.x + spawnPosition, transform.position.y, 0), transform.rotation, transform);
 
             yield return new WaitForSeconds(spawnTime);
 
