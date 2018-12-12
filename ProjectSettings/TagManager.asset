@@ -44,10 +44,10 @@ TagManager:
   - name: Background
     uniqueID: 2458015953
     locked: 0
-  - name: City/Mask
+  - name: Masks
     uniqueID: 1870712625
     locked: 0
-  - name: Clouds
+  - name: Objects
     uniqueID: 279487737
     locked: 0
   - name: Default
