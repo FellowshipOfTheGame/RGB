@@ -30,18 +30,30 @@ public class StatusEffectSO : ScriptableObject
         switch (type)
         {
             case EffectType.SLOWDOWN:
+                //START EFFECT
                 foreach (WeaponBHV w in other.GetComponent<ShipBHV>().weapon1)
                 {
                     Debug.Log("Slowing Weapon");
                     w.fireRate *= intensity;
                 }
+                if (other.GetComponent<ProjectileBHV>() != null)
+                {
+                    other.GetComponent<ProjectileBHV>().Speed *= intensity;
+                }
+                //WAIT
                 yield return new WaitForSeconds(duration);
+                //CEASE EFFECT
                 Debug.Log("Slowing Time Expired");
                 foreach (WeaponBHV w in other.GetComponent<ShipBHV>().weapon1)
                 {
                     Debug.Log("De-Slowing Weapon");
                     w.fireRate /= intensity;
                 }
+                if (other.GetComponent<ProjectileBHV>() != null)
+                {
+                    other.GetComponent<ProjectileBHV>().Speed /= intensity;
+                }
+
                 break;
             default:
                 break;

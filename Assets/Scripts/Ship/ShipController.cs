@@ -123,6 +123,12 @@ public class ShipController : MonoBehaviour
                 Fire();
             }
 
+            // Get special input
+            if (InputMgr.GetButton(1, InputMgr.eButton.SPECIAL))
+            {
+                FireSpecial();
+            }
+
             // change ships
             if (m_changeFoward && m_changeTimer==0)
             {
@@ -150,6 +156,17 @@ public class ShipController : MonoBehaviour
         m_ships[m_shipIndex].Fire1();
         isAttacking = false;
     }
+
+    // ======================================================================================
+    private void FireSpecial()
+    {
+        if (m_ships[m_shipIndex] == null)
+        {
+            return;
+        }
+        m_ships[m_shipIndex].Fire2();
+    }
+
     // ======================================================================================
     private void ChangeShip(int direction = 1)
     {

@@ -17,11 +17,21 @@ public class ProjectileBHV : MonoBehaviour
 
 
     protected float speed;
+    public float Speed
+    {
+        get => speed;
+        set => speed = value;
+    }
     protected float acceleration;
     protected float damage;
     protected float intensityMult;
     protected float creationTime;
     protected List<string> tagsToHit = null;
+    public List<string> TagsToHit
+    {
+        get => tagsToHit;
+        protected set => tagsToHit = value;
+    }
 
     // Components
     protected Rigidbody2D rigidBody;
