@@ -71,7 +71,7 @@ GameObject:
   - component: {fileID: 7904413020569701810}
   - component: {fileID: 5709695409493285060}
   m_Layer: 0
-  m_Name: Ship Enemy 1
+  m_Name: Ship Enemy Straight
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -261,6 +261,7 @@ MonoBehaviour:
       m_RotationOrder: 4
     loop: 1
   pace: 0.05
+  autoMaxPace: 1
   maxPace: 0.05
   hFrame: 0
   vFrame: 0
