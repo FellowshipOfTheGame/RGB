@@ -6,7 +6,7 @@ using UnityEngine;
 /// Defines the base behavior of a projectile. It can be used with 0 damage and a StatusEffector, as a power-up (buff/debuff).
 /// </summary>
 [RequireComponent(typeof(HealthBHV))]
-public class ProjectileBHV : MonoBehaviour
+public class ProjectileBHV : SpaceObjBHV
 {
     [Tooltip("Time, in seconds, until it expires.")]
     public float lifetime = 20;
