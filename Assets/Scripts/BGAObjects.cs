@@ -36,14 +36,13 @@ public class BGAObjects : MonoBehaviour
 
     private void spawnMask(SpriteMask mask, int frequency)
     {
-        int num = Random.Range(0, frequency + 1);
+        int num = Random.Range(1, frequency + 1);
         for (int i = 0; i < num; i++)
         {
             float spawnPointX = Random.Range(-1f, 1f) * amplitudeX;
             float spawnPointY = Random.Range(-1f, 1f) * amplitudeY;
             Vector3 spawnVector = new Vector3(transform.position.x + spawnPointX, transform.position.y + spawnPointY, 0);
-            var newmask = Instantiate(mask, spawnVector, Quaternion.identity, transform);
-            newmask.sortingLayerName = "Masks";
+            Instantiate(mask, spawnVector, Quaternion.identity, transform);
         }
     }
 }
