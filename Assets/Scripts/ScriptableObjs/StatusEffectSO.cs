@@ -38,7 +38,7 @@ public class StatusEffectSO : ScriptableObject
                 }
                 if (other.GetComponent<ProjectileBHV>() != null)
                 {
-                    other.GetComponent<ProjectileBHV>().Speed *= intensity;
+                    other.GetComponent<Rigidbody2D>().velocity *= intensity;
                 }
                 //WAIT
                 yield return new WaitForSeconds(duration);
@@ -51,7 +51,7 @@ public class StatusEffectSO : ScriptableObject
                 }
                 if (other.GetComponent<ProjectileBHV>() != null)
                 {
-                    other.GetComponent<ProjectileBHV>().Speed /= intensity;
+                    other.GetComponent<Rigidbody2D>().velocity /= intensity;
                 }
 
                 break;

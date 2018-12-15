@@ -2317,7 +2317,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &227153725
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2330,6 +2330,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f7f613819fbad947bc90132780756ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  reference: {x: -0, y: -1}
+  verticalTrajectory:
+    amplitude: 0
+    length: 0
+    curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    loop: 0
+  horizontalTrajectory:
+    amplitude: 0
+    length: 0
+    curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    loop: 0
+  pace: 0.05
+  hFrame: 0
+  vFrame: 0
+  frame: 0
 --- !u!61 &227153726
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2510,7 +2535,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &229295677
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2523,6 +2548,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f7f613819fbad947bc90132780756ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  reference: {x: -0, y: -1}
+  verticalTrajectory:
+    amplitude: 0
+    length: 0
+    curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    loop: 0
+  horizontalTrajectory:
+    amplitude: 0
+    length: 0
+    curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    loop: 0
+  pace: 0.05
+  hFrame: 0
+  vFrame: 0
+  frame: 0
 --- !u!61 &229295678
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3155,7 +3205,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: -37, z: -11}
   m_LocalScale: {x: 100, y: 50, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 2079705550}
   m_Father: {fileID: 496242819}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3245,6 +3296,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d213bcac75f138f479b74ff275445a73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyAll: 1
+  destroyShip: 0
+  destroyProjectile: 0
 --- !u!1 &292120525
 GameObject:
   m_ObjectHideFlags: 0
@@ -3267,7 +3321,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &292120526
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3280,6 +3334,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f7f613819fbad947bc90132780756ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  reference: {x: -0, y: -1}
+  verticalTrajectory:
+    amplitude: 0
+    length: 0
+    curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    loop: 0
+  horizontalTrajectory:
+    amplitude: 0
+    length: 0
+    curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    loop: 0
+  pace: 0.05
+  hFrame: 0
+  vFrame: 0
+  frame: 0
 --- !u!61 &292120527
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5421,7 +5500,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &434916177
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5434,6 +5513,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f7f613819fbad947bc90132780756ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  reference: {x: -0, y: -1}
+  verticalTrajectory:
+    amplitude: 0
+    length: 0
+    curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    loop: 0
+  horizontalTrajectory:
+    amplitude: 0
+    length: 0
+    curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    loop: 0
+  pace: 0.05
+  hFrame: 0
+  vFrame: 0
+  frame: 0
 --- !u!61 &434916178
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6473,7 +6577,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &561114987
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6486,6 +6590,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f7f613819fbad947bc90132780756ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  reference: {x: -0, y: -1}
+  verticalTrajectory:
+    amplitude: 0
+    length: 0
+    curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    loop: 0
+  horizontalTrajectory:
+    amplitude: 0
+    length: 0
+    curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    loop: 0
+  pace: 0.05
+  hFrame: 0
+  vFrame: 0
+  frame: 0
 --- !u!61 &561114988
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6667,7 +6796,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &582317845
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6680,6 +6809,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f7f613819fbad947bc90132780756ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  reference: {x: -0, y: -1}
+  verticalTrajectory:
+    amplitude: 0
+    length: 0
+    curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    loop: 0
+  horizontalTrajectory:
+    amplitude: 0
+    length: 0
+    curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    loop: 0
+  pace: 0.05
+  hFrame: 0
+  vFrame: 0
+  frame: 0
 --- !u!61 &582317846
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7180,7 +7334,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &640723347
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7193,6 +7347,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f7f613819fbad947bc90132780756ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  reference: {x: -0, y: -1}
+  verticalTrajectory:
+    amplitude: 0
+    length: 0
+    curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    loop: 0
+  horizontalTrajectory:
+    amplitude: 0
+    length: 0
+    curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    loop: 0
+  pace: 0.05
+  hFrame: 0
+  vFrame: 0
+  frame: 0
 --- !u!61 &640723348
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8054,6 +8233,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spawner
       objectReference: {fileID: 0}
+    - target: {fileID: 8619719647090980886, guid: 6fd5ca573659c60468a6d75f4325d37a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6fd5ca573659c60468a6d75f4325d37a, type: 3}
 --- !u!1 &721629431
@@ -8236,7 +8420,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!61 &734519956
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8275,6 +8459,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f7f613819fbad947bc90132780756ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  reference: {x: -0, y: -1}
+  verticalTrajectory:
+    amplitude: 0
+    length: 0
+    curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    loop: 0
+  horizontalTrajectory:
+    amplitude: 0
+    length: 0
+    curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    loop: 0
+  pace: 0.05
+  hFrame: 0
+  vFrame: 0
+  frame: 0
 --- !u!114 &734519958
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8558,7 +8767,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 36.4, y: 0, z: -11}
   m_LocalScale: {x: 30, y: 50, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1333089913}
   m_Father: {fileID: 496242819}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8648,6 +8858,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d213bcac75f138f479b74ff275445a73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyAll: 1
+  destroyShip: 0
+  destroyProjectile: 0
 --- !u!4 &773190234 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2998154329759175640, guid: 70142d1ef72044444af2a127143860d2,
@@ -9604,7 +9817,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 37, z: -11}
   m_LocalScale: {x: 100, y: 50, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1204414292}
   m_Father: {fileID: 496242819}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9694,6 +9908,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d213bcac75f138f479b74ff275445a73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyAll: 1
+  destroyShip: 0
+  destroyProjectile: 0
 --- !u!1 &862512887
 GameObject:
   m_ObjectHideFlags: 0
@@ -9911,6 +10128,79 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 882797954}
   m_CullTransparentMesh: 0
+--- !u!1 &888600854
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 888600855}
+  - component: {fileID: 888600856}
+  - component: {fileID: 888600857}
+  m_Layer: 0
+  m_Name: ShipKiller
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &888600855
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 888600854}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2013758567}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &888600856
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 888600854}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.88, y: 0.94}
+  m_EdgeRadius: 0
+--- !u!114 &888600857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 888600854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d213bcac75f138f479b74ff275445a73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyAll: 0
+  destroyShip: 1
+  destroyProjectile: 0
 --- !u!1 &895039616
 GameObject:
   m_ObjectHideFlags: 0
@@ -10878,7 +11168,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &987145027
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10891,6 +11181,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f7f613819fbad947bc90132780756ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  reference: {x: -0, y: -1}
+  verticalTrajectory:
+    amplitude: 0
+    length: 0
+    curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    loop: 0
+  horizontalTrajectory:
+    amplitude: 0
+    length: 0
+    curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    loop: 0
+  pace: 0.05
+  hFrame: 0
+  vFrame: 0
+  frame: 0
 --- !u!61 &987145028
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11440,6 +11755,29 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1031085656}
   m_CullTransparentMesh: 0
+--- !u!1 &1035567378 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9198899965536013235, guid: f5fe3823853121044b412176b46fbe57,
+    type: 3}
+  m_PrefabInstance: {fileID: 9198899964498436993}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1035567386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1035567378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7492ecf436072e442b10cce23e3ba19c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 0
+  imageDuration: 22
+  frequency: 4
+  initialAlpha: 0.39
+  zPositionOffset: 0
 --- !u!1 &1044790139
 GameObject:
   m_ObjectHideFlags: 0
@@ -11879,7 +12217,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1071095833
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11892,6 +12230,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f7f613819fbad947bc90132780756ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  reference: {x: -0, y: -1}
+  verticalTrajectory:
+    amplitude: 0
+    length: 0
+    curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    loop: 0
+  horizontalTrajectory:
+    amplitude: 0
+    length: 0
+    curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    loop: 0
+  pace: 0.05
+  hFrame: 0
+  vFrame: 0
+  frame: 0
 --- !u!61 &1071095834
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12944,7 +13307,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1172637102
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12957,6 +13320,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f7f613819fbad947bc90132780756ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  reference: {x: -0, y: -1}
+  verticalTrajectory:
+    amplitude: 0
+    length: 0
+    curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    loop: 0
+  horizontalTrajectory:
+    amplitude: 0
+    length: 0
+    curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    loop: 0
+  pace: 0.05
+  hFrame: 0
+  vFrame: 0
+  frame: 0
 --- !u!61 &1172637103
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13190,6 +13578,79 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1200867819}
   m_CullTransparentMesh: 0
+--- !u!1 &1204414291
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1204414292}
+  - component: {fileID: 1204414293}
+  - component: {fileID: 1204414294}
+  m_Layer: 0
+  m_Name: ShipKiller
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1204414292
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1204414291}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 861810237}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1204414293
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1204414291}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.88, y: 0.94}
+  m_EdgeRadius: 0
+--- !u!114 &1204414294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1204414291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d213bcac75f138f479b74ff275445a73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyAll: 0
+  destroyShip: 1
+  destroyProjectile: 0
 --- !u!1 &1224225811
 GameObject:
   m_ObjectHideFlags: 0
@@ -13770,7 +14231,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1274300157
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13783,6 +14244,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f7f613819fbad947bc90132780756ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  reference: {x: -0, y: -1}
+  verticalTrajectory:
+    amplitude: 0
+    length: 0
+    curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    loop: 0
+  horizontalTrajectory:
+    amplitude: 0
+    length: 0
+    curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    loop: 0
+  pace: 0.05
+  hFrame: 0
+  vFrame: 0
+  frame: 0
 --- !u!61 &1274300158
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14614,6 +15100,79 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1331629617}
   m_CullTransparentMesh: 0
+--- !u!1 &1333089912
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1333089913}
+  - component: {fileID: 1333089914}
+  - component: {fileID: 1333089915}
+  m_Layer: 0
+  m_Name: ShipKiller
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1333089913
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1333089912}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 769089934}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1333089914
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1333089912}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.88, y: 0.94}
+  m_EdgeRadius: 0
+--- !u!114 &1333089915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1333089912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d213bcac75f138f479b74ff275445a73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyAll: 0
+  destroyShip: 1
+  destroyProjectile: 0
 --- !u!1 &1336923798
 GameObject:
   m_ObjectHideFlags: 0
@@ -15485,7 +16044,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1447261184
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15498,6 +16057,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f7f613819fbad947bc90132780756ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  reference: {x: -0, y: -1}
+  verticalTrajectory:
+    amplitude: 0
+    length: 0
+    curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    loop: 0
+  horizontalTrajectory:
+    amplitude: 0
+    length: 0
+    curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    loop: 0
+  pace: 0.05
+  hFrame: 0
+  vFrame: 0
+  frame: 0
 --- !u!61 &1447261185
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16942,7 +17526,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1605049520
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16955,6 +17539,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f7f613819fbad947bc90132780756ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  reference: {x: -0, y: -1}
+  verticalTrajectory:
+    amplitude: 0
+    length: 0
+    curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    loop: 0
+  horizontalTrajectory:
+    amplitude: 0
+    length: 0
+    curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    loop: 0
+  pace: 0.05
+  hFrame: 0
+  vFrame: 0
+  frame: 0
 --- !u!61 &1605049521
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17184,6 +17793,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d213bcac75f138f479b74ff275445a73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyAll: 1
+  destroyShip: 0
+  destroyProjectile: 0
 --- !u!1 &1622926833
 GameObject:
   m_ObjectHideFlags: 0
@@ -20017,7 +20629,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1880678873
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20030,6 +20642,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f7f613819fbad947bc90132780756ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  reference: {x: -0, y: -1}
+  verticalTrajectory:
+    amplitude: 0
+    length: 0
+    curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    loop: 0
+  horizontalTrajectory:
+    amplitude: 0
+    length: 0
+    curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    loop: 0
+  pace: 0.05
+  hFrame: 0
+  vFrame: 0
+  frame: 0
 --- !u!61 &1880678874
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -20569,7 +21206,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!61 &1978146812
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -20608,6 +21245,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f7f613819fbad947bc90132780756ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  reference: {x: -0, y: -1}
+  verticalTrajectory:
+    amplitude: 0
+    length: 0
+    curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    loop: 0
+  horizontalTrajectory:
+    amplitude: 0
+    length: 0
+    curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    loop: 0
+  pace: 0.05
+  hFrame: 0
+  vFrame: 0
+  frame: 0
 --- !u!114 &1978146814
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20874,7 +21536,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -36.4, y: 0, z: -12.19}
   m_LocalScale: {x: 30, y: 50, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 888600855}
   m_Father: {fileID: 496242819}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -20964,6 +21627,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d213bcac75f138f479b74ff275445a73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyAll: 1
+  destroyShip: 0
+  destroyProjectile: 0
 --- !u!1 &2027285907
 GameObject:
   m_ObjectHideFlags: 0
@@ -21615,6 +22281,79 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2073913374}
   m_CullTransparentMesh: 0
+--- !u!1 &2079705549
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2079705550}
+  - component: {fileID: 2079705551}
+  - component: {fileID: 2079705552}
+  m_Layer: 0
+  m_Name: ShipKiller
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2079705550
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2079705549}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 290266331}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &2079705551
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2079705549}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.88, y: 0.94}
+  m_EdgeRadius: 0
+--- !u!114 &2079705552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2079705549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d213bcac75f138f479b74ff275445a73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyAll: 0
+  destroyShip: 1
+  destroyProjectile: 0
 --- !u!1 &2082124827
 GameObject:
   m_ObjectHideFlags: 0
@@ -22635,15 +23374,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 966969110}
     m_Modifications:
+    - target: {fileID: 9198899965536013237, guid: f5fe3823853121044b412176b46fbe57,
+        type: 3}
+      propertyPath: verticalTrajectory.curve.m_Curve.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 9198899965536013237, guid: f5fe3823853121044b412176b46fbe57,
+        type: 3}
+      propertyPath: horizontalTrajectory.curve.m_Curve.Array.size
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 9198899965536013238, guid: f5fe3823853121044b412176b46fbe57,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -13
+      value: -3.92
       objectReference: {fileID: 0}
     - target: {fileID: 9198899965536013238, guid: f5fe3823853121044b412176b46fbe57,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5
+      value: 10.83
       objectReference: {fileID: 0}
     - target: {fileID: 9198899965536013238, guid: f5fe3823853121044b412176b46fbe57,
         type: 3}
@@ -22699,6 +23448,266 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9198899965536013237, guid: f5fe3823853121044b412176b46fbe57,
+        type: 3}
+      propertyPath: verticalTrajectory.amplitude
+      value: -2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 9198899965536013237, guid: f5fe3823853121044b412176b46fbe57,
+        type: 3}
+      propertyPath: verticalTrajectory.length
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 9198899965536013237, guid: f5fe3823853121044b412176b46fbe57,
+        type: 3}
+      propertyPath: horizontalTrajectory.amplitude
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9198899965536013237, guid: f5fe3823853121044b412176b46fbe57,
+        type: 3}
+      propertyPath: horizontalTrajectory.length
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9198899965536013237, guid: f5fe3823853121044b412176b46fbe57,
+        type: 3}
+      propertyPath: verticalTrajectory.curve.m_Curve.Array.data[1].time
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 9198899965536013237, guid: f5fe3823853121044b412176b46fbe57,
+        type: 3}
+      propertyPath: verticalTrajectory.curve.m_Curve.Array.data[1].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9198899965536013237, guid: f5fe3823853121044b412176b46fbe57,
+        type: 3}
+      propertyPath: verticalTrajectory.curve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9198899965536013237, guid: f5fe3823853121044b412176b46fbe57,
+        type: 3}
+      propertyPath: verticalTrajectory.curve.m_Curve.Array.data[0].time
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9198899965536013237, guid: f5fe3823853121044b412176b46fbe57,
+        type: 3}
+      propertyPath: verticalTrajectory.curve.m_Curve.Array.data[1].inWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 9198899965536013237, guid: f5fe3823853121044b412176b46fbe57,
+        type: 3}
+      propertyPath: verticalTrajectory.curve.m_Curve.Array.data[1].outWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 9198899965536013237, guid: f5fe3823853121044b412176b46fbe57,
+        type: 3}
+      propertyPath: verticalTrajectory.curve.m_Curve.Array.data[2].time
+      value: 0.985
+      objectReference: {fileID: 0}
+    - target: {fileID: 9198899965536013237, guid: f5fe3823853121044b412176b46fbe57,
+        type: 3}
+      propertyPath: verticalTrajectory.curve.m_Curve.Array.data[2].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9198899965536013237, guid: f5fe3823853121044b412176b46fbe57,
+        type: 3}
+      propertyPath: verticalTrajectory.curve.m_Curve.Array.data[2].inSlope
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9198899965536013237, guid: f5fe3823853121044b412176b46fbe57,
+        type: 3}
+      propertyPath: verticalTrajectory.curve.m_Curve.Array.data[2].outSlope
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9198899965536013237, guid: f5fe3823853121044b412176b46fbe57,
+        type: 3}
+      propertyPath: verticalTrajectory.curve.m_Curve.Array.data[2].inWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 9198899965536013237, guid: f5fe3823853121044b412176b46fbe57,
+        type: 3}
+      propertyPath: verticalTrajectory.curve.m_Curve.Array.data[2].outWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 9198899965536013237, guid: f5fe3823853121044b412176b46fbe57,
+        type: 3}
+      propertyPath: verticalTrajectory.curve.m_Curve.Array.data[3].time
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9198899965536013237, guid: f5fe3823853121044b412176b46fbe57,
+        type: 3}
+      propertyPath: verticalTrajectory.curve.m_Curve.Array.data[3].tangentMode
+      value: 34
+      objectReference: {fileID: 0}
+    - target: {fileID: 9198899965536013237, guid: f5fe3823853121044b412176b46fbe57,
+        type: 3}
+      propertyPath: verticalTrajectory.curve.m_Curve.Array.data[3].inSlope
+      value: -66.66673
+      objectReference: {fileID: 0}
+    - target: {fileID: 9198899965536013237, guid: f5fe3823853121044b412176b46fbe57,
+        type: 3}
+      propertyPath: verticalTrajectory.curve.m_Curve.Array.data[3].inWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 9198899965536013237, guid: f5fe3823853121044b412176b46fbe57,
+        type: 3}
+      propertyPath: verticalTrajectory.curve.m_Curve.Array.data[0].inSlope
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 9198899965536013237, guid: f5fe3823853121044b412176b46fbe57,
+        type: 3}
+      propertyPath: verticalTrajectory.curve.m_Curve.Array.data[0].outSlope
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 9198899965536013237, guid: f5fe3823853121044b412176b46fbe57,
+        type: 3}
+      propertyPath: verticalTrajectory.curve.m_Curve.Array.data[0].outWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 9198899965536013237, guid: f5fe3823853121044b412176b46fbe57,
+        type: 3}
+      propertyPath: horizontalTrajectory.curve.m_Curve.Array.data[0].inSlope
+      value: 5.8791995
+      objectReference: {fileID: 0}
+    - target: {fileID: 9198899965536013237, guid: f5fe3823853121044b412176b46fbe57,
+        type: 3}
+      propertyPath: horizontalTrajectory.curve.m_Curve.Array.data[0].outSlope
+      value: 5.8791995
+      objectReference: {fileID: 0}
+    - target: {fileID: 9198899965536013237, guid: f5fe3823853121044b412176b46fbe57,
+        type: 3}
+      propertyPath: horizontalTrajectory.curve.m_Curve.Array.data[0].outWeight
+      value: 0.48699385
+      objectReference: {fileID: 0}
+    - target: {fileID: 9198899965536013237, guid: f5fe3823853121044b412176b46fbe57,
+        type: 3}
+      propertyPath: horizontalTrajectory.curve.m_Curve.Array.data[1].time
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 9198899965536013237, guid: f5fe3823853121044b412176b46fbe57,
+        type: 3}
+      propertyPath: horizontalTrajectory.curve.m_Curve.Array.data[1].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9198899965536013237, guid: f5fe3823853121044b412176b46fbe57,
+        type: 3}
+      propertyPath: horizontalTrajectory.curve.m_Curve.Array.data[1].inWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 9198899965536013237, guid: f5fe3823853121044b412176b46fbe57,
+        type: 3}
+      propertyPath: horizontalTrajectory.curve.m_Curve.Array.data[1].outWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 9198899965536013237, guid: f5fe3823853121044b412176b46fbe57,
+        type: 3}
+      propertyPath: horizontalTrajectory.curve.m_Curve.Array.data[2].time
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 9198899965536013237, guid: f5fe3823853121044b412176b46fbe57,
+        type: 3}
+      propertyPath: horizontalTrajectory.curve.m_Curve.Array.data[2].value
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9198899965536013237, guid: f5fe3823853121044b412176b46fbe57,
+        type: 3}
+      propertyPath: horizontalTrajectory.curve.m_Curve.Array.data[2].inWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 9198899965536013237, guid: f5fe3823853121044b412176b46fbe57,
+        type: 3}
+      propertyPath: horizontalTrajectory.curve.m_Curve.Array.data[2].outWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 9198899965536013237, guid: f5fe3823853121044b412176b46fbe57,
+        type: 3}
+      propertyPath: horizontalTrajectory.curve.m_Curve.Array.data[3].time
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9198899965536013237, guid: f5fe3823853121044b412176b46fbe57,
+        type: 3}
+      propertyPath: horizontalTrajectory.curve.m_Curve.Array.data[3].inSlope
+      value: 5.9062943
+      objectReference: {fileID: 0}
+    - target: {fileID: 9198899965536013237, guid: f5fe3823853121044b412176b46fbe57,
+        type: 3}
+      propertyPath: horizontalTrajectory.curve.m_Curve.Array.data[3].tangentMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9198899965536013237, guid: f5fe3823853121044b412176b46fbe57,
+        type: 3}
+      propertyPath: horizontalTrajectory.curve.m_Curve.Array.data[3].inWeight
+      value: 0.5631757
+      objectReference: {fileID: 0}
+    - target: {fileID: 9198899965536013237, guid: f5fe3823853121044b412176b46fbe57,
+        type: 3}
+      propertyPath: pace
+      value: 0.001
+      objectReference: {fileID: 0}
+    - target: {fileID: 9198899965536013236, guid: f5fe3823853121044b412176b46fbe57,
+        type: 3}
+      propertyPath: speed
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9198899965536013237, guid: f5fe3823853121044b412176b46fbe57,
+        type: 3}
+      propertyPath: loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9198899965536013237, guid: f5fe3823853121044b412176b46fbe57,
+        type: 3}
+      propertyPath: verticalTrajectory.curve.m_Curve.Array.data[0].tangentMode
+      value: 34
+      objectReference: {fileID: 0}
+    - target: {fileID: 9198899965536013237, guid: f5fe3823853121044b412176b46fbe57,
+        type: 3}
+      propertyPath: verticalTrajectory.curve.m_Curve.Array.data[1].inSlope
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9198899965536013237, guid: f5fe3823853121044b412176b46fbe57,
+        type: 3}
+      propertyPath: verticalTrajectory.curve.m_Curve.Array.data[1].outSlope
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9198899965536013237, guid: f5fe3823853121044b412176b46fbe57,
+        type: 3}
+      propertyPath: verticalTrajectory.curve.m_Curve.Array.data[1].tangentMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9198899965536013237, guid: f5fe3823853121044b412176b46fbe57,
+        type: 3}
+      propertyPath: verticalTrajectory.curve.m_Curve.Array.data[0].inWeight
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9198899965536013237, guid: f5fe3823853121044b412176b46fbe57,
+        type: 3}
+      propertyPath: verticalTrajectory.curve.m_Curve.Array.data[2].tangentMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9198899965536013237, guid: f5fe3823853121044b412176b46fbe57,
+        type: 3}
+      propertyPath: verticalTrajectory.loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9198899965536013237, guid: f5fe3823853121044b412176b46fbe57,
+        type: 3}
+      propertyPath: horizontalTrajectory.loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9198899965536013237, guid: f5fe3823853121044b412176b46fbe57,
+        type: 3}
+      propertyPath: hFrame
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9198899965536013237, guid: f5fe3823853121044b412176b46fbe57,
+        type: 3}
+      propertyPath: verticalTrajectory.curve.m_Curve.Array.data[3].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9198899965536013237, guid: f5fe3823853121044b412176b46fbe57,
+        type: 3}
+      propertyPath: verticalTrajectory.curve.m_Curve.Array.data[3].outSlope
+      value: -66.66673
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5fe3823853121044b412176b46fbe57, type: 3}

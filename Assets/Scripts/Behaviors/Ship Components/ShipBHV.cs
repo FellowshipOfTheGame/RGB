@@ -35,7 +35,7 @@ public class ShipBHV : MonoBehaviour
     void Start()
     {
         // Starts ship with initial velocity
-        GetComponent<Rigidbody2D>().velocity = transform.up * speed;
+        //GetComponent<Rigidbody2D>().velocity = transform.up * speed;
     }
 
     // Update is called once per frame

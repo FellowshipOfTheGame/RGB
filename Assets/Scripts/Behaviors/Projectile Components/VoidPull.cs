@@ -7,6 +7,7 @@ public class VoidPull : MonoBehaviour
     public float pullVelocity = 1;
     [Min(1.0f)]
     public float centerRadius = 4;
+    public float centerRadiusLimit = 1;
     private ProjectileBHV projectile;
 
     private void Awake()
@@ -32,7 +33,8 @@ public class VoidPull : MonoBehaviour
         if (projectile.TagsToHit.Contains (collision.tag))
         {
             Vector3 distance = (transform.position - collision.transform.position);
-            collision.transform.position += distance.normalized / (distance.magnitude * distance.magnitude + centerRadius) * pullVelocity;
+            float magnitude = Mathf.Max(distance.magnitude, centerRadiusLimit); //smoothes central point attraction
+            collision.transform.position += distance.normalized / ( magnitude * magnitude + centerRadius) * pullVelocity;
         }
     }
 }
