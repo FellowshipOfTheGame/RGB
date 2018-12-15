@@ -19419,7 +19419,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a4850a57196a2945b1f79785a3e5687, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 333
+  health: 2
   invincible: 0
 --- !u!114 &1651095598
 MonoBehaviour:
@@ -21021,7 +21021,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a4850a57196a2945b1f79785a3e5687, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 333
+  health: 2
   invincible: 0
 --- !u!114 &1811830206
 MonoBehaviour:
@@ -24102,7 +24102,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a4850a57196a2945b1f79785a3e5687, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 3e+9
+  health: 2
   invincible: 0
 --- !u!114 &2136772207
 MonoBehaviour:

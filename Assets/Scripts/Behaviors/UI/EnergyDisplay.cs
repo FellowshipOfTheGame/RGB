@@ -26,7 +26,7 @@ public class EnergyDisplay : MonoBehaviour
     {
         rectHeight = GetComponent<RectTransform>().rect.size.y;
         energySticks = (transform.GetComponentsInChildren<Image>()).ToList();
-        Invoke("SetupColors", Time.deltaTime);
+        Invoke("SetupColors", 2*Time.deltaTime);
     }
 
     void SetupColors()
