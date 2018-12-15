@@ -216,7 +216,7 @@ Transform:
   - {fileID: 1018913147}
   - {fileID: 1382066478}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &23845391
 GameObject:
@@ -2330,17 +2330,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f7f613819fbad947bc90132780756ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timeToStartShooting: 0
   reference: {x: -0, y: -1}
-  verticalTrajectory:
-    amplitude: 0
-    length: 0
-    curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    loop: 0
   horizontalTrajectory:
     amplitude: 0
     length: 0
@@ -2351,7 +2342,19 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
     loop: 0
+  verticalTrajectory:
+    amplitude: 0
+    length: 0
+    curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    loop: 0
   pace: 0.05
+  autoMaxPace: 1
+  maxPace: 0.05
   hFrame: 0
   vFrame: 0
   frame: 0
@@ -2548,17 +2551,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f7f613819fbad947bc90132780756ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timeToStartShooting: 0
   reference: {x: -0, y: -1}
-  verticalTrajectory:
-    amplitude: 0
-    length: 0
-    curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    loop: 0
   horizontalTrajectory:
     amplitude: 0
     length: 0
@@ -2569,7 +2563,19 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
     loop: 0
+  verticalTrajectory:
+    amplitude: 0
+    length: 0
+    curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    loop: 0
   pace: 0.05
+  autoMaxPace: 1
+  maxPace: 0.05
   hFrame: 0
   vFrame: 0
   frame: 0
@@ -3334,17 +3340,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f7f613819fbad947bc90132780756ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timeToStartShooting: 0
   reference: {x: -0, y: -1}
-  verticalTrajectory:
-    amplitude: 0
-    length: 0
-    curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    loop: 0
   horizontalTrajectory:
     amplitude: 0
     length: 0
@@ -3355,7 +3352,19 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
     loop: 0
+  verticalTrajectory:
+    amplitude: 0
+    length: 0
+    curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    loop: 0
   pace: 0.05
+  autoMaxPace: 1
+  maxPace: 0.05
   hFrame: 0
   vFrame: 0
   frame: 0
@@ -5513,17 +5522,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f7f613819fbad947bc90132780756ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timeToStartShooting: 0
   reference: {x: -0, y: -1}
-  verticalTrajectory:
-    amplitude: 0
-    length: 0
-    curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    loop: 0
   horizontalTrajectory:
     amplitude: 0
     length: 0
@@ -5534,7 +5534,19 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
     loop: 0
+  verticalTrajectory:
+    amplitude: 0
+    length: 0
+    curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    loop: 0
   pace: 0.05
+  autoMaxPace: 1
+  maxPace: 0.05
   hFrame: 0
   vFrame: 0
   frame: 0
@@ -6590,17 +6602,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f7f613819fbad947bc90132780756ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timeToStartShooting: 0
   reference: {x: -0, y: -1}
-  verticalTrajectory:
-    amplitude: 0
-    length: 0
-    curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    loop: 0
   horizontalTrajectory:
     amplitude: 0
     length: 0
@@ -6611,7 +6614,19 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
     loop: 0
+  verticalTrajectory:
+    amplitude: 0
+    length: 0
+    curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    loop: 0
   pace: 0.05
+  autoMaxPace: 1
+  maxPace: 0.05
   hFrame: 0
   vFrame: 0
   frame: 0
@@ -6809,17 +6824,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f7f613819fbad947bc90132780756ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timeToStartShooting: 0
   reference: {x: -0, y: -1}
-  verticalTrajectory:
-    amplitude: 0
-    length: 0
-    curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    loop: 0
   horizontalTrajectory:
     amplitude: 0
     length: 0
@@ -6830,7 +6836,19 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
     loop: 0
+  verticalTrajectory:
+    amplitude: 0
+    length: 0
+    curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    loop: 0
   pace: 0.05
+  autoMaxPace: 1
+  maxPace: 0.05
   hFrame: 0
   vFrame: 0
   frame: 0
@@ -7347,17 +7365,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f7f613819fbad947bc90132780756ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timeToStartShooting: 0
   reference: {x: -0, y: -1}
-  verticalTrajectory:
-    amplitude: 0
-    length: 0
-    curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    loop: 0
   horizontalTrajectory:
     amplitude: 0
     length: 0
@@ -7368,7 +7377,19 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
     loop: 0
+  verticalTrajectory:
+    amplitude: 0
+    length: 0
+    curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    loop: 0
   pace: 0.05
+  autoMaxPace: 1
+  maxPace: 0.05
   hFrame: 0
   vFrame: 0
   frame: 0
@@ -8211,7 +8232,7 @@ PrefabInstance:
     - target: {fileID: 2520617558045577867, guid: 6fd5ca573659c60468a6d75f4325d37a,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2520617558045577867, guid: 6fd5ca573659c60468a6d75f4325d37a,
         type: 3}
@@ -8236,7 +8257,24 @@ PrefabInstance:
     - target: {fileID: 8619719647090980886, guid: 6fd5ca573659c60468a6d75f4325d37a,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 179755567689067081, guid: 6fd5ca573659c60468a6d75f4325d37a,
+        type: 3}
+      propertyPath: enemiesPrefab.Array.data[1]
+      value: 
+      objectReference: {fileID: 9198899965536013235, guid: f5fe3823853121044b412176b46fbe57,
+        type: 3}
+    - target: {fileID: 179755567689067081, guid: 6fd5ca573659c60468a6d75f4325d37a,
+        type: 3}
+      propertyPath: enemiesPrefab.Array.data[2]
+      value: 
+      objectReference: {fileID: 6075102585174379321, guid: 720846c2661eff1469b49b3d015fee55,
+        type: 3}
+    - target: {fileID: 179755567689067081, guid: 6fd5ca573659c60468a6d75f4325d37a,
+        type: 3}
+      propertyPath: spawnTime
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6fd5ca573659c60468a6d75f4325d37a, type: 3}
@@ -8459,17 +8497,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f7f613819fbad947bc90132780756ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timeToStartShooting: 0
   reference: {x: -0, y: -1}
-  verticalTrajectory:
-    amplitude: 0
-    length: 0
-    curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    loop: 0
   horizontalTrajectory:
     amplitude: 0
     length: 0
@@ -8480,7 +8509,19 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
     loop: 0
+  verticalTrajectory:
+    amplitude: 0
+    length: 0
+    curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    loop: 0
   pace: 0.05
+  autoMaxPace: 1
+  maxPace: 0.05
   hFrame: 0
   vFrame: 0
   frame: 0
@@ -11181,17 +11222,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f7f613819fbad947bc90132780756ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timeToStartShooting: 0
   reference: {x: -0, y: -1}
-  verticalTrajectory:
-    amplitude: 0
-    length: 0
-    curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    loop: 0
   horizontalTrajectory:
     amplitude: 0
     length: 0
@@ -11202,7 +11234,19 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
     loop: 0
+  verticalTrajectory:
+    amplitude: 0
+    length: 0
+    curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    loop: 0
   pace: 0.05
+  autoMaxPace: 1
+  maxPace: 0.05
   hFrame: 0
   vFrame: 0
   frame: 0
@@ -11755,29 +11799,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1031085656}
   m_CullTransparentMesh: 0
---- !u!1 &1035567378 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9198899965536013235, guid: f5fe3823853121044b412176b46fbe57,
-    type: 3}
-  m_PrefabInstance: {fileID: 9198899964498436993}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1035567386
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1035567378}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7492ecf436072e442b10cce23e3ba19c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  duration: 0
-  imageDuration: 22
-  frequency: 4
-  initialAlpha: 0.39
-  zPositionOffset: 0
 --- !u!1 &1044790139
 GameObject:
   m_ObjectHideFlags: 0
@@ -12230,17 +12251,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f7f613819fbad947bc90132780756ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timeToStartShooting: 0
   reference: {x: -0, y: -1}
-  verticalTrajectory:
-    amplitude: 0
-    length: 0
-    curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    loop: 0
   horizontalTrajectory:
     amplitude: 0
     length: 0
@@ -12251,7 +12263,19 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
     loop: 0
+  verticalTrajectory:
+    amplitude: 0
+    length: 0
+    curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    loop: 0
   pace: 0.05
+  autoMaxPace: 1
+  maxPace: 0.05
   hFrame: 0
   vFrame: 0
   frame: 0
@@ -13320,17 +13344,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f7f613819fbad947bc90132780756ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timeToStartShooting: 0
   reference: {x: -0, y: -1}
-  verticalTrajectory:
-    amplitude: 0
-    length: 0
-    curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    loop: 0
   horizontalTrajectory:
     amplitude: 0
     length: 0
@@ -13341,7 +13356,19 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
     loop: 0
+  verticalTrajectory:
+    amplitude: 0
+    length: 0
+    curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    loop: 0
   pace: 0.05
+  autoMaxPace: 1
+  maxPace: 0.05
   hFrame: 0
   vFrame: 0
   frame: 0
@@ -13504,6 +13531,114 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!1001 &1196730296
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 179755567689067081, guid: 6fd5ca573659c60468a6d75f4325d37a,
+        type: 3}
+      propertyPath: enemiesPrefab.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2520617558045577867, guid: 6fd5ca573659c60468a6d75f4325d37a,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2520617558045577867, guid: 6fd5ca573659c60468a6d75f4325d37a,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 11.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 2520617558045577867, guid: 6fd5ca573659c60468a6d75f4325d37a,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2520617558045577867, guid: 6fd5ca573659c60468a6d75f4325d37a,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2520617558045577867, guid: 6fd5ca573659c60468a6d75f4325d37a,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2520617558045577867, guid: 6fd5ca573659c60468a6d75f4325d37a,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2520617558045577867, guid: 6fd5ca573659c60468a6d75f4325d37a,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2520617558045577867, guid: 6fd5ca573659c60468a6d75f4325d37a,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 2520617558045577867, guid: 6fd5ca573659c60468a6d75f4325d37a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2520617558045577867, guid: 6fd5ca573659c60468a6d75f4325d37a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2520617558045577867, guid: 6fd5ca573659c60468a6d75f4325d37a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 8619719647090980886, guid: 6fd5ca573659c60468a6d75f4325d37a,
+        type: 3}
+      propertyPath: m_Name
+      value: Spawner (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8619719647090980886, guid: 6fd5ca573659c60468a6d75f4325d37a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 179755567689067081, guid: 6fd5ca573659c60468a6d75f4325d37a,
+        type: 3}
+      propertyPath: enemiesPrefab.Array.data[1]
+      value: 
+      objectReference: {fileID: 9198899965536013235, guid: f5fe3823853121044b412176b46fbe57,
+        type: 3}
+    - target: {fileID: 179755567689067081, guid: 6fd5ca573659c60468a6d75f4325d37a,
+        type: 3}
+      propertyPath: enemiesPrefab.Array.data[2]
+      value: 
+      objectReference: {fileID: 6075102585174379321, guid: 720846c2661eff1469b49b3d015fee55,
+        type: 3}
+    - target: {fileID: 179755567689067081, guid: 6fd5ca573659c60468a6d75f4325d37a,
+        type: 3}
+      propertyPath: spawnTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 179755567689067081, guid: 6fd5ca573659c60468a6d75f4325d37a,
+        type: 3}
+      propertyPath: enemiesPrefab.Array.data[3]
+      value: 
+      objectReference: {fileID: 9198899965536013235, guid: f5fe3823853121044b412176b46fbe57,
+        type: 3}
+    - target: {fileID: 179755567689067081, guid: 6fd5ca573659c60468a6d75f4325d37a,
+        type: 3}
+      propertyPath: enemiesPrefab.Array.data[4]
+      value: 
+      objectReference: {fileID: 9198899965536013235, guid: 9890e1ecbbcb7cd4a850cbb07d7b2040,
+        type: 3}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6fd5ca573659c60468a6d75f4325d37a, type: 3}
 --- !u!1 &1200867819
 GameObject:
   m_ObjectHideFlags: 0
@@ -14244,17 +14379,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f7f613819fbad947bc90132780756ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timeToStartShooting: 0
   reference: {x: -0, y: -1}
-  verticalTrajectory:
-    amplitude: 0
-    length: 0
-    curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    loop: 0
   horizontalTrajectory:
     amplitude: 0
     length: 0
@@ -14265,7 +14391,19 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
     loop: 0
+  verticalTrajectory:
+    amplitude: 0
+    length: 0
+    curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    loop: 0
   pace: 0.05
+  autoMaxPace: 1
+  maxPace: 0.05
   hFrame: 0
   vFrame: 0
   frame: 0
@@ -16057,17 +16195,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f7f613819fbad947bc90132780756ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timeToStartShooting: 0
   reference: {x: -0, y: -1}
-  verticalTrajectory:
-    amplitude: 0
-    length: 0
-    curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    loop: 0
   horizontalTrajectory:
     amplitude: 0
     length: 0
@@ -16078,7 +16207,19 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
     loop: 0
+  verticalTrajectory:
+    amplitude: 0
+    length: 0
+    curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    loop: 0
   pace: 0.05
+  autoMaxPace: 1
+  maxPace: 0.05
   hFrame: 0
   vFrame: 0
   frame: 0
@@ -17539,17 +17680,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f7f613819fbad947bc90132780756ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timeToStartShooting: 0
   reference: {x: -0, y: -1}
-  verticalTrajectory:
-    amplitude: 0
-    length: 0
-    curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    loop: 0
   horizontalTrajectory:
     amplitude: 0
     length: 0
@@ -17560,7 +17692,19 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
     loop: 0
+  verticalTrajectory:
+    amplitude: 0
+    length: 0
+    curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    loop: 0
   pace: 0.05
+  autoMaxPace: 1
+  maxPace: 0.05
   hFrame: 0
   vFrame: 0
   frame: 0
@@ -20642,17 +20786,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f7f613819fbad947bc90132780756ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timeToStartShooting: 0
   reference: {x: -0, y: -1}
-  verticalTrajectory:
-    amplitude: 0
-    length: 0
-    curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    loop: 0
   horizontalTrajectory:
     amplitude: 0
     length: 0
@@ -20663,7 +20798,19 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
     loop: 0
+  verticalTrajectory:
+    amplitude: 0
+    length: 0
+    curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    loop: 0
   pace: 0.05
+  autoMaxPace: 1
+  maxPace: 0.05
   hFrame: 0
   vFrame: 0
   frame: 0
@@ -21245,17 +21392,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f7f613819fbad947bc90132780756ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timeToStartShooting: 0
   reference: {x: -0, y: -1}
-  verticalTrajectory:
-    amplitude: 0
-    length: 0
-    curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    loop: 0
   horizontalTrajectory:
     amplitude: 0
     length: 0
@@ -21266,7 +21404,19 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
     loop: 0
+  verticalTrajectory:
+    amplitude: 0
+    length: 0
+    curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    loop: 0
   pace: 0.05
+  autoMaxPace: 1
+  maxPace: 0.05
   hFrame: 0
   vFrame: 0
   frame: 0
@@ -23374,16 +23524,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 966969110}
     m_Modifications:
-    - target: {fileID: 9198899965536013237, guid: f5fe3823853121044b412176b46fbe57,
-        type: 3}
-      propertyPath: verticalTrajectory.curve.m_Curve.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 9198899965536013237, guid: f5fe3823853121044b412176b46fbe57,
-        type: 3}
-      propertyPath: horizontalTrajectory.curve.m_Curve.Array.size
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: 9198899965536013238, guid: f5fe3823853121044b412176b46fbe57,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -23392,7 +23532,7 @@ PrefabInstance:
     - target: {fileID: 9198899965536013238, guid: f5fe3823853121044b412176b46fbe57,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 10.83
+      value: 11.18
       objectReference: {fileID: 0}
     - target: {fileID: 9198899965536013238, guid: f5fe3823853121044b412176b46fbe57,
         type: 3}
@@ -23444,270 +23584,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ship Enemy
       objectReference: {fileID: 0}
-    - target: {fileID: 7116223725130973552, guid: f5fe3823853121044b412176b46fbe57,
+    - target: {fileID: 9198899965536013235, guid: f5fe3823853121044b412176b46fbe57,
         type: 3}
-      propertyPath: m_LocalPosition.x
+      propertyPath: m_IsActive
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9198899965536013237, guid: f5fe3823853121044b412176b46fbe57,
-        type: 3}
-      propertyPath: verticalTrajectory.amplitude
-      value: -2000
-      objectReference: {fileID: 0}
-    - target: {fileID: 9198899965536013237, guid: f5fe3823853121044b412176b46fbe57,
-        type: 3}
-      propertyPath: verticalTrajectory.length
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 9198899965536013237, guid: f5fe3823853121044b412176b46fbe57,
-        type: 3}
-      propertyPath: horizontalTrajectory.amplitude
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 9198899965536013237, guid: f5fe3823853121044b412176b46fbe57,
-        type: 3}
-      propertyPath: horizontalTrajectory.length
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 9198899965536013237, guid: f5fe3823853121044b412176b46fbe57,
-        type: 3}
-      propertyPath: verticalTrajectory.curve.m_Curve.Array.data[1].time
-      value: 0.01
-      objectReference: {fileID: 0}
-    - target: {fileID: 9198899965536013237, guid: f5fe3823853121044b412176b46fbe57,
-        type: 3}
-      propertyPath: verticalTrajectory.curve.m_Curve.Array.data[1].value
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9198899965536013237, guid: f5fe3823853121044b412176b46fbe57,
-        type: 3}
-      propertyPath: verticalTrajectory.curve.m_Curve.Array.data[0].value
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9198899965536013237, guid: f5fe3823853121044b412176b46fbe57,
-        type: 3}
-      propertyPath: verticalTrajectory.curve.m_Curve.Array.data[0].time
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9198899965536013237, guid: f5fe3823853121044b412176b46fbe57,
-        type: 3}
-      propertyPath: verticalTrajectory.curve.m_Curve.Array.data[1].inWeight
-      value: 0.33333334
-      objectReference: {fileID: 0}
-    - target: {fileID: 9198899965536013237, guid: f5fe3823853121044b412176b46fbe57,
-        type: 3}
-      propertyPath: verticalTrajectory.curve.m_Curve.Array.data[1].outWeight
-      value: 0.33333334
-      objectReference: {fileID: 0}
-    - target: {fileID: 9198899965536013237, guid: f5fe3823853121044b412176b46fbe57,
-        type: 3}
-      propertyPath: verticalTrajectory.curve.m_Curve.Array.data[2].time
-      value: 0.985
-      objectReference: {fileID: 0}
-    - target: {fileID: 9198899965536013237, guid: f5fe3823853121044b412176b46fbe57,
-        type: 3}
-      propertyPath: verticalTrajectory.curve.m_Curve.Array.data[2].value
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9198899965536013237, guid: f5fe3823853121044b412176b46fbe57,
-        type: 3}
-      propertyPath: verticalTrajectory.curve.m_Curve.Array.data[2].inSlope
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9198899965536013237, guid: f5fe3823853121044b412176b46fbe57,
-        type: 3}
-      propertyPath: verticalTrajectory.curve.m_Curve.Array.data[2].outSlope
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9198899965536013237, guid: f5fe3823853121044b412176b46fbe57,
-        type: 3}
-      propertyPath: verticalTrajectory.curve.m_Curve.Array.data[2].inWeight
-      value: 0.33333334
-      objectReference: {fileID: 0}
-    - target: {fileID: 9198899965536013237, guid: f5fe3823853121044b412176b46fbe57,
-        type: 3}
-      propertyPath: verticalTrajectory.curve.m_Curve.Array.data[2].outWeight
-      value: 0.33333334
-      objectReference: {fileID: 0}
-    - target: {fileID: 9198899965536013237, guid: f5fe3823853121044b412176b46fbe57,
-        type: 3}
-      propertyPath: verticalTrajectory.curve.m_Curve.Array.data[3].time
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9198899965536013237, guid: f5fe3823853121044b412176b46fbe57,
-        type: 3}
-      propertyPath: verticalTrajectory.curve.m_Curve.Array.data[3].tangentMode
-      value: 34
-      objectReference: {fileID: 0}
-    - target: {fileID: 9198899965536013237, guid: f5fe3823853121044b412176b46fbe57,
-        type: 3}
-      propertyPath: verticalTrajectory.curve.m_Curve.Array.data[3].inSlope
-      value: -66.66673
-      objectReference: {fileID: 0}
-    - target: {fileID: 9198899965536013237, guid: f5fe3823853121044b412176b46fbe57,
-        type: 3}
-      propertyPath: verticalTrajectory.curve.m_Curve.Array.data[3].inWeight
-      value: 0.33333334
-      objectReference: {fileID: 0}
-    - target: {fileID: 9198899965536013237, guid: f5fe3823853121044b412176b46fbe57,
-        type: 3}
-      propertyPath: verticalTrajectory.curve.m_Curve.Array.data[0].inSlope
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 9198899965536013237, guid: f5fe3823853121044b412176b46fbe57,
-        type: 3}
-      propertyPath: verticalTrajectory.curve.m_Curve.Array.data[0].outSlope
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 9198899965536013237, guid: f5fe3823853121044b412176b46fbe57,
-        type: 3}
-      propertyPath: verticalTrajectory.curve.m_Curve.Array.data[0].outWeight
-      value: 0.33333334
-      objectReference: {fileID: 0}
-    - target: {fileID: 9198899965536013237, guid: f5fe3823853121044b412176b46fbe57,
-        type: 3}
-      propertyPath: horizontalTrajectory.curve.m_Curve.Array.data[0].inSlope
-      value: 5.8791995
-      objectReference: {fileID: 0}
-    - target: {fileID: 9198899965536013237, guid: f5fe3823853121044b412176b46fbe57,
-        type: 3}
-      propertyPath: horizontalTrajectory.curve.m_Curve.Array.data[0].outSlope
-      value: 5.8791995
-      objectReference: {fileID: 0}
-    - target: {fileID: 9198899965536013237, guid: f5fe3823853121044b412176b46fbe57,
-        type: 3}
-      propertyPath: horizontalTrajectory.curve.m_Curve.Array.data[0].outWeight
-      value: 0.48699385
-      objectReference: {fileID: 0}
-    - target: {fileID: 9198899965536013237, guid: f5fe3823853121044b412176b46fbe57,
-        type: 3}
-      propertyPath: horizontalTrajectory.curve.m_Curve.Array.data[1].time
-      value: 0.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 9198899965536013237, guid: f5fe3823853121044b412176b46fbe57,
-        type: 3}
-      propertyPath: horizontalTrajectory.curve.m_Curve.Array.data[1].value
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9198899965536013237, guid: f5fe3823853121044b412176b46fbe57,
-        type: 3}
-      propertyPath: horizontalTrajectory.curve.m_Curve.Array.data[1].inWeight
-      value: 0.33333334
-      objectReference: {fileID: 0}
-    - target: {fileID: 9198899965536013237, guid: f5fe3823853121044b412176b46fbe57,
-        type: 3}
-      propertyPath: horizontalTrajectory.curve.m_Curve.Array.data[1].outWeight
-      value: 0.33333334
-      objectReference: {fileID: 0}
-    - target: {fileID: 9198899965536013237, guid: f5fe3823853121044b412176b46fbe57,
-        type: 3}
-      propertyPath: horizontalTrajectory.curve.m_Curve.Array.data[2].time
-      value: 0.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 9198899965536013237, guid: f5fe3823853121044b412176b46fbe57,
-        type: 3}
-      propertyPath: horizontalTrajectory.curve.m_Curve.Array.data[2].value
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9198899965536013237, guid: f5fe3823853121044b412176b46fbe57,
-        type: 3}
-      propertyPath: horizontalTrajectory.curve.m_Curve.Array.data[2].inWeight
-      value: 0.33333334
-      objectReference: {fileID: 0}
-    - target: {fileID: 9198899965536013237, guid: f5fe3823853121044b412176b46fbe57,
-        type: 3}
-      propertyPath: horizontalTrajectory.curve.m_Curve.Array.data[2].outWeight
-      value: 0.33333334
-      objectReference: {fileID: 0}
-    - target: {fileID: 9198899965536013237, guid: f5fe3823853121044b412176b46fbe57,
-        type: 3}
-      propertyPath: horizontalTrajectory.curve.m_Curve.Array.data[3].time
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9198899965536013237, guid: f5fe3823853121044b412176b46fbe57,
-        type: 3}
-      propertyPath: horizontalTrajectory.curve.m_Curve.Array.data[3].inSlope
-      value: 5.9062943
-      objectReference: {fileID: 0}
-    - target: {fileID: 9198899965536013237, guid: f5fe3823853121044b412176b46fbe57,
-        type: 3}
-      propertyPath: horizontalTrajectory.curve.m_Curve.Array.data[3].tangentMode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9198899965536013237, guid: f5fe3823853121044b412176b46fbe57,
-        type: 3}
-      propertyPath: horizontalTrajectory.curve.m_Curve.Array.data[3].inWeight
-      value: 0.5631757
-      objectReference: {fileID: 0}
-    - target: {fileID: 9198899965536013237, guid: f5fe3823853121044b412176b46fbe57,
-        type: 3}
-      propertyPath: pace
-      value: 0.001
-      objectReference: {fileID: 0}
-    - target: {fileID: 9198899965536013236, guid: f5fe3823853121044b412176b46fbe57,
-        type: 3}
-      propertyPath: speed
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9198899965536013237, guid: f5fe3823853121044b412176b46fbe57,
-        type: 3}
-      propertyPath: loop
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9198899965536013237, guid: f5fe3823853121044b412176b46fbe57,
-        type: 3}
-      propertyPath: verticalTrajectory.curve.m_Curve.Array.data[0].tangentMode
-      value: 34
-      objectReference: {fileID: 0}
-    - target: {fileID: 9198899965536013237, guid: f5fe3823853121044b412176b46fbe57,
-        type: 3}
-      propertyPath: verticalTrajectory.curve.m_Curve.Array.data[1].inSlope
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9198899965536013237, guid: f5fe3823853121044b412176b46fbe57,
-        type: 3}
-      propertyPath: verticalTrajectory.curve.m_Curve.Array.data[1].outSlope
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9198899965536013237, guid: f5fe3823853121044b412176b46fbe57,
-        type: 3}
-      propertyPath: verticalTrajectory.curve.m_Curve.Array.data[1].tangentMode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9198899965536013237, guid: f5fe3823853121044b412176b46fbe57,
-        type: 3}
-      propertyPath: verticalTrajectory.curve.m_Curve.Array.data[0].inWeight
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9198899965536013237, guid: f5fe3823853121044b412176b46fbe57,
-        type: 3}
-      propertyPath: verticalTrajectory.curve.m_Curve.Array.data[2].tangentMode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9198899965536013237, guid: f5fe3823853121044b412176b46fbe57,
-        type: 3}
-      propertyPath: verticalTrajectory.loop
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9198899965536013237, guid: f5fe3823853121044b412176b46fbe57,
-        type: 3}
-      propertyPath: horizontalTrajectory.loop
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9198899965536013237, guid: f5fe3823853121044b412176b46fbe57,
-        type: 3}
-      propertyPath: hFrame
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 9198899965536013237, guid: f5fe3823853121044b412176b46fbe57,
-        type: 3}
-      propertyPath: verticalTrajectory.curve.m_Curve.Array.data[3].value
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9198899965536013237, guid: f5fe3823853121044b412176b46fbe57,
-        type: 3}
-      propertyPath: verticalTrajectory.curve.m_Curve.Array.data[3].outSlope
-      value: -66.66673
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5fe3823853121044b412176b46fbe57, type: 3}
