@@ -41,10 +41,10 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: Background
+  - name: CloudBG
     uniqueID: 2458015953
     locked: 0
-  - name: Masks
+  - name: CityBG
     uniqueID: 1870712625
     locked: 0
   - name: Objects
