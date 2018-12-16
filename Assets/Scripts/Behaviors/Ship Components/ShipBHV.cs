@@ -22,6 +22,7 @@ public class ShipBHV : MonoBehaviour
 
     [Header("Weapons")]
     public List<WeaponBHV> weapon1 = new List<WeaponBHV>();
+    public List<WeaponBHV> weapon2 = new List<WeaponBHV>();
 
     private EnergyGeneratorBHV generator;
 
@@ -34,7 +35,7 @@ public class ShipBHV : MonoBehaviour
     void Start()
     {
         // Starts ship with initial velocity
-        GetComponent<Rigidbody2D>().velocity = transform.up * speed;
+        //GetComponent<Rigidbody2D>().velocity = transform.up * speed;
     }
 
     // Update is called once per frame
@@ -53,6 +54,18 @@ public class ShipBHV : MonoBehaviour
             w.Fire();
         }
     }
+
+    /// <summary>
+    /// Tries to fire with secondary/special weapon or set of weapons.
+    /// </summary>
+    public void Fire2() // Fires with secondary/special weapon
+    {
+        foreach (WeaponBHV w in weapon2)
+        {
+            w.Fire();
+        }
+    }
+
     /// <summary>
     /// Have a Status Effect added to the ship.
     /// </summary>

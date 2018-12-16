@@ -213,7 +213,7 @@ public class InputMgr : MonoBehaviour
             case eButton.ATTACK:
                 return Input.GetKey(KeyCode.Space);
             case eButton.SPECIAL:
-                return Input.GetKey(KeyCode.F);
+                return Input.GetKey(KeyCode.F) || Input.GetKey(KeyCode.LeftShift);
             case eButton.CHANGEB:
                 return Input.GetKey(KeyCode.Q);
             case eButton.CHANGEF:

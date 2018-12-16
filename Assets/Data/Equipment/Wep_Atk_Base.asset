@@ -10,12 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6d7e402b8647c92408e0b9056ea99b7a, type: 3}
-  m_Name: Wep_Atk_Base1
+  m_Name: Wep_Atk_Base
   m_EditorClassIdentifier: 
   equipmentName: Weapon
   sprite: {fileID: 21300000, guid: 0fe7634257e6ede40b09beacfa12bdb6, type: 3}
-  childrenEquipments:
-  - {fileID: 11400000, guid: 66812f449a3573d4e80095da298e1f63, type: 2}
+  childrenEquipments: []
   level: 2
   maxLevel: 10
   upgradeCost:

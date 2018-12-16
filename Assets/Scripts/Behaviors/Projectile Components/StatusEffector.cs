@@ -32,6 +32,10 @@ public class StatusEffector : MonoBehaviour
     /// </summary>
     /// <param name="other">Target game object.</param>
     public void Effect(GameObject other) {
+        if (enabled == false)
+        {
+            return;
+        }
         ShipBHV ship = other.GetComponent<ShipBHV>();
         if (ship != null)
         {

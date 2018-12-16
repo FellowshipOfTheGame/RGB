@@ -66,12 +66,12 @@ GameObject:
   - component: {fileID: 9198899965536013236}
   - component: {fileID: 9198899965536013241}
   - component: {fileID: 9198899965536013240}
+  - component: {fileID: 9198899965536013237}
   - component: {fileID: 9198899965536013234}
   - component: {fileID: 7904413020569701810}
-  - component: {fileID: 9198899965536013237}
   - component: {fileID: 5709695409493285060}
   m_Layer: 0
-  m_Name: Ship Enemy 1
+  m_Name: Ship Enemy Straight
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -152,13 +152,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b5aa9c885dea68448f1511d64b270d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 12
+  speed: 0.5
   impactDamage: 500
   tagsToImpact:
   - Player
   - PlayerProjectile
   weapon1:
   - {fileID: 9198899965280645548}
+  weapon2: []
 --- !u!114 &9198899965536013241
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -189,6 +190,82 @@ MonoBehaviour:
   maxCapacity: 200
   energy: 200
   power: 10
+--- !u!114 &9198899965536013237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9198899965536013235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f7f613819fbad947bc90132780756ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeToStartShooting: 0
+  reference: {x: -0, y: -1}
+  horizontalTrajectory:
+    amplitude: 1
+    length: 1
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    loop: 0
+  verticalTrajectory:
+    amplitude: 20
+    length: 100
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: -2
+        outSlope: -2
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: -1
+        inSlope: -2
+        outSlope: 3.999999
+        tangentMode: 69
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    loop: 1
+  pace: 0.05
+  autoMaxPace: 1
+  maxPace: 0.05
+  hFrame: 0
+  vFrame: 0
+  frame: 0
 --- !u!61 &9198899965536013234
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -236,18 +313,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &9198899965536013237
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9198899965536013235}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f7f613819fbad947bc90132780756ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &5709695409493285060
 MonoBehaviour:
   m_ObjectHideFlags: 0

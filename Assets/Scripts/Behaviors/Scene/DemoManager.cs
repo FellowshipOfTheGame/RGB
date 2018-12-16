@@ -27,7 +27,7 @@ public class DemoManager : MonoBehaviour
         {
             for (int i = 0; i < 3; i++)
             {
-                for (int j = 0; j < 2; j++)
+                for (int j = 0; j < Player.Instance.inventories[i].equipments.Length; j++)
                 {
                     Player.Instance.inventories[i].equipments[j].SetLevel(startLevels);
                 }

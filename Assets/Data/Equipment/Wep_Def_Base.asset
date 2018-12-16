@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   equipmentName: Weapon
   sprite: {fileID: 21300000, guid: 0fe7634257e6ede40b09beacfa12bdb6, type: 3}
-  level: 10
+  childrenEquipments: []
+  level: 2
   maxLevel: 10
   upgradeCost:
     baseValue: 100
@@ -190,4 +191,3 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-  childWeapon: {fileID: 0}

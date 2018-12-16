@@ -12,13 +12,13 @@ public class WeaponAimPlayerBHV : MonoBehaviour
 
     private void Awake()
     {
-        player = Player.Instance.gameObject;
-        weapons = transform.GetChild(0).gameObject;
+        
     }
     // Start is called before the first frame update
     void Start()
     {
-        
+        player = Player.Instance.gameObject;
+        weapons = transform.GetChild(0).gameObject;
     }
 
     // Update is called once per frame
