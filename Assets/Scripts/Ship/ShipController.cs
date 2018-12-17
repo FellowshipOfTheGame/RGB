@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ShipController : MonoBehaviour
 {
@@ -54,6 +55,7 @@ public class ShipController : MonoBehaviour
     private List<ShipBHV> m_ships = new List<ShipBHV>();
     private int m_shipIndex = 0;
     private Vector2 centralPosition = Vector2.zero;
+    private int m_livingShips = 3;
 
     // LOCOMOTION: WALK
     private Vector2 m_flySpeed = new Vector2(0, 0);
@@ -346,7 +348,12 @@ public class ShipController : MonoBehaviour
     // ======================================================================================
     private void OnShipKilled(HealthBHV healthBHV)
     {
-        
+        m_livingShips--;
+        if (m_livingShips == 0)
+        {
+            //FIXME: move to a more adequate place
+            SceneManager.LoadScene("Combat");
+        }
         Debug.Log("Ship killed.");
         //m_ships.Remove(healthBHV.GetComponent<ShipBHV>());
         for (int i = 0; i < m_ships.Count; i++)

@@ -36,10 +36,10 @@ public class StatusEffector : MonoBehaviour
         {
             return;
         }
-        ShipBHV ship = other.GetComponent<ShipBHV>();
-        if (ship != null)
+        SpaceObjBHV spaceObj = other.GetComponent<SpaceObjBHV>();
+        if (spaceObj != null)
         {
-            ship.AddEffect(statusEffect, duration, intensity);
+            spaceObj.AddEffect(statusEffect, duration, intensity);
         }
     }
 
