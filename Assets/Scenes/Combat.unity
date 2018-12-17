@@ -384,15 +384,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   equipmentData: {fileID: 0}
+  projectilePrefab: {fileID: 6658535161591884227, guid: 244fea80c3d2bde4f98f53a3db260e69,
+    type: 3}
+  tagsToHit:
+  - Player
   fireRate: 3
   intensityMult: 1
   drainedPower: 1
   projectileSpeed: 7
   projectileAcceleration: 0
-  projectilePrefab: {fileID: 6658535161591884227, guid: 244fea80c3d2bde4f98f53a3db260e69,
-    type: 3}
-  tagsToHit:
-  - Player
 --- !u!4 &38365798
 Transform:
   m_ObjectHideFlags: 0
@@ -890,15 +890,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   equipmentData: {fileID: 0}
+  projectilePrefab: {fileID: 6658535161591884227, guid: 244fea80c3d2bde4f98f53a3db260e69,
+    type: 3}
+  tagsToHit:
+  - Player
   fireRate: 3
   intensityMult: 1
   drainedPower: 1
   projectileSpeed: 7
   projectileAcceleration: 0
-  projectilePrefab: {fileID: 6658535161591884227, guid: 244fea80c3d2bde4f98f53a3db260e69,
-    type: 3}
-  tagsToHit:
-  - Player
 --- !u!4 &141558308
 Transform:
   m_ObjectHideFlags: 0
@@ -1392,15 +1392,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   equipmentData: {fileID: 0}
+  projectilePrefab: {fileID: 6658535161591884227, guid: 244fea80c3d2bde4f98f53a3db260e69,
+    type: 3}
+  tagsToHit:
+  - Player
   fireRate: 3
   intensityMult: 0
   drainedPower: 0
   projectileSpeed: 7
   projectileAcceleration: 0
-  projectilePrefab: {fileID: 6658535161591884227, guid: 244fea80c3d2bde4f98f53a3db260e69,
-    type: 3}
-  tagsToHit:
-  - Player
 --- !u!4 &262470854
 Transform:
   m_ObjectHideFlags: 0
@@ -1445,15 +1445,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   equipmentData: {fileID: 0}
+  projectilePrefab: {fileID: 6658535161591884227, guid: 244fea80c3d2bde4f98f53a3db260e69,
+    type: 3}
+  tagsToHit:
+  - Player
   fireRate: 3
   intensityMult: 1
   drainedPower: 1
   projectileSpeed: 7
   projectileAcceleration: 0
-  projectilePrefab: {fileID: 6658535161591884227, guid: 244fea80c3d2bde4f98f53a3db260e69,
-    type: 3}
-  tagsToHit:
-  - Player
 --- !u!4 &264540310
 Transform:
   m_ObjectHideFlags: 0
@@ -2530,15 +2530,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   equipmentData: {fileID: 0}
+  projectilePrefab: {fileID: 6658535161591884227, guid: 244fea80c3d2bde4f98f53a3db260e69,
+    type: 3}
+  tagsToHit:
+  - Player
   fireRate: 3
   intensityMult: 1
   drainedPower: 1
   projectileSpeed: 7
   projectileAcceleration: 0
-  projectilePrefab: {fileID: 6658535161591884227, guid: 244fea80c3d2bde4f98f53a3db260e69,
-    type: 3}
-  tagsToHit:
-  - Player
 --- !u!4 &427788014
 Transform:
   m_ObjectHideFlags: 0
@@ -4233,6 +4233,24 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spawner
       objectReference: {fileID: 0}
+    - target: {fileID: 179755567689067081, guid: 6fd5ca573659c60468a6d75f4325d37a,
+        type: 3}
+      propertyPath: enemiesPrefab.Array.data[0]
+      value: 
+      objectReference: {fileID: 9198899965536013235, guid: 9890e1ecbbcb7cd4a850cbb07d7b2040,
+        type: 3}
+    - target: {fileID: 179755567689067081, guid: 6fd5ca573659c60468a6d75f4325d37a,
+        type: 3}
+      propertyPath: enemiesPrefab.Array.data[1]
+      value: 
+      objectReference: {fileID: 9198899965536013235, guid: 9890e1ecbbcb7cd4a850cbb07d7b2040,
+        type: 3}
+    - target: {fileID: 179755567689067081, guid: 6fd5ca573659c60468a6d75f4325d37a,
+        type: 3}
+      propertyPath: enemiesPrefab.Array.data[2]
+      value: 
+      objectReference: {fileID: 9198899965536013235, guid: 9890e1ecbbcb7cd4a850cbb07d7b2040,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6fd5ca573659c60468a6d75f4325d37a, type: 3}
 --- !u!1 &724362692
@@ -4296,15 +4314,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   equipmentData: {fileID: 0}
+  projectilePrefab: {fileID: 6658535161591884227, guid: 244fea80c3d2bde4f98f53a3db260e69,
+    type: 3}
+  tagsToHit:
+  - Player
   fireRate: 3
   intensityMult: 1
   drainedPower: 1
   projectileSpeed: 7
   projectileAcceleration: 0
-  projectilePrefab: {fileID: 6658535161591884227, guid: 244fea80c3d2bde4f98f53a3db260e69,
-    type: 3}
-  tagsToHit:
-  - Player
 --- !u!4 &728830053
 Transform:
   m_ObjectHideFlags: 0
@@ -4700,15 +4718,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   equipmentData: {fileID: 0}
+  projectilePrefab: {fileID: 6658535161591884227, guid: 244fea80c3d2bde4f98f53a3db260e69,
+    type: 3}
+  tagsToHit:
+  - Player
   fireRate: 3
   intensityMult: 1
   drainedPower: 1
   projectileSpeed: 7
   projectileAcceleration: 0
-  projectilePrefab: {fileID: 6658535161591884227, guid: 244fea80c3d2bde4f98f53a3db260e69,
-    type: 3}
-  tagsToHit:
-  - Player
 --- !u!4 &831038927
 Transform:
   m_ObjectHideFlags: 0
@@ -4940,15 +4958,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   equipmentData: {fileID: 0}
+  projectilePrefab: {fileID: 6658535161591884227, guid: 244fea80c3d2bde4f98f53a3db260e69,
+    type: 3}
+  tagsToHit:
+  - Player
   fireRate: 3
   intensityMult: 0
   drainedPower: 0
   projectileSpeed: 7
   projectileAcceleration: 0
-  projectilePrefab: {fileID: 6658535161591884227, guid: 244fea80c3d2bde4f98f53a3db260e69,
-    type: 3}
-  tagsToHit:
-  - Player
 --- !u!4 &862512889
 Transform:
   m_ObjectHideFlags: 0
@@ -5044,15 +5062,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   equipmentData: {fileID: 11400000, guid: c3bd89b373c80354784f8908f0d9ece8, type: 2}
+  projectilePrefab: {fileID: 6658535161591884227, guid: 7548e264acf752946b06259e0e0e2b61,
+    type: 3}
+  tagsToHit:
+  - Enemy
   fireRate: 5
   intensityMult: 1
   drainedPower: 1
   projectileSpeed: 25
   projectileAcceleration: 0
-  projectilePrefab: {fileID: 6658535161591884227, guid: 7548e264acf752946b06259e0e0e2b61,
-    type: 3}
-  tagsToHit:
-  - Enemy
 --- !u!1 &916197756
 GameObject:
   m_ObjectHideFlags: 0
@@ -5083,15 +5101,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   equipmentData: {fileID: 0}
+  projectilePrefab: {fileID: 6658535161591884227, guid: 244fea80c3d2bde4f98f53a3db260e69,
+    type: 3}
+  tagsToHit:
+  - Player
   fireRate: 3
   intensityMult: 1
   drainedPower: 1
   projectileSpeed: 7
   projectileAcceleration: 0
-  projectilePrefab: {fileID: 6658535161591884227, guid: 244fea80c3d2bde4f98f53a3db260e69,
-    type: 3}
-  tagsToHit:
-  - Player
 --- !u!4 &916197758
 Transform:
   m_ObjectHideFlags: 0
@@ -5824,15 +5842,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   equipmentData: {fileID: 11400000, guid: b4bf8f41cb3a0104a90363c02f1c776f, type: 2}
+  projectilePrefab: {fileID: 7578785111674155956, guid: f85e2a9bea92cba41826fca3ebb93a87,
+    type: 3}
+  tagsToHit:
+  - Enemy
   fireRate: 2
   intensityMult: 1
   drainedPower: 1
   projectileSpeed: 20
   projectileAcceleration: -0.4
-  projectilePrefab: {fileID: 7578785111674155956, guid: f85e2a9bea92cba41826fca3ebb93a87,
-    type: 3}
-  tagsToHit:
-  - Enemy
 --- !u!4 &1013610556
 Transform:
   m_ObjectHideFlags: 0
@@ -6348,15 +6366,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   equipmentData: {fileID: 11400000, guid: c3bd89b373c80354784f8908f0d9ece8, type: 2}
+  projectilePrefab: {fileID: 6658535161591884227, guid: 7548e264acf752946b06259e0e0e2b61,
+    type: 3}
+  tagsToHit:
+  - Enemy
   fireRate: 5
   intensityMult: 1
   drainedPower: 1
   projectileSpeed: 25
   projectileAcceleration: 0
-  projectilePrefab: {fileID: 6658535161591884227, guid: 7548e264acf752946b06259e0e0e2b61,
-    type: 3}
-  tagsToHit:
-  - Enemy
 --- !u!1 &1124294777
 GameObject:
   m_ObjectHideFlags: 0
@@ -6506,15 +6524,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   equipmentData: {fileID: 11400000, guid: c3bd89b373c80354784f8908f0d9ece8, type: 2}
+  projectilePrefab: {fileID: 6658535161591884227, guid: 7548e264acf752946b06259e0e0e2b61,
+    type: 3}
+  tagsToHit:
+  - Enemy
   fireRate: 5
   intensityMult: 1
   drainedPower: 1
   projectileSpeed: 25
   projectileAcceleration: 0
-  projectilePrefab: {fileID: 6658535161591884227, guid: 7548e264acf752946b06259e0e0e2b61,
-    type: 3}
-  tagsToHit:
-  - Enemy
 --- !u!1 &1166757577
 GameObject:
   m_ObjectHideFlags: 0
@@ -7413,7 +7431,6 @@ MonoBehaviour:
   - {fileID: 1797315366}
   - {fileID: 279812717}
   - {fileID: 2027285909}
-  shipController: {fileID: 92351242}
 --- !u!1 &1319285670
 GameObject:
   m_ObjectHideFlags: 0
@@ -7444,15 +7461,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   equipmentData: {fileID: 0}
+  projectilePrefab: {fileID: 6658535161591884227, guid: 244fea80c3d2bde4f98f53a3db260e69,
+    type: 3}
+  tagsToHit:
+  - Player
   fireRate: 3
   intensityMult: 1
   drainedPower: 1
   projectileSpeed: 7
   projectileAcceleration: 0
-  projectilePrefab: {fileID: 6658535161591884227, guid: 244fea80c3d2bde4f98f53a3db260e69,
-    type: 3}
-  tagsToHit:
-  - Player
 --- !u!4 &1319285672
 Transform:
   m_ObjectHideFlags: 0
@@ -8166,15 +8183,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   equipmentData: {fileID: 0}
+  projectilePrefab: {fileID: 6658535161591884227, guid: 244fea80c3d2bde4f98f53a3db260e69,
+    type: 3}
+  tagsToHit:
+  - Player
   fireRate: 3
   intensityMult: 1
   drainedPower: 1
   projectileSpeed: 7
   projectileAcceleration: 0
-  projectilePrefab: {fileID: 6658535161591884227, guid: 244fea80c3d2bde4f98f53a3db260e69,
-    type: 3}
-  tagsToHit:
-  - Player
 --- !u!4 &1449044811
 Transform:
   m_ObjectHideFlags: 0
@@ -8219,16 +8236,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   equipmentData: {fileID: 11400000, guid: 27e3b12a1d1602e4db5872debd4e7a05, type: 2}
-  fireRate: 2.5
-  intensityMult: 1
-  drainedPower: 1
-  projectileSpeed: 15
-  projectileAcceleration: 0
   projectilePrefab: {fileID: 6658535161591884227, guid: 70142d1ef72044444af2a127143860d2,
     type: 3}
   tagsToHit:
   - Enemy
   - EnemyProjectile
+  fireRate: 2.5
+  intensityMult: 1
+  drainedPower: 1
+  projectileSpeed: 15
+  projectileAcceleration: 0
 --- !u!4 &1467020264
 Transform:
   m_ObjectHideFlags: 0
@@ -8947,15 +8964,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   equipmentData: {fileID: 0}
+  projectilePrefab: {fileID: 6658535161591884227, guid: 244fea80c3d2bde4f98f53a3db260e69,
+    type: 3}
+  tagsToHit:
+  - Player
   fireRate: 3
   intensityMult: 1
   drainedPower: 1
   projectileSpeed: 7
   projectileAcceleration: 0
-  projectilePrefab: {fileID: 6658535161591884227, guid: 244fea80c3d2bde4f98f53a3db260e69,
-    type: 3}
-  tagsToHit:
-  - Player
 --- !u!4 &1631270812
 Transform:
   m_ObjectHideFlags: 0
@@ -10169,15 +10186,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   equipmentData: {fileID: 0}
+  projectilePrefab: {fileID: 6658535161591884227, guid: 244fea80c3d2bde4f98f53a3db260e69,
+    type: 3}
+  tagsToHit:
+  - Player
   fireRate: 3
   intensityMult: 1
   drainedPower: 1
   projectileSpeed: 7
   projectileAcceleration: 0
-  projectilePrefab: {fileID: 6658535161591884227, guid: 244fea80c3d2bde4f98f53a3db260e69,
-    type: 3}
-  tagsToHit:
-  - Player
 --- !u!4 &1814076607
 Transform:
   m_ObjectHideFlags: 0
@@ -10375,15 +10392,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   equipmentData: {fileID: 0}
+  projectilePrefab: {fileID: 6658535161591884227, guid: 244fea80c3d2bde4f98f53a3db260e69,
+    type: 3}
+  tagsToHit:
+  - Player
   fireRate: 3
   intensityMult: 1
   drainedPower: 1
   projectileSpeed: 7
   projectileAcceleration: 0
-  projectilePrefab: {fileID: 6658535161591884227, guid: 244fea80c3d2bde4f98f53a3db260e69,
-    type: 3}
-  tagsToHit:
-  - Player
 --- !u!4 &1867603629
 Transform:
   m_ObjectHideFlags: 0
@@ -11132,19 +11149,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   equipmentData: {fileID: 11400000, guid: 66812f449a3573d4e80095da298e1f63, type: 2}
+  projectilePrefab: {fileID: 6658535161591884227, guid: 4d8060afe6a691449898886661c732fd,
+    type: 3}
+  tagsToHit:
+  - Enemy
   fireRate: 0
   intensityMult: 0
   drainedPower: 0
   projectileSpeed: 0
   projectileAcceleration: 0
-  projectilePrefab: {fileID: 6658535161591884227, guid: 4d8060afe6a691449898886661c732fd,
-    type: 3}
-  tagsToHit:
-  - Enemy
   gunsTransformPositions:
   - {x: -0.9, y: 0}
   - {x: 0.9, y: 0}
-  horizontalSpeed: 5
+  lateralSpeed: 1
 --- !u!1 &2002510448
 GameObject:
   m_ObjectHideFlags: 0
@@ -11381,15 +11398,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   equipmentData: {fileID: 0}
+  projectilePrefab: {fileID: 6658535161591884227, guid: 244fea80c3d2bde4f98f53a3db260e69,
+    type: 3}
+  tagsToHit:
+  - Player
   fireRate: 3
   intensityMult: 1
   drainedPower: 1
   projectileSpeed: 7
   projectileAcceleration: 0
-  projectilePrefab: {fileID: 6658535161591884227, guid: 244fea80c3d2bde4f98f53a3db260e69,
-    type: 3}
-  tagsToHit:
-  - Player
 --- !u!4 &2038524700
 Transform:
   m_ObjectHideFlags: 0
@@ -11617,15 +11634,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   equipmentData: {fileID: 0}
+  projectilePrefab: {fileID: 6658535161591884227, guid: 244fea80c3d2bde4f98f53a3db260e69,
+    type: 3}
+  tagsToHit:
+  - Player
   fireRate: 3
   intensityMult: 1
   drainedPower: 1
   projectileSpeed: 7
   projectileAcceleration: 0
-  projectilePrefab: {fileID: 6658535161591884227, guid: 244fea80c3d2bde4f98f53a3db260e69,
-    type: 3}
-  tagsToHit:
-  - Player
 --- !u!4 &2136508889
 Transform:
   m_ObjectHideFlags: 0

@@ -54,7 +54,7 @@ public class InputMgr : MonoBehaviour
     public float m_triggMinRatio = .3f;
 
     [Header("Debug")]
-    public bool m_debugMode = false;
+    public bool m_debugMode = true;
 
     public string m_shoot   = "Space";
     public string m_changeF = "X";
@@ -83,12 +83,11 @@ public class InputMgr : MonoBehaviour
         if (_player > 1 || _player <= 0)
             return false;
 
-#if UNITY_EDITOR
+
         if (_player == 1 && m_manager.m_debugMode)
         {
             return GetDebugButton(_button);
         }
-#endif
 
         GamePadState gamePadState = GamePad.GetState( (PlayerIndex) (_player - 1) );
 
@@ -118,12 +117,10 @@ public class InputMgr : MonoBehaviour
             return 0f;
 
 
-#if UNITY_EDITOR
         if (_player == 1 && m_manager.m_debugMode)
         {
             return GetDebugAxis(_axis);
         }
-#endif
 
         GamePadState gamePadState = GamePad.GetState( (PlayerIndex) (_player - 1) );
 
