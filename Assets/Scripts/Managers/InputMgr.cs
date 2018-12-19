@@ -60,7 +60,7 @@ public class InputMgr : MonoBehaviour
     public float m_triggMinRatio = .3f;
 
     [Header("Debug")]
-    public bool m_debugMode = false;
+    public bool m_debugMode = true;
 
     public string m_shoot   = "Space";
     public string m_changeF = "X";
@@ -87,15 +87,14 @@ public class InputMgr : MonoBehaviour
     // TODO: Explain: what is the '_player' parameter?
     public static bool GetButton(int _player, eButton _button)
     {
-        if (_player > 4 || _player <= 0)
+        if (_player > 1 || _player <= 0)
             return false;
 
-#if UNITY_EDITOR
+
         if (_player == 1 && m_manager.m_debugMode)
         {
             return GetDebugButton(_button);
         }
-#endif
 
 #if UNITY_WEBGL
         return GetDebugButton(_button);
@@ -125,7 +124,7 @@ public class InputMgr : MonoBehaviour
     // ======================================================================================
     public static float GetAxis(int _player, eAxis _axis)
     {
-        if (_player > 4 || _player <= 0)
+        if (_player > 1 || _player <= 0)
             return 0f;
 
 #if UNITY_EDITOR
@@ -133,7 +132,6 @@ public class InputMgr : MonoBehaviour
         {
             return GetDebugAxis(_axis);
         }
-#endif
 
 #if UNITY_WEBGL
         return GetDebugAxis(_axis);
