@@ -105,46 +105,49 @@ public class ShipController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float horizontal = 0, vertical = 0;
-        bool doAttack = false, doChange = false;
+        if (SceneManager.GetActiveScene().name=="BattleFinal")
+        { 
+            float horizontal = 0, vertical = 0;
+            bool doAttack = false, doChange = false;
 
-        if (m_nbLives > 0)
-        {
-
-            // get input
-            horizontal       = InputMgr.GetAxis(1, InputMgr.eAxis.HORIZONTAL);    
-            vertical         = InputMgr.GetAxis(1, InputMgr.eAxis.VERTICAL);      
-            doAttack         = InputMgr.GetButton(1, InputMgr.eButton.ATTACK);        
-            doChange         = InputMgr.GetButton(1, InputMgr.eButton.CHANGEB) || InputMgr.GetButton(1, InputMgr.eButton.CHANGEF);
-            m_changeBackward = InputMgr.GetButton(1, InputMgr.eButton.CHANGEB);
-            m_changeFoward   = InputMgr.GetButton(1, InputMgr.eButton.CHANGEF);
-
-            // get attack input
-            if (InputMgr.GetButton(1, InputMgr.eButton.ATTACK) && !isAttacking)
+            if (m_nbLives > 0)
             {
-                Fire();
+
+                // get input
+                horizontal = InputMgr.GetAxis(1, InputMgr.eAxis.HORIZONTAL);
+                vertical = InputMgr.GetAxis(1, InputMgr.eAxis.VERTICAL);
+                doAttack = InputMgr.GetButton(1, InputMgr.eButton.ATTACK);
+                doChange = InputMgr.GetButton(1, InputMgr.eButton.CHANGEB) || InputMgr.GetButton(1, InputMgr.eButton.CHANGEF);
+                m_changeBackward = InputMgr.GetButton(1, InputMgr.eButton.CHANGEB);
+                m_changeFoward = InputMgr.GetButton(1, InputMgr.eButton.CHANGEF);
+
+                // get attack input
+                if (InputMgr.GetButton(1, InputMgr.eButton.ATTACK) && !isAttacking)
+                {
+                    Fire();
+                }
+
+                // Get special input
+                if (InputMgr.GetButton(1, InputMgr.eButton.SPECIAL))
+                {
+                    FireSpecial();
+                }
+
+                // change ships
+                if (m_changeFoward && m_changeTimer == 0)
+                {
+                    ChangeShip(1);
+                }
+                if (m_changeBackward && m_changeTimer == 0)
+                {
+                    ChangeShip(-1);
+                }
+
             }
 
-            // Get special input
-            if (InputMgr.GetButton(1, InputMgr.eButton.SPECIAL))
-            {
-                FireSpecial();
-            }
-
-            // change ships
-            if (m_changeFoward && m_changeTimer==0)
-            {
-                ChangeShip(1);
-            }    
-            if (m_changeBackward && m_changeTimer==0)
-            {
-                ChangeShip(-1);
-            }
-                
+            // update position
+            UpdateTransform(horizontal, vertical);
         }
-
-        // update position
-        UpdateTransform(horizontal, vertical);
     }
 
     // ======================================================================================
@@ -352,7 +355,7 @@ public class ShipController : MonoBehaviour
         if (m_livingShips == 0)
         {
             //FIXME: move to a more adequate place
-            SceneManager.LoadScene("Combat");
+            SceneManager.LoadScene("UpgradeFinal");
         }
         Debug.Log("Ship killed.");
         //m_ships.Remove(healthBHV.GetComponent<ShipBHV>());

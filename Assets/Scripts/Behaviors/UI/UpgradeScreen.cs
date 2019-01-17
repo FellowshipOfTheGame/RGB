@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 /// <summary>
 /// Handles equipment upgrades UI
@@ -25,6 +26,11 @@ public class UpgradeScreen : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             UpgradeSelected();
+        }
+        //if (InputMgr.GetButton(1, InputMgr.eButton.CANCEL)) Doesnt work for some reason
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            ExitUpgrade();
         }
     }
 
@@ -58,5 +64,11 @@ public class UpgradeScreen : MonoBehaviour
                 equipmentScrollers[i].gameObject.SetActive(false);
             }
         }
+    }
+
+    private void ExitUpgrade()
+    {
+        print("Im here");
+        SceneManager.LoadScene("BattleFinal");
     }
 }

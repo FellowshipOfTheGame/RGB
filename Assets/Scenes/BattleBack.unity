@@ -324,6 +324,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d213bcac75f138f479b74ff275445a73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyAll: 1
+  destroyShip: 0
+  destroyProjectile: 0
 --- !u!61 &285462565
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -613,6 +616,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 9198899965536013235, guid: 9890e1ecbbcb7cd4a850cbb07d7b2040,
         type: 3}
+    - target: {fileID: 8619719647090980886, guid: 6fd5ca573659c60468a6d75f4325d37a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6fd5ca573659c60468a6d75f4325d37a, type: 3}
 --- !u!1001 &586190193
@@ -1569,6 +1577,7 @@ MonoBehaviour:
   tagsToImpact: []
   weapon1:
   - {fileID: 2075123748}
+  weapon2: []
 --- !u!4 &1827648997
 Transform:
   m_ObjectHideFlags: 0
@@ -1628,6 +1637,13 @@ MonoBehaviour:
     m_RotationOrder: 4
   m_changeDuration: 0.1
   m_changeCoolDownDuration: 1
+  m_positionLerpFactor: 0.5
+  m_scaleLerpFactor: 0.5
+  m_invulnerabilityTime: 0.2
+  transforms:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   AttackCooldown: 0.4
   ShotOffset: {x: 0, y: 0}
   ShotHitbox: {x: 0, y: 0}
@@ -1797,6 +1813,7 @@ MonoBehaviour:
   tagsToImpact: []
   weapon1:
   - {fileID: 1963544952}
+  weapon2: []
 --- !u!4 &1837117764
 Transform:
   m_ObjectHideFlags: 0
@@ -1856,6 +1873,13 @@ MonoBehaviour:
     m_RotationOrder: 4
   m_changeDuration: 0.1
   m_changeCoolDownDuration: 1
+  m_positionLerpFactor: 0.5
+  m_scaleLerpFactor: 0.5
+  m_invulnerabilityTime: 0.2
+  transforms:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   AttackCooldown: 0.4
   ShotOffset: {x: 0, y: 0}
   ShotHitbox: {x: 0, y: 0}
@@ -2029,6 +2053,7 @@ MonoBehaviour:
   - {fileID: 436071823}
   - {fileID: 670091928}
   - {fileID: 1939326951}
+  weapon2: []
 --- !u!4 &1900747152
 Transform:
   m_ObjectHideFlags: 0
@@ -2088,6 +2113,13 @@ MonoBehaviour:
     m_RotationOrder: 4
   m_changeDuration: 0.1
   m_changeCoolDownDuration: 1
+  m_positionLerpFactor: 0.5
+  m_scaleLerpFactor: 0.5
+  m_invulnerabilityTime: 0.2
+  transforms:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   AttackCooldown: 0.4
   ShotOffset: {x: 0, y: 0}
   ShotHitbox: {x: 0, y: 0}

@@ -85,6 +85,7 @@ public class InputMgr : MonoBehaviour
     
     // ======================================================================================
     // TODO: Explain: what is the '_player' parameter?
+    // Player is the paired controller. If _player > 1, it means that there are more than one controller connected
     public static bool GetButton(int _player, eButton _button)
     {
         if (_player > 1 || _player <= 0)
@@ -132,7 +133,7 @@ public class InputMgr : MonoBehaviour
         {
             return GetDebugAxis(_axis);
         }
-
+#endif
 #if UNITY_WEBGL
         return GetDebugAxis(_axis);
 #else
