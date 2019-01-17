@@ -7,6 +7,7 @@ public class BattleMonitor : MonoBehaviour
 {
     public static bool debugMode = true;
     public bool resetLevels = false;
+    public int startLevels = 1;
     public int weaponsLevel = 1;
     public float upgradeDelay = 3f;
     public List<WeaponSO> weapons = new List<WeaponSO>();
@@ -26,9 +27,9 @@ public class BattleMonitor : MonoBehaviour
         {
             for (int i = 0; i < 3; i++)
             {
-                for (int j = 0; j < 2; j++)
+                for (int j = 0; j < Player.Instance.inventories[i].equipments.Length; j++)
                 {
-                    Player.Instance.inventories[i].equipments[j].SetLevel(1);
+                    Player.Instance.inventories[i].equipments[j].SetLevel(startLevels);
                 }
             }
         }
@@ -39,11 +40,11 @@ public class BattleMonitor : MonoBehaviour
     {
         UpdateWeapons();
         //UpdateText();
-        foreach (GameObject s in ships)
-        {
-            s.gameObject.SetActive(false);
-        }
-        ships[shipIndex].SetActive(true);
+        //foreach (GameObject s in ships)
+        //{
+        //   s.gameObject.SetActive(false);
+        //}
+        //ships[shipIndex].SetActive(true);
     }
 
     // Update is called once per frame
@@ -62,26 +63,26 @@ public class BattleMonitor : MonoBehaviour
             //UpdateText();
         }
         //Input
-        if (Input.GetKeyDown(KeyCode.S)) //previous ship
-        {
-            Transform transf = ships[shipIndex].transform;
-            shipIndex--;
-            if (shipIndex < 0)
-            {
-                shipIndex = ships.Count - 1;
-            }
-            ChangeShip(transf);
-        }
-        if (Input.GetKeyDown(KeyCode.D)) // next ship
-        {
-            Transform transf = ships[shipIndex].transform;
-            shipIndex++;
-            if (shipIndex == ships.Count)
-            {
-                shipIndex = 0;
-            }
-            ChangeShip(transf);
-        }
+        //if (Input.GetKeyDown(KeyCode.S)) //previous ship
+        //{
+        //    Transform transf = ships[shipIndex].transform;
+        //    shipIndex--;
+        //    if (shipIndex < 0)
+        //    {
+        //        shipIndex = ships.Count - 1;
+        //    }
+        //    ChangeShip(transf);
+        //}
+        //if (Input.GetKeyDown(KeyCode.D)) // next ship
+        //{
+        //    Transform transf = ships[shipIndex].transform;
+        //   shipIndex++;
+        //    if (shipIndex == ships.Count)
+        //    {
+        //        shipIndex = 0;
+        //    }
+        //    ChangeShip(transf);
+        //}
         //if (Input.GetKeyDown(KeyCode.U))
         //{
         //    upgradeScreen.gameObject.SetActive(!upgradeScreen.gameObject.activeInHierarchy);

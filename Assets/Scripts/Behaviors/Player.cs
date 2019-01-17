@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
@@ -10,6 +11,9 @@ public class Player : MonoBehaviour
     public int Money { get; private set; } = 0;
 
     public ShipInventory[] inventories;
+
+    public Text m_scoreDisplay;
+    public Text m_moneyDisplay;
 
     private void Awake()
     {
@@ -49,5 +53,12 @@ public class Player : MonoBehaviour
         equipment.Upgrade();
         return canUpgrade;
     }
+
+    void UpdateStatistics()
+    {
+        m_scoreDisplay.text = "Score: " + Score.ToString();
+        m_moneyDisplay.text = "Money: " + Money.ToString();
+    }
+
 
 }
