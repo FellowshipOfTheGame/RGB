@@ -1371,7 +1371,7 @@ GameObject:
   - component: {fileID: 215138894}
   - component: {fileID: 215138893}
   m_Layer: 0
-  m_Name: __Player Ships
+  m_Name: Player_ships
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1475,6 +1475,8 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 805e96fb734c6ed48a100de7c55961fb, type: 2}
     - {fileID: 11400000, guid: b4bf8f41cb3a0104a90363c02f1c776f, type: 2}
     - {fileID: 11400000, guid: b005cefee8d7beb4daa29b7125caa2e3, type: 2}
+  m_scoreDisplay: {fileID: 283954982}
+  m_moneyDisplay: {fileID: 464296143}
 --- !u!114 &215138895
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1989,6 +1991,85 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 70142d1ef72044444af2a127143860d2, type: 3}
+--- !u!1 &283954980
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 283954981}
+  - component: {fileID: 283954983}
+  - component: {fileID: 283954982}
+  m_Layer: 5
+  m_Name: ScoreDisplay
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &283954981
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 283954980}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2114184705}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 4.2, y: 360.62}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &283954982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 283954980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 'Score:'
+--- !u!222 &283954983
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 283954980}
+  m_CullTransparentMesh: 0
 --- !u!1 &295539440
 GameObject:
   m_ObjectHideFlags: 0
@@ -3144,6 +3225,85 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 443659239}
   m_CullTransparentMesh: 0
+--- !u!1 &464296141
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 464296142}
+  - component: {fileID: 464296144}
+  - component: {fileID: 464296143}
+  m_Layer: 5
+  m_Name: 'MoneyDisplay '
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &464296142
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 464296141}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2114184705}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 4.2, y: 331.43}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &464296143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 464296141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 'Money:'
+--- !u!222 &464296144
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 464296141}
+  m_CullTransparentMesh: 0
 --- !u!1 &468964556
 GameObject:
   m_ObjectHideFlags: 0
@@ -3487,7 +3647,7 @@ GameObject:
   m_Component:
   - component: {fileID: 546170807}
   - component: {fileID: 546170808}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TileBG2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3542,8 +3702,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1870712625
+  m_SortingLayer: -2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 37ca6f0e1d6809341bfb0e6cfd309303, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -5341,7 +5501,7 @@ GameObject:
   m_Component:
   - component: {fileID: 795452699}
   - component: {fileID: 795452700}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: CityBG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12049,7 +12209,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1905264109}
   - component: {fileID: 1905264110}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TileBG3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12104,8 +12264,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1870712625
+  m_SortingLayer: -2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 37ca6f0e1d6809341bfb0e6cfd309303, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -12276,7 +12436,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1914332698}
   - component: {fileID: 1914332699}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TileBG1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12331,8 +12491,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1870712625
+  m_SortingLayer: -2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 37ca6f0e1d6809341bfb0e6cfd309303, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -13744,6 +13904,8 @@ RectTransform:
   - {fileID: 1640207755}
   - {fileID: 1925017566}
   - {fileID: 1256617539}
+  - {fileID: 283954981}
+  - {fileID: 464296142}
   m_Father: {fileID: 980794065}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
