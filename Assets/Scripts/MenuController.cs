@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
+//WE ARE NOT USING THIS ANYMORE!
+
 public class MenuController : MonoBehaviour
 {
     public EventSystem eventSystem;
