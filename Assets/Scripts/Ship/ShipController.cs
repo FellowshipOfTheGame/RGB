@@ -30,6 +30,7 @@ public class ShipController : MonoBehaviour
 
     [Header("Change")]
     public AnimationCurve m_changeSpeed = new AnimationCurve(new Keyframe(0, 1), new Keyframe(1, 0));
+    public AudioClip m_changeSound;
     public float m_changeDuration = 0.1f;
     public float m_changeCoolDownDuration = 1;
     public float m_positionLerpFactor = 0.5f;
@@ -208,6 +209,9 @@ public class ShipController : MonoBehaviour
                     s.GetComponent<SpriteTrack>().enabled = true;
                 }
             }
+            AudioSource playerShips_audioSrc = GetComponent<AudioSource>();
+            playerShips_audioSrc.clip = m_changeSound;
+            playerShips_audioSrc.Play();
         }
 
         StartCoroutine(ChangeCooldown());
