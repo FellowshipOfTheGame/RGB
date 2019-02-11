@@ -23,12 +23,13 @@ public class UpgradeScreen : MonoBehaviour
     void Update()
     {
         // TODO: there's no GetButtonDown on InputMgr
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (InputMgr.GetKeyDown(1, InputMgr.eButton.ATTACK))
+        //if (Input.GetKeyDown(KeyCode.Space))
         {
             UpgradeSelected();
         }
-        //if (InputMgr.GetButton(1, InputMgr.eButton.CANCEL)) Doesnt work for some reason
-        if (Input.GetKeyDown(KeyCode.M))
+        if (InputMgr.GetKeyDown(1, InputMgr.eButton.CANCEL)) 
+        //if (Input.GetKeyDown(KeyCode.M))
         {
             ExitUpgrade();
         }
