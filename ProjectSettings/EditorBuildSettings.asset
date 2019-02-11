@@ -9,9 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/FinalLoop/StartMenu.unity
     guid: 270b0bb6554382841bf472daf3b21412
   - enabled: 1
-    path: Assets/Scenes/Proto/Combat.unity
-    guid: 99c9720ab356a0642a771bea13969a05
-  - enabled: 1
     path: Assets/Scenes/FinalLoop/UpgradeFinal.unity
     guid: 9bc326f4a568d7f4b89de42e875a0aed
   - enabled: 1
