@@ -73,6 +73,7 @@ public class InputMgr : MonoBehaviour
 
     // --------------------------------- PRIVATE ATTRIBUTES ------------------------------ //
     private static InputMgr m_manager = null;
+    private static int      Count;
 
     // ======================================================================================
     // PUBLIC MEMBERS
@@ -81,11 +82,12 @@ public class InputMgr : MonoBehaviour
     {
         Debug.Assert(m_manager == null, this.gameObject.name + " - InputMgr : input manager must be unique!");
         m_manager = this;
+        Count = 0;
     }
     
     // ======================================================================================
     // TODO: Explain: what is the '_player' parameter?
-    // Player is the paired controller. If _player > 1, it means that there are more than one controller connected
+    // Player is the paired controller. If _player > 1, it means that there is more than one controller connected
     public static bool GetButton(int _player, eButton _button)
     {
         if (_player > 1 || _player <= 0)
@@ -122,18 +124,88 @@ public class InputMgr : MonoBehaviour
 #endif
     }
 
+    public static bool GetKeyDown(int _player, eButton _button)
+    {
+        if (_player > 1 || _player <= 0)
+            return false;
+
+
+        if (_player == 1 && m_manager.m_debugMode)
+        {
+            return GetDebugKeyDown(_button);
+        }
+
+#if UNITY_WEBGL
+        return GetDebugKeyDown(_button);
+#else
+        GamePadState gamePadState = GamePad.GetState((PlayerIndex)(_player - 1));
+
+        if(Count >= 1)
+        {
+            return false;
+        }
+
+        switch (_button)
+        {
+            case eButton.ATTACK:
+                Count += 1;
+                if (GetButton(gamePadState, m_manager.m_shootButton))
+                    return true;
+                else
+                    Count = 0;
+                return false;
+            case eButton.CHANGEF:
+                Count += 1;
+                if (GetButton(gamePadState, m_manager.m_changeButtonF))
+                    return true;
+                else
+                    Count = 0;
+                return false;
+            case eButton.CHANGEB:
+                Count += 1;
+                if (GetButton(gamePadState, m_manager.m_changeButtonB))
+                    return true;
+                else
+                    Count = 0;
+                return false;
+            case eButton.SPECIAL:
+                Count += 1;
+                if (GetButton(gamePadState, m_manager.m_specialButton))
+                    return true;
+                else
+                    Count = 0;
+                return false;
+            case eButton.CANCEL:
+                Count += 1;
+                if (GetButton(gamePadState, m_manager.m_cancelButton))
+                    return true;
+                else
+                    Count = 0;
+                return false;
+            case eButton.PAUSE:
+                Count += 1;
+                if (GetButton(gamePadState, m_manager.m_pauseButton))
+                    return true;
+                else
+                    Count = 0;
+                return false;
+        }
+
+        return false;
+#endif
+    }
+
     // ======================================================================================
     public static float GetAxis(int _player, eAxis _axis)
     {
         if (_player > 1 || _player <= 0)
             return 0f;
 
-#if UNITY_EDITOR
         if (_player == 1 && m_manager.m_debugMode)
         {
             return GetDebugAxis(_axis);
         }
-#endif
+
 #if UNITY_WEBGL
         return GetDebugAxis(_axis);
 #else
@@ -220,7 +292,7 @@ public class InputMgr : MonoBehaviour
             case eButton.PAUSE:
                 return Input.GetKey(KeyCode.T);
             case eButton.CANCEL:
-                return Input.GetKey(KeyCode.R);
+                return Input.GetKey(KeyCode.M);
             case eButton.LEFT:
                 return Input.GetKey(KeyCode.A);
             case eButton.RIGHT:
@@ -234,6 +306,34 @@ public class InputMgr : MonoBehaviour
         return false;
     }
 
+    public static bool GetDebugKeyDown(eButton _button)
+    {
+        switch (_button)
+        {
+            case eButton.ATTACK:
+                return Input.GetKeyDown(KeyCode.Space);
+            case eButton.SPECIAL:
+                return Input.GetKeyDown(KeyCode.F) || Input.GetKeyDown(KeyCode.LeftShift);
+            case eButton.CHANGEB:
+                return Input.GetKeyDown(KeyCode.Q);
+            case eButton.CHANGEF:
+                return Input.GetKeyDown(KeyCode.E);
+            case eButton.PAUSE:
+                return Input.GetKeyDown(KeyCode.T);
+            case eButton.CANCEL:
+                return Input.GetKeyDown(KeyCode.M);
+            case eButton.LEFT:
+                return Input.GetKeyDown(KeyCode.A);
+            case eButton.RIGHT:
+                return Input.GetKeyDown(KeyCode.D);
+            case eButton.UP:
+                return Input.GetKeyDown(KeyCode.W);
+            case eButton.DOWN:
+                return Input.GetKeyDown(KeyCode.S);
+        }
+
+        return false;
+    }
 
     public static float GetDebugAxis(eAxis _axis)
     {

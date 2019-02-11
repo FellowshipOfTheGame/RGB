@@ -32,6 +32,11 @@ public class Player : MonoBehaviour
         Score = 0;
     }
 
+    private void Update()
+    {
+        UpdateStatistics();
+    }
+
     public void AddScore(int s)
     {
         Score += s;
