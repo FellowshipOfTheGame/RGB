@@ -53,5 +53,10 @@ public class HealthBHV : MonoBehaviour
         Debug.Log("Killed!");
         OnKilled?.Invoke(this); // triggers event
         Destroy(gameObject);//, 2*Time.deltaTime);
+        if (this.gameObject.tag == "Enemy")
+        {
+            GameObject.Find("Player_ships").GetComponent<Player>().AddScore(100);
+            GameObject.Find("Player_ships").GetComponent<Player>().AddMoney(50);
+        }
     }
 }
