@@ -48,6 +48,7 @@ MonoBehaviour:
     type: 3}
   tagsToHit:
   - Player
+  - PlayerProjectile
   fireRate: 3
   intensityMult: 1
   drainedPower: 1
@@ -71,7 +72,7 @@ GameObject:
   - component: {fileID: 3835580735469777490}
   - component: {fileID: 3163241467698823568}
   m_Layer: 0
-  m_Name: Ship Enemy Sinoidal
+  m_Name: Ship Enemy Sin
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

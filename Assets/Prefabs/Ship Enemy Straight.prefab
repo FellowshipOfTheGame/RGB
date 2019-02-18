@@ -48,6 +48,7 @@ MonoBehaviour:
     type: 3}
   tagsToHit:
   - Player
+  - PlayerProjectile
   fireRate: 1
   intensityMult: 1
   drainedPower: 1

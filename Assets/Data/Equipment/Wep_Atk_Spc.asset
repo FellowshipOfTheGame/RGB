@@ -15,7 +15,7 @@ MonoBehaviour:
   equipmentName: Special
   sprite: {fileID: 21300000, guid: 0fe7634257e6ede40b09beacfa12bdb6, type: 3}
   childrenEquipments: []
-  level: 2
+  level: 1
   maxLevel: 10
   upgradeCost:
     baseValue: 120
@@ -51,26 +51,17 @@ MonoBehaviour:
       - serializedVersion: 3
         time: 0
         value: 0
-        inSlope: 0
-        outSlope: 0
+        inSlope: 1
+        outSlope: 1
         tangentMode: 34
         weightedMode: 0
         inWeight: 0
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 1
-        value: 0
-        inSlope: -0
-        outSlope: 1
-        tangentMode: 69
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 2
         value: 1
         inSlope: 1
-        outSlope: 0.25
+        outSlope: 0.22222222
         tangentMode: 69
         weightedMode: 0
         inWeight: 0.33333334
@@ -78,7 +69,7 @@ MonoBehaviour:
       - serializedVersion: 3
         time: 10
         value: 3
-        inSlope: 0.25
+        inSlope: 0.22222222
         outSlope: 3.999999
         tangentMode: 69
         weightedMode: 0
