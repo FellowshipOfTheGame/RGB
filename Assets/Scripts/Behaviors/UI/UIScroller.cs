@@ -44,12 +44,17 @@ public class UIScroller : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (rectTransform.sizeDelta.x == 0) // locks interaction until screen is properly set
+        {
+            return;
+        }
+        
         if (Input.GetKeyDown(leftKey))
         {
             //move to left element
@@ -84,7 +89,10 @@ public class UIScroller : MonoBehaviour
 
     private void FixedUpdate()
     {
-        LerpToTargetPosition(targetPosition);
+        if ((Vector2)transform.localPosition != targetPosition)
+        {
+            LerpToTargetPosition(targetPosition);
+        }
     }
 
     private void TargetPositionToCurrent()
@@ -95,13 +103,17 @@ public class UIScroller : MonoBehaviour
     private Vector2 TargetPosition (int targetIndex)
     {
         Vector2 targetPosition = Vector2.zero;
-        targetPosition.x = rectTransform.sizeDelta.x/2 - (layoutGroup.padding.left + layoutGroup.spacing * targetIndex + elementWidth * (0.5f + currentIndex) );
+        if (rectTransform.sizeDelta.x != 0)
+        {
+            targetPosition.x = rectTransform.sizeDelta.x / 2 - (layoutGroup.padding.left + layoutGroup.spacing * targetIndex + elementWidth * (0.5f + currentIndex));
+        }
         return targetPosition;
     }
 
     private void LerpToTargetPosition (Vector2 tgtPosition)
     {
         float distanceX = tgtPosition.x - transform.localPosition.x;
+        //Debug.Log("DISTANCE X = " + distanceX);
         transform.localPosition = Vector2.Lerp(transform.localPosition, tgtPosition, lerpFactor);
     }
 
