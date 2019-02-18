@@ -12,8 +12,8 @@ public class Player : MonoBehaviour
 
     public ShipInventory[] inventories;
 
-    public Text m_scoreDisplay;
-    public Text m_moneyDisplay;
+    public delegate void OnValueChangedDelegate();
+    public event OnValueChangedDelegate OnValueChanged;
 
     private void Awake()
     {
@@ -34,17 +34,19 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
-        UpdateStatistics();
+        
     }
 
     public void AddScore(int s)
     {
         Score += s;
+        OnValueChanged?.Invoke();
     }
 
     public void AddMoney(int m)
     {
         Money += m;
+        OnValueChanged?.Invoke();
     }
 
     public bool CanUpgrade (EquipmentSO equipment)
@@ -58,12 +60,5 @@ public class Player : MonoBehaviour
         equipment.Upgrade();
         return canUpgrade;
     }
-
-    void UpdateStatistics()
-    {
-        m_scoreDisplay.text = "Score: " + Score.ToString();
-        m_moneyDisplay.text = "Money: " + Money.ToString();
-    }
-
 
 }

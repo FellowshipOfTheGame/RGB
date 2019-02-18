@@ -22,6 +22,7 @@ public class EnemyShipController : MonoBehaviour
     public Vector2 reference = -Vector2.up;
     public DirectionalTrajectory horizontalTrajectory;
     public DirectionalTrajectory verticalTrajectory;
+    public AnimationCurve speedModifier;
     public float pace = 0.01f;
     public bool autoMaxPace = true;
     public float maxPace = 0.05f;
@@ -83,7 +84,7 @@ public class EnemyShipController : MonoBehaviour
             vFrame %= 1;
         }
         Vector3 target = Vector3.zero;
-        while (distance < ship.speed && nextFrame - frame < maxPace)
+        while (distance < ship.speed * speedModifier.Evaluate(frame) && nextFrame - frame < maxPace)
         {
             nextFrame += pace;
             float nextHFrame = nextFrame / horizontalTrajectory.length;

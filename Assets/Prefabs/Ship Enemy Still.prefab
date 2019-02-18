@@ -202,7 +202,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.1
-  impactDamage: 50
+  impactDamage: 1
   tagsToImpact:
   - Player
   - PlayerProjectile
@@ -224,6 +224,8 @@ MonoBehaviour:
   health: 8
   invincible: 0
   shield: {fileID: 0}
+  killScore: 10
+  killMoney: 10
 --- !u!114 &9198899965536013240
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -335,9 +337,9 @@ MonoBehaviour:
         outWeight: 0.6856583
       - serializedVersion: 3
         time: 1
-        value: 10
-        inSlope: 109.99998
-        outSlope: 109.99998
+        value: 4
+        inSlope: 49.99999
+        outSlope: 49.99999
         tangentMode: 34
         weightedMode: 1
         inWeight: 0.33333334
@@ -346,6 +348,48 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
     loop: 1
+  speedModifier:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: -0.081214674
+      outSlope: -0.66980875
+      tangentMode: 1
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.2999367
+    - serializedVersion: 3
+      time: 0.48435843
+      value: 0.2994845
+      inSlope: -0.087197274
+      outSlope: -0.087197274
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.08872515
+    - serializedVersion: 3
+      time: 3.8995852
+      value: 0.25026786
+      inSlope: 0.025544202
+      outSlope: 0.025544202
+      tangentMode: 0
+      weightedMode: 2
+      inWeight: 0.069839604
+      outWeight: 0.7948166
+    - serializedVersion: 3
+      time: 5
+      value: 1
+      inSlope: 0.796731
+      outSlope: 0.796731
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.055366877
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   pace: 0.001
   autoMaxPace: 1
   maxPace: 0.05

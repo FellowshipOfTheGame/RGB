@@ -8,6 +8,7 @@ using UnityEngine;
 /// </summary>
 public class HealthBHV : MonoBehaviour
 {
+    [Header("Health")]
     public float health = 1;
     public bool invincible = false;
 
@@ -15,6 +16,10 @@ public class HealthBHV : MonoBehaviour
     public event OnKilledDelegate OnKilled;
 
     public SpriteTrackImage shield; // TODO: fazer classe mais adequada para o escudo
+
+    [Header("Reward")] 
+    public int killScore = 0;
+    public int killMoney = 0;
 
     private bool dead = false; // to prevent multiple Kill() calls
 
@@ -58,11 +63,8 @@ public class HealthBHV : MonoBehaviour
         Debug.Log("Killed!");
         OnKilled?.Invoke(this); // triggers event
         Destroy(gameObject);//, 2*Time.deltaTime);
-        if (this.gameObject.tag == "Enemy")
-        {
-            GameObject.Find("Player_ships").GetComponent<Player>().AddScore(100);
-            GameObject.Find("Player_ships").GetComponent<Player>().AddMoney(50);
-        }
+        Player.Instance.AddScore(killScore);
+        Player.Instance.AddMoney(killMoney);
     }
 
     private void MakeInvulnerable(float time)

@@ -202,7 +202,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.5
-  impactDamage: 500
+  impactDamage: 1
   tagsToImpact:
   - Player
   - PlayerProjectile
@@ -224,6 +224,8 @@ MonoBehaviour:
   health: 5
   invincible: 0
   shield: {fileID: 0}
+  killScore: 10
+  killMoney: 10
 --- !u!114 &9198899965536013240
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -310,6 +312,30 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
     loop: 1
+  speedModifier:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   pace: 0.05
   autoMaxPace: 1
   maxPace: 0.05
