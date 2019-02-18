@@ -2041,8 +2041,8 @@ MonoBehaviour:
   lerpFactor: 0.2
   leftKey: 276
   rightKey: 275
-  leftButton: 0
-  rightButton: 0
+  leftButton: 5
+  rightButton: 6
   layoutGroup: {fileID: 0}
   currentIndex: 1
   targetPosition: {x: 0, y: 0}
@@ -2206,8 +2206,8 @@ MonoBehaviour:
   lerpFactor: 0.2
   leftKey: 276
   rightKey: 275
-  leftButton: 0
-  rightButton: 0
+  leftButton: 5
+  rightButton: 6
   layoutGroup: {fileID: 0}
   currentIndex: 1
   targetPosition: {x: 0, y: 0}
@@ -4916,7 +4916,7 @@ MonoBehaviour:
   m_shoot: Space
   m_changeF: E
   m_changeB: Q
-  m_cancel: M
+  m_cancel: C
   m_special: SPACE
   m_pause: P
 --- !u!1 &1923334132
@@ -5262,8 +5262,8 @@ MonoBehaviour:
   lerpFactor: 0.2
   leftKey: 276
   rightKey: 275
-  leftButton: 0
-  rightButton: 0
+  leftButton: 5
+  rightButton: 6
   layoutGroup: {fileID: 0}
   currentIndex: 1
   targetPosition: {x: 0, y: 0}
