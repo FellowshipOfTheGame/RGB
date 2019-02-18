@@ -14,6 +14,10 @@ public class HealthBHV : MonoBehaviour
     public delegate void OnKilledDelegate(HealthBHV healthBHV);
     public event OnKilledDelegate OnKilled;
 
+    public SpriteTrackImage shield; // TODO: fazer classe mais adequada para o escudo
+
+    private bool dead = false; // to prevent multiple Kill() calls
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,8 +34,8 @@ public class HealthBHV : MonoBehaviour
     /// Adds damage to the HealthBHV component.
     /// </summary>
     public bool TakeDamage (float damage)
-    {
-        if (invincible)
+    {    
+        if (invincible || dead)
         {
             return false;
         }
@@ -49,6 +53,7 @@ public class HealthBHV : MonoBehaviour
     // Define o comportamento de morte do objeto
     private void Kill ()
     {
+        dead = true;
         // animãção, etc
         Debug.Log("Killed!");
         OnKilled?.Invoke(this); // triggers event
@@ -58,5 +63,36 @@ public class HealthBHV : MonoBehaviour
             GameObject.Find("Player_ships").GetComponent<Player>().AddScore(100);
             GameObject.Find("Player_ships").GetComponent<Player>().AddMoney(50);
         }
+    }
+
+    private void MakeInvulnerable(float time)
+    {
+        invincible = true;
+        if (shield == null) return;
+        shield.duration = time;
+        shield.gameObject.SetActive(true);
+    }
+
+    private void MakeVulnerable()
+    {
+        invincible = false;
+        if (shield == null)
+        {
+            Debug.Log("No shield");
+            return;
+        }
+        shield.gameObject.SetActive(false);
+    }
+
+    public void SetInvulnerability(float time)
+    {
+        StartCoroutine(RunInvulnerability(time));
+    }
+
+    private IEnumerator RunInvulnerability(float time)
+    {
+        MakeInvulnerable(time);
+        yield return new WaitForSeconds(time);
+        MakeVulnerable();
     }
 }

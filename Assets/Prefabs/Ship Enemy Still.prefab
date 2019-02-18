@@ -96,7 +96,7 @@ MonoBehaviour:
   tagsToHit:
   - Player
   - PlayerProjectile
-  fireRate: 3
+  fireRate: 2.5
   intensityMult: 1
   drainedPower: 1
   projectileSpeed: 7
@@ -221,8 +221,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a4850a57196a2945b1f79785a3e5687, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 20
+  health: 8
   invincible: 0
+  shield: {fileID: 0}
 --- !u!114 &9198899965536013240
 MonoBehaviour:
   m_ObjectHideFlags: 0
