@@ -4934,12 +4934,12 @@ MonoBehaviour:
   m_pauseButton: 8
   m_triggMinRatio: 0.3
   m_debugMode: 1
-  m_shoot: Space
-  m_changeF: E
-  m_changeB: Q
-  m_cancel: C
-  m_special: SPACE
-  m_pause: P
+  m_shootKey: 32
+  m_changeFKey: 101
+  m_changeBKey: 113
+  m_cancelKey: 99
+  m_specialKey: 304
+  m_pauseKey: 112
 --- !u!1 &1923334132
 GameObject:
   m_ObjectHideFlags: 0

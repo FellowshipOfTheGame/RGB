@@ -8279,7 +8279,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a4850a57196a2945b1f79785a3e5687, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 2
+  health: 1
   invincible: 0
   shield: {fileID: 2018505697}
   killScore: 0
@@ -8698,12 +8698,12 @@ MonoBehaviour:
   m_pauseButton: 8
   m_triggMinRatio: 0.3
   m_debugMode: 1
-  m_shoot: Space
-  m_changeF: E
-  m_changeB: Q
-  m_cancel: M
-  m_special: SPACE
-  m_pause: P
+  m_shootKey: 32
+  m_changeFKey: 101
+  m_changeBKey: 113
+  m_cancelKey: 99
+  m_specialKey: 304
+  m_pauseKey: 112
 --- !u!4 &1215541173 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2998154329759175640, guid: 70142d1ef72044444af2a127143860d2,
@@ -10376,7 +10376,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a4850a57196a2945b1f79785a3e5687, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 2
+  health: 1
   invincible: 0
   shield: {fileID: 1318380501}
   killScore: 0
@@ -13481,7 +13481,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a4850a57196a2945b1f79785a3e5687, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 2
+  health: 1
   invincible: 0
   shield: {fileID: 1668879792}
   killScore: 0
