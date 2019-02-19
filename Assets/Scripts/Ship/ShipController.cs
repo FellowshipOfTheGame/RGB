@@ -35,7 +35,9 @@ public class ShipController : MonoBehaviour
     public float m_changeCoolDownDuration = 1;
     public float m_positionLerpFactor = 0.5f;
     public float m_scaleLerpFactor = 0.5f;
-    public float m_invulnerabilityTime = 0.2f;
+    public float m_invulnerabilityTimeOnChange = 0.2f;
+    public float m_invulnerabilityTimeOnDeath = 0.2f;
+    public float m_forceChangeTimer = 0.5f;
     public Transform[] transforms = new Transform[3];
 
     //COMBAT
@@ -174,7 +176,7 @@ public class ShipController : MonoBehaviour
     }
 
     // ======================================================================================
-    private void ChangeShip(int direction = 1)
+    private void ChangeShip(int direction = 1, bool cooldown = true)
     {
         m_changeCooldownTimer = m_changeCoolDownDuration;
         m_changeTimer = m_changeCoolDownDuration;
@@ -192,7 +194,7 @@ public class ShipController : MonoBehaviour
         }
         if (m_ships[m_shipIndex] != null)
         {
-            Invoke("ReactivateMainShipCollider", m_invulnerabilityTime);
+            Invoke("ReactivateMainShipCollider", m_invulnerabilityTimeOnChange);
         }
         else
         {
@@ -214,7 +216,10 @@ public class ShipController : MonoBehaviour
             playerShips_audioSrc.Play();
         }
 
-        StartCoroutine(ChangeCooldown());
+        if (cooldown)
+        {
+            StartCoroutine(ChangeCooldown());
+        }
     }
 
     // ======================================================================================
@@ -361,7 +366,7 @@ public class ShipController : MonoBehaviour
             //FIXME: move to a more adequate place
             SceneManager.LoadScene("UpgradeFinal");
         }
-        Debug.Log("Ship killed.");
+        Debug.Log("Ship killed at frame: " + Time.frameCount);
         //m_ships.Remove(healthBHV.GetComponent<ShipBHV>());
         for (int i = 0; i < m_ships.Count; i++)
         {
@@ -372,7 +377,8 @@ public class ShipController : MonoBehaviour
         }
         Debug.Log("Ship removed.");
         //ChangeShip(1);
-        Invoke("ForceReplaceDestroyedShip", 1.0f);
+        SetInvulnerability();
+        Invoke("ForceReplaceDestroyedShip", m_forceChangeTimer);
         Debug.Log("Ship changed.");
     }
     // ======================================================================================
@@ -387,6 +393,17 @@ public class ShipController : MonoBehaviour
     private void ReactivateMainShipCollider()
     {
         m_ships[m_shipIndex].GetComponent<Collider2D>().enabled = true;
+    }
+    // ======================================================================================
+    private void SetInvulnerability()
+    {
+        for (int i = 0; i < m_ships.Count; i++)
+        {
+            if (m_ships[i] != null)
+            {
+                m_ships[i].GetComponent<HealthBHV>().SetInvulnerability(m_invulnerabilityTimeOnDeath);
+            }
+        }
     }
 
 }

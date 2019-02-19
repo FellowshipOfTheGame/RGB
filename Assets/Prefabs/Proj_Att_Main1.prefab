@@ -97,7 +97,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a4850a57196a2945b1f79785a3e5687, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 1
+  health: 111
   invincible: 0
 --- !u!61 &1794516416801752915
 BoxCollider2D:
@@ -188,7 +188,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: e216adadf4992d747b8d965cbe326c56, type: 3}
+  m_audioClip: {fileID: 8300000, guid: bf7e107b06b53c44eb2b99554f743c54, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1.31

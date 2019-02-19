@@ -48,7 +48,8 @@ MonoBehaviour:
     type: 3}
   tagsToHit:
   - Player
-  fireRate: 3
+  - PlayerProjectile
+  fireRate: 2.8
   intensityMult: 1
   drainedPower: 1
   projectileSpeed: 7
@@ -155,7 +156,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.1
-  impactDamage: 50
+  impactDamage: 1
   tagsToImpact:
   - Player
   - PlayerProjectile
@@ -174,8 +175,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a4850a57196a2945b1f79785a3e5687, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 50
+  health: 20
   invincible: 0
+  shield: {fileID: 0}
+  killScore: 10
+  killMoney: 10
+  explosion: {fileID: 4719576999491915415, guid: 4b9fe8ad684ffca4889776d8a168af01,
+    type: 3}
 --- !u!114 &6075102585174379314
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -280,6 +286,30 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
     loop: 1
+  speedModifier:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   pace: 0.001
   autoMaxPace: 0
   maxPace: 0.005
@@ -299,7 +329,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.05}
+  m_Offset: {x: 0, y: -0.27}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -310,7 +340,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.5, y: 1.5}
+  m_Size: {x: 3.32, y: 1.25}
   m_EdgeRadius: 0
 --- !u!50 &3835580735469777490
 Rigidbody2D:
@@ -446,4 +476,4 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.7
+  m_Radius: 0.8

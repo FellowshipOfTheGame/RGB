@@ -101,7 +101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lifetime: 10
   destroyOnImpact: 0
-  baseDamage: 0
+  baseDamage: 5
 --- !u!114 &4723968228723979711
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -123,7 +123,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6658535161591884227}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 58e1846f23a14e140be136dfc76ed945, type: 3}
   m_Name: 
@@ -214,7 +214,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 1b0a9b8669c6a9d4596352001d31852b, type: 3}
+  m_audioClip: {fileID: 8300000, guid: adbefa24a23185e44ab840c1f4ede3bf, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1

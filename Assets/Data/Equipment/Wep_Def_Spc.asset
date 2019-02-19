@@ -15,7 +15,7 @@ MonoBehaviour:
   equipmentName: Special
   sprite: {fileID: 21300000, guid: 0fe7634257e6ede40b09beacfa12bdb6, type: 3}
   childrenEquipments: []
-  level: 2
+  level: 1
   maxLevel: 10
   upgradeCost:
     baseValue: 120
@@ -105,7 +105,7 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
   drainedPower:
-    baseValue: 50
+    baseValue: 80
     curve:
       serializedVersion: 2
       m_Curve:

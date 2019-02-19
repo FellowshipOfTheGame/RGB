@@ -8,11 +8,20 @@ using UnityEngine;
 /// </summary>
 public class HealthBHV : MonoBehaviour
 {
+    [Header("Health")]
     public float health = 1;
     public bool invincible = false;
 
     public delegate void OnKilledDelegate(HealthBHV healthBHV);
     public event OnKilledDelegate OnKilled;
+
+    public SpriteTrackImage shield; // TODO: fazer classe mais adequada para o escudo
+
+    [Header("Reward")] 
+    public int killScore = 0;
+    public int killMoney = 0;
+
+    private bool dead = false; // to prevent multiple Kill() calls
 
     // Start is called before the first frame update
     void Start()
@@ -30,8 +39,8 @@ public class HealthBHV : MonoBehaviour
     /// Adds damage to the HealthBHV component.
     /// </summary>
     public bool TakeDamage (float damage)
-    {
-        if (invincible)
+    {    
+        if (invincible || dead)
         {
             return false;
         }
@@ -54,21 +63,52 @@ public class HealthBHV : MonoBehaviour
     // Define o comportamento de morte do objeto
     private void Kill ()
     {
+        dead = true;
         // animãção, etc
         
         Debug.Log("Killed!");
         OnKilled?.Invoke(this); // triggers event
-        
         if (this.gameObject.tag == "Enemy")
         {
             GetComponent<Animator>().SetTrigger("Explode");
-            Destroy(gameObject, GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length);
-            GameObject.Find("Player_ships").GetComponent<Player>().AddScore(100);
-            GameObject.Find("Player_ships").GetComponent<Player>().AddMoney(50);
+            Destroy(gameObject, GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length-0.4f);
         }
         else
         {
             Destroy(gameObject);//, 2*Time.deltaTime);
         }
+        Player.Instance.AddScore(killScore);
+        Player.Instance.AddMoney(killMoney);
+    }
+
+    private void MakeInvulnerable(float time)
+    {
+        invincible = true;
+        if (shield == null) return;
+        shield.duration = time;
+        shield.gameObject.SetActive(true);
+    }
+
+    private void MakeVulnerable()
+    {
+        invincible = false;
+        if (shield == null)
+        {
+            Debug.Log("No shield");
+            return;
+        }
+        shield.gameObject.SetActive(false);
+    }
+    
+    public void SetInvulnerability(float time)
+    {
+        StartCoroutine(RunInvulnerability(time));
+    }
+
+    private IEnumerator RunInvulnerability(float time)
+    {
+        MakeInvulnerable(time);
+        yield return new WaitForSeconds(time);
+        MakeVulnerable();
     }
 }

@@ -44,13 +44,18 @@ public class UIScroller : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(leftKey))
+        if (rectTransform.sizeDelta.x == 0) // locks interaction until screen is properly set
+        {
+            return;
+        }
+        
+        if (Input.GetKeyDown(leftKey) || InputMgr.GetDebugKeyDown(leftButton))
         {
             //move to left element
             if (currentIndex > 0)
@@ -60,7 +65,7 @@ public class UIScroller : MonoBehaviour
                 OnIndexChange?.Invoke(currentIndex + 1);
             }
         }
-        if (Input.GetKeyDown(rightKey))
+        if (Input.GetKeyDown(rightKey) || InputMgr.GetDebugKeyDown(rightButton))
         {
             //move to right element
             if (currentIndex < transform.childCount - 1)
@@ -84,7 +89,10 @@ public class UIScroller : MonoBehaviour
 
     private void FixedUpdate()
     {
-        LerpToTargetPosition(targetPosition);
+        if ((Vector2)transform.localPosition != targetPosition)
+        {
+            LerpToTargetPosition(targetPosition);
+        }
     }
 
     private void TargetPositionToCurrent()
@@ -95,13 +103,17 @@ public class UIScroller : MonoBehaviour
     private Vector2 TargetPosition (int targetIndex)
     {
         Vector2 targetPosition = Vector2.zero;
-        targetPosition.x = rectTransform.sizeDelta.x/2 - (layoutGroup.padding.left + layoutGroup.spacing * targetIndex + elementWidth * (0.5f + currentIndex) );
+        if (rectTransform.sizeDelta.x != 0)
+        {
+            targetPosition.x = rectTransform.sizeDelta.x / 2 - (layoutGroup.padding.left + layoutGroup.spacing * targetIndex + elementWidth * (0.5f + currentIndex));
+        }
         return targetPosition;
     }
 
     private void LerpToTargetPosition (Vector2 tgtPosition)
     {
         float distanceX = tgtPosition.x - transform.localPosition.x;
+        //Debug.Log("DISTANCE X = " + distanceX);
         transform.localPosition = Vector2.Lerp(transform.localPosition, tgtPosition, lerpFactor);
     }
 

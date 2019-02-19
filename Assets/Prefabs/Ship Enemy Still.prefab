@@ -95,7 +95,8 @@ MonoBehaviour:
     type: 3}
   tagsToHit:
   - Player
-  fireRate: 3
+  - PlayerProjectile
+  fireRate: 2.5
   intensityMult: 1
   drainedPower: 1
   projectileSpeed: 7
@@ -202,7 +203,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.1
-  impactDamage: 50
+  impactDamage: 1
   tagsToImpact:
   - Player
   - PlayerProjectile
@@ -221,8 +222,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a4850a57196a2945b1f79785a3e5687, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 20
+  health: 8
   invincible: 0
+  shield: {fileID: 0}
+  killScore: 10
+  killMoney: 10
+  explosion: {fileID: 4719576999491915415, guid: 4b9fe8ad684ffca4889776d8a168af01,
+    type: 3}
 --- !u!114 &9198899965536013240
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -324,7 +330,7 @@ MonoBehaviour:
         inWeight: 0.59084225
         outWeight: 0.38774863
       - serializedVersion: 3
-        time: 0.9
+        time: 0.8
         value: -1
         inSlope: -0.0000017386103
         outSlope: -0.0000017386103
@@ -335,8 +341,8 @@ MonoBehaviour:
       - serializedVersion: 3
         time: 1
         value: 10
-        inSlope: 109.99998
-        outSlope: 109.99998
+        inSlope: 55.000004
+        outSlope: 55.000004
         tangentMode: 34
         weightedMode: 1
         inWeight: 0.33333334
@@ -345,6 +351,30 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
     loop: 1
+  speedModifier:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   pace: 0.001
   autoMaxPace: 1
   maxPace: 0.05
