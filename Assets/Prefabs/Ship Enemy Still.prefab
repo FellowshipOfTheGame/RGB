@@ -117,6 +117,7 @@ GameObject:
   - component: {fileID: 9198899965536013234}
   - component: {fileID: 2223844737599746776}
   - component: {fileID: 1035567386}
+  - component: {fileID: 695967003820853151}
   m_Layer: 0
   m_Name: Ship Enemy Still
   m_TagString: Enemy
@@ -414,6 +415,25 @@ MonoBehaviour:
   frequency: 4
   initialAlpha: 0.39
   zPositionOffset: 0
+--- !u!95 &695967003820853151
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9198899965536013235}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 151cb59f57726f845b2e8fc7643745d5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &9198899965817697072
 GameObject:
   m_ObjectHideFlags: 0

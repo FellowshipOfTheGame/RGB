@@ -70,8 +70,9 @@ GameObject:
   - component: {fileID: 6075102585174379320}
   - component: {fileID: 3835580735469777490}
   - component: {fileID: 3163241467698823568}
+  - component: {fileID: 124642337602998119}
   m_Layer: 0
-  m_Name: Ship Enemy Sinoidal
+  m_Name: Ship Enemy Sin
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -349,6 +350,25 @@ MonoBehaviour:
   frequency: 5
   initialAlpha: 0.2
   zPositionOffset: 0
+--- !u!95 &124642337602998119
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6075102585174379321}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 151cb59f57726f845b2e8fc7643745d5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &6075102585447674810
 GameObject:
   m_ObjectHideFlags: 0

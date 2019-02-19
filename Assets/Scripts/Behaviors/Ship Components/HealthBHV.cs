@@ -37,6 +37,11 @@ public class HealthBHV : MonoBehaviour
         }
         else
         {
+            /*if (this.gameObject.tag == "Enemy" && this.gameObject.name.Contains("Straight"))
+            {
+                Debug.Log("Damaged");
+                GetComponent<Animator>().SetTrigger("BlueDamage");
+            }*/
             health -= damage;
             if (health <= 0)
             {
@@ -50,13 +55,20 @@ public class HealthBHV : MonoBehaviour
     private void Kill ()
     {
         // animãção, etc
+        
         Debug.Log("Killed!");
         OnKilled?.Invoke(this); // triggers event
-        Destroy(gameObject);//, 2*Time.deltaTime);
+        
         if (this.gameObject.tag == "Enemy")
         {
+            GetComponent<Animator>().SetTrigger("Explode");
+            Destroy(gameObject, GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length);
             GameObject.Find("Player_ships").GetComponent<Player>().AddScore(100);
             GameObject.Find("Player_ships").GetComponent<Player>().AddMoney(50);
+        }
+        else
+        {
+            Destroy(gameObject);//, 2*Time.deltaTime);
         }
     }
 }

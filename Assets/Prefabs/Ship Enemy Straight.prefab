@@ -70,6 +70,7 @@ GameObject:
   - component: {fileID: 9198899965536013234}
   - component: {fileID: 7904413020569701810}
   - component: {fileID: 5709695409493285060}
+  - component: {fileID: 502508776783245297}
   m_Layer: 0
   m_Name: Ship Enemy Straight
   m_TagString: Enemy
@@ -325,6 +326,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8073ffa397b19a34886e67ebf22d7f7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &502508776783245297
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9198899965536013235}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 151cb59f57726f845b2e8fc7643745d5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &9198899965817697072
 GameObject:
   m_ObjectHideFlags: 0

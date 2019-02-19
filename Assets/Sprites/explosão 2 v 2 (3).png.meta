@@ -1,11 +1,14 @@
 fileFormatVersion: 2
-guid: c1018499a0037c348926ea56b586fef3
+guid: e82359976a807f64297915f8a0286760
 TextureImporter:
   fileIDToRecycleName:
-    21300000: SpritesheetDefense_0
-    21300002: SpritesheetDefense_1
-    21300004: SpritesheetDefense_2
-    21300006: SpritesheetDefense_3
+    21300000: "explos\xE3o 2 v 2 (3)_0"
+    21300002: "explos\xE3o 2 v 2 (3)_1"
+    21300004: "explos\xE3o 2 v 2 (3)_2"
+    21300006: "explos\xE3o 2 v 2 (3)_3"
+    21300008: "explos\xE3o 2 v 2 (3)_4"
+    21300010: "explos\xE3o 2 v 2 (3)_5"
+    21300012: "explos\xE3o 2 v 2 (3)_6"
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -46,7 +49,7 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 0
+  spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 32
@@ -99,13 +102,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SpritesheetDefense_0
+      name: "explos\xE3o 2 v 2 (3)_0"
       rect:
         serializedVersion: 2
-        x: 0
+        x: 140
         y: 0
-        width: 64
-        height: 64
+        width: 140
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -113,19 +116,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 36b1132ff96fc13449cd1789da0c0746
+      spriteID: 1dc4f73633ca3d5478c1d001c51a785f
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritesheetDefense_1
+      name: "explos\xE3o 2 v 2 (3)_1"
       rect:
         serializedVersion: 2
-        x: 64
+        x: 280
         y: 0
-        width: 64
-        height: 64
+        width: 140
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -133,19 +136,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d8935d828e6ba8a4893924de410af3ad
+      spriteID: 844d4af5a09d80e49a3a9cb8c41c7cf0
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritesheetDefense_2
+      name: "explos\xE3o 2 v 2 (3)_2"
       rect:
         serializedVersion: 2
-        x: 128
+        x: 420
         y: 0
-        width: 64
-        height: 64
+        width: 140
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,19 +156,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 866aacbc1965c9642900a73cd420adeb
+      spriteID: f19aa48e80d79f24fac55d5c3613ce7c
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritesheetDefense_3
+      name: "explos\xE3o 2 v 2 (3)_3"
       rect:
         serializedVersion: 2
-        x: 192
+        x: 560
         y: 0
-        width: 64
-        height: 64
+        width: 140
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -173,7 +176,67 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f8cc1f22a15c84c47a4e39a906bd78ac
+      spriteID: c6286d835f00fa54cb758b066d96d361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "explos\xE3o 2 v 2 (3)_4"
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 0
+        width: 140
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42333e7c8cc3afa44a925cdbb1c59b92
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "explos\xE3o 2 v 2 (3)_5"
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 0
+        width: 140
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c41d23fb96adde438dcb4d92c8d9605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "explos\xE3o 2 v 2 (3)_6"
+      rect:
+        serializedVersion: 2
+        x: 980
+        y: 0
+        width: 140
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed7dc6fc18da8bd4c8f020b25d99e34c
       vertices: []
       indices: 
       edges: []
@@ -181,7 +244,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 1462b9c7b70753a4ea8a0efb1c0e7b1c
+    spriteID: b82ac22c3d10bf3468665fc191946464
     vertices: []
     indices: 
     edges: []

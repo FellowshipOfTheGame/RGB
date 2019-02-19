@@ -1,11 +1,13 @@
 fileFormatVersion: 2
-guid: c1018499a0037c348926ea56b586fef3
+guid: f5e1d04b72df77847bf3d52e1ac85d29
 TextureImporter:
   fileIDToRecycleName:
-    21300000: SpritesheetDefense_0
-    21300002: SpritesheetDefense_1
-    21300004: SpritesheetDefense_2
-    21300006: SpritesheetDefense_3
+    21300000: CrystalFoe3 dano A_0
+    21300002: CrystalFoe3 dano A_1
+    21300004: CrystalFoe3 dano A_2
+    21300006: CrystalFoe3 dano A_3
+    21300008: CrystalFoe3 dano A_4
+    21300010: CrystalFoe3 dano A_5
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -46,7 +48,7 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 0
+  spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 32
@@ -99,7 +101,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SpritesheetDefense_0
+      name: CrystalFoe3 dano A_0
       rect:
         serializedVersion: 2
         x: 0
@@ -113,13 +115,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 36b1132ff96fc13449cd1789da0c0746
+      spriteID: 4569d09b79138f0418c90470ff39d481
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritesheetDefense_1
+      name: CrystalFoe3 dano A_1
       rect:
         serializedVersion: 2
         x: 64
@@ -133,13 +135,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d8935d828e6ba8a4893924de410af3ad
+      spriteID: c549cc7a79db6114a8733cf01ba74836
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritesheetDefense_2
+      name: CrystalFoe3 dano A_2
       rect:
         serializedVersion: 2
         x: 128
@@ -153,13 +155,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 866aacbc1965c9642900a73cd420adeb
+      spriteID: 633ff4e8dd651af41bbade4ccd5efcdd
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritesheetDefense_3
+      name: CrystalFoe3 dano A_3
       rect:
         serializedVersion: 2
         x: 192
@@ -173,7 +175,47 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f8cc1f22a15c84c47a4e39a906bd78ac
+      spriteID: 3ae98e9a6e8dbf74dbdc8926bcf2b2aa
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrystalFoe3 dano A_4
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b69e5179bea4204ca7d6fd453282471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrystalFoe3 dano A_5
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad45edd6130d6cc4abe5ccbc14e685d0
       vertices: []
       indices: 
       edges: []
@@ -181,7 +223,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 1462b9c7b70753a4ea8a0efb1c0e7b1c
+    spriteID: eefdd1a896f20534aa3c42818caf4fc2
     vertices: []
     indices: 
     edges: []
