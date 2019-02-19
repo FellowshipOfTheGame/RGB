@@ -18,11 +18,11 @@ public class Leaderboard : MonoBehaviour
         for (int x=0; x < highScores.Length; x++){
             highScoreValues[x] = PlayerPrefs.GetInt("highScoreValues" + x); 
         }
-        
+        DrawScores();
     }
 
     //Essa funcao ira checar o novo score do player, para saber se deve entrar na leaderboard. Ela sera chamada no fim de cada sessao de jogo, por um outro script.
-    void CheckForHighScore()
+    public void CheckForHighScore()
     {
         int newScore = player.Score;
         for (int i =0; i< highScores.Length; i++)
@@ -35,6 +35,8 @@ public class Leaderboard : MonoBehaviour
                 }
                 highScoreValues[i] = newScore;
                 SaveScores();
+                DrawScores();
+                Debug.Log("Scores salvos, e desenhados");
                 break;
             }
         }
@@ -45,6 +47,14 @@ public class Leaderboard : MonoBehaviour
         for (int x = 0; x < highScores.Length; x++)
         {
             PlayerPrefs.SetInt("highScoreValues" + x, highScoreValues[x]);
+        }
+    }
+
+    void DrawScores()
+    {
+        for (int i=0; i < highScores.Length; i++)
+        {
+            highScores[i].text = "Position " + i.ToString() + ": " + highScoreValues[i].ToString();
         }
     }
 }

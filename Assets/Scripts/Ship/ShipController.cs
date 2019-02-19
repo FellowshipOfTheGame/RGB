@@ -359,6 +359,7 @@ public class ShipController : MonoBehaviour
         if (m_livingShips == 0)
         {
             //FIXME: move to a more adequate place
+            GetComponent<Leaderboard>().CheckForHighScore();
             SceneManager.LoadScene("UpgradeFinal");
         }
         Debug.Log("Ship killed.");
