@@ -365,7 +365,8 @@ public class ShipController : MonoBehaviour
         {
             //FIXME: move to a more adequate place
             GetComponent<Leaderboard>().CheckForHighScore();
-            SceneManager.LoadScene("UpgradeFinal");
+            LoadUpgradeScene();
+            return;
         }
         Debug.Log("Ship killed at frame: " + Time.frameCount);
         //m_ships.Remove(healthBHV.GetComponent<ShipBHV>());
@@ -403,6 +404,37 @@ public class ShipController : MonoBehaviour
             if (m_ships[i] != null)
             {
                 m_ships[i].GetComponent<HealthBHV>().SetInvulnerability(m_invulnerabilityTimeOnDeath);
+            }
+        }
+    }
+    // ======================================================================================
+    private void LoadUpgradeScene()
+    {
+        //FIXME: código porco
+        Time.timeScale /= 4;
+        //FindObjectOfType<Spawner>().enabled = false;
+        GameObject.Find("Battle Music").GetComponent<AudioSource>().Stop();
+        // Fim do código porco
+
+
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("UpgradeFinal");
+        asyncLoad.allowSceneActivation = false;
+        StartCoroutine(LoadUpgradeSceneAsync(asyncLoad, 1.2f)); //TODO: place value in a config file 
+    }
+    // ======================================================================================
+    private IEnumerator LoadUpgradeSceneAsync(AsyncOperation asyncLoad, float delay)
+    {
+        float timeNow = Time.time;
+        while (!asyncLoad.isDone)
+        {
+            yield return null;
+            Debug.Log("BEG");
+            if (Time.time >= timeNow + delay)
+            {
+                //FIXME: código porco
+                Time.timeScale *= 4;
+                // Fim do código porco
+                asyncLoad.allowSceneActivation = true;
             }
         }
     }

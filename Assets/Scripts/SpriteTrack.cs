@@ -33,8 +33,9 @@ public class SpriteTrack : MonoBehaviour
         if (timer > 1 / frequency)
         {
             timer = 0;
-            GameObject g = Instantiate(new GameObject());
-            g.transform.position = transform.position + Vector3.forward*zPositionOffset;
+            GameObject g = new GameObject();
+            g.name = "Track";
+            g.transform.position = transform.position + Vector3.forward * zPositionOffset;
             g.transform.rotation = transform.rotation;
             g.transform.localScale = transform.lossyScale;
             g.AddComponent<SpriteRenderer>();

@@ -11,12 +11,15 @@ public class UpgradeScreen : MonoBehaviour
     public UIScroller shipScroller;
     public UIScroller[] equipmentScrollers; // Equipment scroller for each ship
 
+    private AsyncOperation asyncLoad;
+
 
     // Start is called before the first frame update
     void Start()
     {
         shipScroller.OnIndexChange += OnShipIndexChange;
         OnShipIndexChange(0);
+        PrepareBattleScene();
     }
 
     // Update is called once per frame
@@ -70,6 +73,21 @@ public class UpgradeScreen : MonoBehaviour
     private void ExitUpgrade()
     {
         print("Im here");
-        SceneManager.LoadScene("BattleFinal");
+        //SceneManager.LoadScene("BattleFinal");
+        asyncLoad.allowSceneActivation = true;
+    }
+
+    private void PrepareBattleScene()
+    {
+        asyncLoad = SceneManager.LoadSceneAsync("BattleFinal");
+        asyncLoad.allowSceneActivation = false;
+    }
+
+    private IEnumerator LoadBattleAsync()
+    {
+        while(!asyncLoad.isDone)
+        {
+            yield return null;
+        }
     }
 }

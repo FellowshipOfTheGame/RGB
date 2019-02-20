@@ -26,7 +26,7 @@ public class Spawner : MonoBehaviour
     //that way the enemy will spawn inside an desirable region
     public float amplitude;
 
-    private void Start()
+    private void OnEnable()
     {
         StartCoroutine(SpawnRoutine());
     }
@@ -45,7 +45,7 @@ public class Spawner : MonoBehaviour
 
     IEnumerator SpawnRoutine()
     {
-        while (true)
+        while (enabled)
         {
             //Need to choose which enemy to spawn
             enemy = Choose_Enemy();
