@@ -7,12 +7,12 @@ public class Leaderboard : MonoBehaviour
     public Text[] highScores;
     private int[] highScoreValues;
     // referencia para o script do player, onde poderei pegar o score
-    private Player player;
+    private PlayerSO player;
     // Start is called before the first frame update
     void Start()
     {
 
-        player = GameObject.Find("__Player_ships").GetComponent<Player>();
+        player = PlayerSO.Instance;
         highScoreValues = new int[highScores.Length];//Setando o tamanho do vetor de score para ser igual a quantidade de lugares na leaderboard
 
         for (int x = 0; x < highScores.Length; x++)
@@ -25,7 +25,7 @@ public class Leaderboard : MonoBehaviour
     //Essa funcao ira checar o novo score do player, para saber se deve entrar na leaderboard. Ela sera chamada no fim de cada sessao de jogo, por um outro script.
     public void CheckForHighScore()
     {
-        int newScore = player.Score;
+        int newScore = player.playerData.Score;
         for (int i = 0; i < highScores.Length; i++)
         {
             if (newScore > highScoreValues[i])

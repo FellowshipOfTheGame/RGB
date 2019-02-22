@@ -28,7 +28,6 @@ public class SpriteTrackImage : MonoBehaviour
 
     private void OnEnable()
     {
-        Debug.Log("TrackImage Enabled");
         if (resetOnEnable)
         {
             Color c = spriteR.color;

@@ -17,7 +17,7 @@ public class WeaponAimPlayerBHV : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player = Player.Instance.gameObject;
+        player = FindObjectOfType<ShipController>().gameObject; //FIXME: fix slow code
         weapons = transform.GetChild(0).gameObject;
     }
 

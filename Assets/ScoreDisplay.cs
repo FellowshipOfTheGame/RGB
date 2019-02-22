@@ -34,8 +34,8 @@ public class ScoreDisplay : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        displayedScore = Player.Instance.Score;
-        displayedMoney = Player.Instance.Money;
+        displayedScore = PlayerSO.Instance.playerData.Score;
+        displayedMoney = PlayerSO.Instance.playerData.Money;
         scoreText.text += displayedScore;
         moneyText.text += displayedMoney;
     }
@@ -43,7 +43,7 @@ public class ScoreDisplay : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (displayedScore != Player.Instance.Score || displayedMoney != Player.Instance.Money)
+        if (displayedScore != PlayerSO.Instance.playerData.Score || displayedMoney != PlayerSO.Instance.playerData.Money)
         {
             if (Time.frameCount % updateFramesInterval == 0)
             {
@@ -54,8 +54,8 @@ public class ScoreDisplay : MonoBehaviour
 
     private void UpdateText()
     {
-        calculatedScore = Lerp(calculatedScore, Player.Instance.Score, changeValueFactor);
-        calculatedMoney = Lerp(calculatedMoney, Player.Instance.Money, changeValueFactor);
+        calculatedScore = Lerp(calculatedScore, PlayerSO.Instance.playerData.Score, changeValueFactor);
+        calculatedMoney = Lerp(calculatedMoney, PlayerSO.Instance.playerData.Money, changeValueFactor);
         int score = Mathf.RoundToInt(calculatedScore);
         int money = Mathf.RoundToInt(calculatedMoney);
 

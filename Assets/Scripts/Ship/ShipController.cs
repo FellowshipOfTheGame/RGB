@@ -411,11 +411,12 @@ public class ShipController : MonoBehaviour
     private void LoadUpgradeScene()
     {
         //FIXME: código porco
-        Time.timeScale /= 4;
+        Time.timeScale /= 3;
         //FindObjectOfType<Spawner>().enabled = false;
         GameObject.Find("Battle Music").GetComponent<AudioSource>().Stop();
         // Fim do código porco
 
+        GameConfig.Instance.SaveGame();
 
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("UpgradeFinal");
         asyncLoad.allowSceneActivation = false;
@@ -428,11 +429,10 @@ public class ShipController : MonoBehaviour
         while (!asyncLoad.isDone)
         {
             yield return null;
-            Debug.Log("BEG");
             if (Time.time >= timeNow + delay)
             {
                 //FIXME: código porco
-                Time.timeScale *= 4;
+                Time.timeScale *= 3;
                 // Fim do código porco
                 asyncLoad.allowSceneActivation = true;
             }

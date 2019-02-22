@@ -42,8 +42,8 @@ public class UpgradeScreen : MonoBehaviour
     private void UpgradeSelected()
     {
         //TODO: define best way to call the upgrade
-        //Player.Instance.Upgrade(Player.Instance.inventories[shipScroller.currentIndex].equipments[equipmentScrollers[shipScroller.currentIndex].currentIndex]);
-        equipmentScrollers[shipScroller.currentIndex].transform.GetChild(equipmentScrollers[shipScroller.currentIndex].currentIndex).GetComponent<UIEqUpgrader>().equipmentData.Upgrade();
+        bool upgrade = PlayerSO.Instance.Upgrade(PlayerSO.Instance.playerData.inventories[shipScroller.currentIndex].equipments[equipmentScrollers[shipScroller.currentIndex].currentIndex]);
+        //equipmentScrollers[shipScroller.currentIndex].transform.GetChild(equipmentScrollers[shipScroller.currentIndex].currentIndex).GetComponent<UIEqUpgrader>().equipmentData.Upgrade();
     }
 
 
@@ -74,6 +74,7 @@ public class UpgradeScreen : MonoBehaviour
     {
         print("Im here");
         //SceneManager.LoadScene("BattleFinal");
+        GameConfig.Instance.SaveGame();
         asyncLoad.allowSceneActivation = true;
     }
 
