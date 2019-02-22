@@ -90,6 +90,14 @@ public class ShipController : MonoBehaviour
         }
     }
 
+    private void OnDestroy()
+    {
+        foreach (ShipBHV ship in GetComponentsInChildren<ShipBHV>(true))
+        {
+            ship.GetComponent<HealthBHV>().OnKilled -= OnShipKilled; // unsubscribes listener TODO: recheck place to unsubscribe
+        }
+    }
+
     private void Start()
     {
         for (int i = 0; i < m_ships.Count; i++)

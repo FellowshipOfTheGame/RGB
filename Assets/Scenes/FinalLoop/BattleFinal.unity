@@ -2244,7 +2244,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Score:'
+  m_Text: 'Score: '
 --- !u!222 &283954983
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3540,7 +3540,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Money:'
+  m_Text: 'Money: '
 --- !u!222 &464296144
 CanvasRenderer:
   m_ObjectHideFlags: 0

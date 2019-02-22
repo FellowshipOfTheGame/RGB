@@ -34,8 +34,15 @@ public class ScoreDisplay : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
+    }
+
+    private void OnEnable()
+    {
         displayedScore = PlayerSO.Instance.playerData.Score;
         displayedMoney = PlayerSO.Instance.playerData.Money;
+        calculatedScore = displayedScore;
+        calculatedMoney = displayedMoney;
         scoreText.text += displayedScore;
         moneyText.text += displayedMoney;
     }

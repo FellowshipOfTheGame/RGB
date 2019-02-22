@@ -2,6 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using UnityEngine.UI;
+
+/// <summary>
+/// To load resources by default (so that they can be found): Edit -> Project Settings -> Player -> (Tab) Other Settings -> Preloaded Assets
+/// </summary>
+/// <typeparam name="T"></typeparam>
 
 public abstract class SingletonSO<T> : ScriptableObject where T : ScriptableObject
 {
@@ -13,9 +19,12 @@ public abstract class SingletonSO<T> : ScriptableObject where T : ScriptableObje
             if (!_instance)
             {
                 _instance = Resources.FindObjectsOfTypeAll<T>().FirstOrDefault();
+                
+                //if (!_instance) _instance = Resources.LoadAll<T>("Assets/Data/Config").FirstOrDefault();
                 if (!_instance)
                 {
                     Debug.LogError("Instance of " + typeof(T) + " could not be loaded.");
+                    FindObjectOfType<Text>().text = "" + typeof(T); //FIXME: debughack
                 }
                 else
                 {
@@ -32,6 +41,8 @@ public abstract class SingletonSO<T> : ScriptableObject where T : ScriptableObje
 
     private void Awake()
     {
+        Debug.Log("Singleton " + typeof(T) + " awaking.");
+        //Instance = Resources.FindObjectsOfTypeAll<T>().FirstOrDefault();
         //if (Instance != null)
         //{
         //    if (Instance != this)

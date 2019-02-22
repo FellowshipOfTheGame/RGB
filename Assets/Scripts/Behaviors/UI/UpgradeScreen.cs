@@ -22,6 +22,11 @@ public class UpgradeScreen : MonoBehaviour
         PrepareBattleScene();
     }
 
+    private void OnDestroy()
+    {
+        shipScroller.OnIndexChange -= OnShipIndexChange;
+    }
+
     // Update is called once per frame
     void Update()
     {
