@@ -26,7 +26,7 @@ public class MainMenu : MonoBehaviour
     private bool m_changeFoward = true;
     private bool m_changeBackward = false;
     [SerializeField]
-    private GameObject cueRotateLeft, cueRotateRight, creditsMenu;
+    private GameObject cueRotateLeft, cueRotateRight, creditsMenu, nameInput;
 
     private Image actualCueActive;
     private readonly float pressedAlpha = 1.0f;
@@ -215,5 +215,16 @@ public class MainMenu : MonoBehaviour
         creditsTimer = creditsCooldownDuration;
         creditsMenu.SetActive(true);
         StartCoroutine(CreditsCooldown());
+    }
+
+    public void GoToNameInput()
+    {
+        nameInput.SetActive(true);
+        
+    }
+
+    public void ReturnFromNameInput()
+    {
+        nameInput.SetActive(false);
     }
 }
