@@ -13,7 +13,8 @@ public class EnergyDisplay : MonoBehaviour
 
 
     [SerializeField] // For debug inspection
-    private float rectHeight;
+    private float rectHeight = 0;
+    private float lastRectHeight = -1;
     [SerializeField] // For debug inspection
     private List<Image> energySticks = null;
     [SerializeField] // For debug inspection
@@ -24,9 +25,9 @@ public class EnergyDisplay : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        rectHeight = GetComponent<RectTransform>().rect.size.y;
         energySticks = (transform.GetComponentsInChildren<Image>()).ToList();
-        Invoke("SetupColors", 2*Time.deltaTime);
+        //Invoke("SetupColors", 2*Time.deltaTime);
+        StartCoroutine(SetupAfterEndOfFrame());
     }
 
     void SetupColors()
@@ -45,6 +46,26 @@ public class EnergyDisplay : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
+        //if (lastRectHeight != rectHeight)
+        //{
+        //    lastRectHeight = rectHeight;
+        //    rectHeight = GetComponent<RectTransform>().rect.size.y;
+        //    if (rectHeight == lastRectHeight)
+        //    {
+        //        SetupColors();
+        //    }
+        //}
+        
+        if (generator == null)
+        {
+            for (int i = 0; i < stickHeights.Count; i++)
+            {
+                energySticks[i].color = deactivatedColor;
+            }
+            return;
+        }
+
         float energyLevel = generator.energy / 370;//generator.maxCapacity;
         for (int i = 0; i < stickHeights.Count; i++)
         {
@@ -58,4 +79,12 @@ public class EnergyDisplay : MonoBehaviour
             }
         }
     }
+
+    IEnumerator SetupAfterEndOfFrame()
+    {
+        yield return new WaitForEndOfFrame();
+        rectHeight = GetComponent<RectTransform>().rect.size.y;
+        SetupColors();
+    }
+
 }

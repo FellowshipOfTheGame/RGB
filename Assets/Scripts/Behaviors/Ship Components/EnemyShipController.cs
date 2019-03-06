@@ -61,7 +61,7 @@ public class EnemyShipController : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         //Shooting
         if (Time.time > startTime + timeToStartShooting)

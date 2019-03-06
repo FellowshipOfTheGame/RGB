@@ -6,6 +6,7 @@ using UnityEngine;
 /// <summary>
 /// Base class for ship equipment data.
 /// </summary>
+[System.Serializable]
 public abstract class EquipmentSO : ScriptableObject
 {
     [System.Serializable]
@@ -46,11 +47,11 @@ public abstract class EquipmentSO : ScriptableObject
         }
     }
 
-    public float GetUpgradeCost ()
+    public int GetUpgradeCost ()
     {
         float cost = upgradeCost.baseValue * upgradeCost.curve.Evaluate(level + 1);
         cost = (int)(cost / 100) * 100;
-        return cost;
+        return (int)cost;
     }
 
     public void Upgrade()

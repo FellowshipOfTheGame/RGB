@@ -99,8 +99,8 @@ public class HealthBHV : MonoBehaviour
         {
             Destroy(gameObject);//, 2*Time.deltaTime);
         }
-        Player.Instance.AddScore(killScore);
-        Player.Instance.AddMoney(killMoney);
+        PlayerSO.Instance.AddScore(killScore);
+        PlayerSO.Instance.AddMoney(killMoney);
     }
 
     private void MakeInvulnerable(float time)

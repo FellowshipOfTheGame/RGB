@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc0bcdb8b430a824fa78d177e9611460, type: 3}
+  m_Name: PlayerSO
+  m_EditorClassIdentifier: 
+  playerData:
+    inventories:
+    - equipments:
+      - {fileID: 11400000, guid: d03c0ef149cb48343b744bf2b8e3c05a, type: 2}
+      - {fileID: 11400000, guid: c3bd89b373c80354784f8908f0d9ece8, type: 2}
+      - {fileID: 11400000, guid: 66812f449a3573d4e80095da298e1f63, type: 2}
+    - equipments:
+      - {fileID: 11400000, guid: 6bed47d247b93af44a2b25726bf5944f, type: 2}
+      - {fileID: 11400000, guid: 27e3b12a1d1602e4db5872debd4e7a05, type: 2}
+      - {fileID: 11400000, guid: a0276f32dbe0c23479556244d692d66a, type: 2}
+    - equipments:
+      - {fileID: 11400000, guid: 805e96fb734c6ed48a100de7c55961fb, type: 2}
+      - {fileID: 11400000, guid: b4bf8f41cb3a0104a90363c02f1c776f, type: 2}
+      - {fileID: 11400000, guid: b005cefee8d7beb4daa29b7125caa2e3, type: 2}

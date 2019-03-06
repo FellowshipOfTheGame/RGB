@@ -11,12 +11,20 @@ public class UpgradeScreen : MonoBehaviour
     public UIScroller shipScroller;
     public UIScroller[] equipmentScrollers; // Equipment scroller for each ship
 
+    private AsyncOperation asyncLoad;
+
 
     // Start is called before the first frame update
     void Start()
     {
         shipScroller.OnIndexChange += OnShipIndexChange;
         OnShipIndexChange(0);
+        PrepareBattleScene();
+    }
+
+    private void OnDestroy()
+    {
+        shipScroller.OnIndexChange -= OnShipIndexChange;
     }
 
     // Update is called once per frame
@@ -39,8 +47,8 @@ public class UpgradeScreen : MonoBehaviour
     private void UpgradeSelected()
     {
         //TODO: define best way to call the upgrade
-        //Player.Instance.Upgrade(Player.Instance.inventories[shipScroller.currentIndex].equipments[equipmentScrollers[shipScroller.currentIndex].currentIndex]);
-        equipmentScrollers[shipScroller.currentIndex].transform.GetChild(equipmentScrollers[shipScroller.currentIndex].currentIndex).GetComponent<UIEqUpgrader>().equipmentData.Upgrade();
+        bool upgrade = PlayerSO.Instance.Upgrade(PlayerSO.Instance.playerData.inventories[shipScroller.currentIndex].equipments[equipmentScrollers[shipScroller.currentIndex].currentIndex]);
+        //equipmentScrollers[shipScroller.currentIndex].transform.GetChild(equipmentScrollers[shipScroller.currentIndex].currentIndex).GetComponent<UIEqUpgrader>().equipmentData.Upgrade();
     }
 
 
@@ -70,6 +78,22 @@ public class UpgradeScreen : MonoBehaviour
     private void ExitUpgrade()
     {
         print("Im here");
-        SceneManager.LoadScene("BattleFinal");
+        //SceneManager.LoadScene("BattleFinal");
+        GameConfig.Instance.SaveGame();
+        asyncLoad.allowSceneActivation = true;
+    }
+
+    private void PrepareBattleScene()
+    {
+        asyncLoad = SceneManager.LoadSceneAsync("BattleFinal");
+        asyncLoad.allowSceneActivation = false;
+    }
+
+    private IEnumerator LoadBattleAsync()
+    {
+        while(!asyncLoad.isDone)
+        {
+            yield return null;
+        }
     }
 }

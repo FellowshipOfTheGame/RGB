@@ -90,6 +90,14 @@ public class ShipController : MonoBehaviour
         }
     }
 
+    private void OnDestroy()
+    {
+        foreach (ShipBHV ship in GetComponentsInChildren<ShipBHV>(true))
+        {
+            ship.GetComponent<HealthBHV>().OnKilled -= OnShipKilled; // unsubscribes listener TODO: recheck place to unsubscribe
+        }
+    }
+
     private void Start()
     {
         for (int i = 0; i < m_ships.Count; i++)
@@ -364,7 +372,9 @@ public class ShipController : MonoBehaviour
         if (m_livingShips == 0)
         {
             //FIXME: move to a more adequate place
-            SceneManager.LoadScene("UpgradeFinal");
+            GetComponent<Leaderboard>().CheckForHighScore();
+            LoadUpgradeScene();
+            return;
         }
         Debug.Log("Ship killed at frame: " + Time.frameCount);
         //m_ships.Remove(healthBHV.GetComponent<ShipBHV>());
@@ -402,6 +412,37 @@ public class ShipController : MonoBehaviour
             if (m_ships[i] != null)
             {
                 m_ships[i].GetComponent<HealthBHV>().SetInvulnerability(m_invulnerabilityTimeOnDeath);
+            }
+        }
+    }
+    // ======================================================================================
+    private void LoadUpgradeScene()
+    {
+        //FIXME: código porco
+        Time.timeScale /= 3;
+        //FindObjectOfType<Spawner>().enabled = false;
+        GameObject.Find("Battle Music").GetComponent<AudioSource>().Stop();
+        // Fim do código porco
+
+        GameConfig.Instance.SaveGame();
+
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("UpgradeFinal");
+        asyncLoad.allowSceneActivation = false;
+        StartCoroutine(LoadUpgradeSceneAsync(asyncLoad, 1.2f)); //TODO: place value in a config file 
+    }
+    // ======================================================================================
+    private IEnumerator LoadUpgradeSceneAsync(AsyncOperation asyncLoad, float delay)
+    {
+        float timeNow = Time.time;
+        while (!asyncLoad.isDone)
+        {
+            yield return null;
+            if (Time.time >= timeNow + delay)
+            {
+                //FIXME: código porco
+                Time.timeScale *= 3;
+                // Fim do código porco
+                asyncLoad.allowSceneActivation = true;
             }
         }
     }

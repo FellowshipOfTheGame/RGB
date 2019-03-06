@@ -27,9 +27,9 @@ public class BattleMonitor : MonoBehaviour
         {
             for (int i = 0; i < 3; i++)
             {
-                for (int j = 0; j < Player.Instance.inventories[i].equipments.Length; j++)
+                for (int j = 0; j < PlayerSO.Instance.playerData.inventories[i].equipments.Length; j++)
                 {
-                    Player.Instance.inventories[i].equipments[j].SetLevel(startLevels);
+                    PlayerSO.Instance.playerData.inventories[i].equipments[j].SetLevel(startLevels);
                 }
             }
         }

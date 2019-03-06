@@ -62,12 +62,27 @@ public class InputMgr : MonoBehaviour
     [Header("Debug")]
     public bool m_debugMode = true;
 
-    public string m_shoot   = "Space";
-    public string m_changeF = "X";
-    public string m_changeB = "C";
-    public string m_cancel  = "M";
-    public string m_special = "Z";
-    public string m_pause   = "P";
+    //public string m_shoot   = "Space";
+    //public string m_changeF = "X";
+    //public string m_changeB = "C";
+    //public string m_cancel  = "M";
+    //public string m_special = "Z";
+    //public string m_pause   = "P";
+
+
+    public KeyCode m_shootKey = KeyCode.Space;
+    public KeyCode m_changeFKey = KeyCode.E;
+    public KeyCode m_changeBKey = KeyCode.Q;
+    public KeyCode m_cancelKey = KeyCode.C;
+    public KeyCode m_specialKey = KeyCode.LeftShift;
+    public KeyCode m_pauseKey = KeyCode.P;
+
+    public static KeyCode m_shoot = KeyCode.Space;
+    public static KeyCode m_changeF = KeyCode.E;
+    public static KeyCode m_changeB = KeyCode.Q;
+    public static KeyCode m_cancel = KeyCode.C;
+    public static KeyCode m_special = KeyCode.LeftShift;
+    public static KeyCode m_pause = KeyCode.P;
 
     // --------------------------------- PUBLIC ATTRIBUTES ------------------------------- //
 
@@ -83,6 +98,12 @@ public class InputMgr : MonoBehaviour
         Debug.Assert(m_manager == null, this.gameObject.name + " - InputMgr : input manager must be unique!");
         m_manager = this;
         Count = 0;
+        m_shoot = m_shootKey;
+        m_changeF = m_changeFKey;
+        m_changeB = m_changeBKey;
+        m_cancel = m_cancelKey;
+        m_special = m_specialKey;
+        m_pause = m_pauseKey;
     }
     
     // ======================================================================================
@@ -282,17 +303,17 @@ public class InputMgr : MonoBehaviour
         switch (_button)
         {
             case eButton.ATTACK:
-                return Input.GetKey(KeyCode.Space);
+                return Input.GetKey(m_shoot);
             case eButton.SPECIAL:
-                return Input.GetKey(KeyCode.F) || Input.GetKey(KeyCode.LeftShift);
+                return Input.GetKey(m_special) || Input.GetKey(KeyCode.LeftShift);
             case eButton.CHANGEB:
-                return Input.GetKey(KeyCode.Q);
+                return Input.GetKey(m_changeB);
             case eButton.CHANGEF:
-                return Input.GetKey(KeyCode.E);
+                return Input.GetKey(m_changeF);
             case eButton.PAUSE:
-                return Input.GetKey(KeyCode.T);
+                return Input.GetKey(m_pause);
             case eButton.CANCEL:
-                return Input.GetKey(KeyCode.M);
+                return Input.GetKey(m_cancel);
             case eButton.LEFT:
                 return Input.GetKey(KeyCode.A);
             case eButton.RIGHT:
@@ -311,17 +332,17 @@ public class InputMgr : MonoBehaviour
         switch (_button)
         {
             case eButton.ATTACK:
-                return Input.GetKeyDown(KeyCode.Space);
+                return Input.GetKeyDown(m_shoot);
             case eButton.SPECIAL:
-                return Input.GetKeyDown(KeyCode.F) || Input.GetKeyDown(KeyCode.LeftShift);
+                return Input.GetKeyDown(KeyCode.F) || Input.GetKeyDown(m_special);
             case eButton.CHANGEB:
-                return Input.GetKeyDown(KeyCode.Q);
+                return Input.GetKeyDown(m_changeB);
             case eButton.CHANGEF:
-                return Input.GetKeyDown(KeyCode.E);
+                return Input.GetKeyDown(m_changeF);
             case eButton.PAUSE:
-                return Input.GetKeyDown(KeyCode.T);
+                return Input.GetKeyDown(m_pause);
             case eButton.CANCEL:
-                return Input.GetKeyDown(KeyCode.M);
+                return Input.GetKeyDown(m_cancel);
             case eButton.LEFT:
                 return Input.GetKeyDown(KeyCode.A);
             case eButton.RIGHT:
