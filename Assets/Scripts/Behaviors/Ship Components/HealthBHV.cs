@@ -38,7 +38,7 @@ public class HealthBHV : MonoBehaviour
     /// <summary>
     /// Adds damage to the HealthBHV component.
     /// </summary>
-    public bool TakeDamage (float damage)
+    public bool TakeDamage (float damage, int shipColor)
     {    
         if (invincible || dead)
         {
@@ -46,11 +46,33 @@ public class HealthBHV : MonoBehaviour
         }
         else
         {
-            /*if (this.gameObject.tag == "Enemy" && this.gameObject.name.Contains("Straight"))
+            if (this.gameObject.tag == "Enemy")
             {
                 Debug.Log("Damaged");
-                GetComponent<Animator>().SetTrigger("BlueDamage");
-            }*/
+                if(shipColor == 0)
+                    GetComponent<Animator>().SetTrigger("RedDamage");
+                else if (shipColor == 1)
+                    GetComponent<Animator>().SetTrigger("BlueDamage");
+                else
+                    GetComponent<Animator>().SetTrigger("GreenDamage");
+            }
+            health -= damage;
+            if (health <= 0)
+            {
+                Kill();
+            }
+            return true;
+        }
+    }
+
+    public bool TakeDamage(float damage)
+    {
+        if (invincible || dead)
+        {
+            return false;
+        }
+        else
+        {
             health -= damage;
             if (health <= 0)
             {

@@ -118,7 +118,7 @@ GameObject:
   - component: {fileID: 9198899965536013234}
   - component: {fileID: 2223844737599746776}
   - component: {fileID: 1035567386}
-  - component: {fileID: 695967003820853151}
+  - component: {fileID: 5494646599420085304}
   m_Layer: 0
   m_Name: Ship Enemy Still
   m_TagString: Enemy
@@ -227,8 +227,6 @@ MonoBehaviour:
   shield: {fileID: 0}
   killScore: 10
   killMoney: 10
-  explosion: {fileID: 4719576999491915415, guid: 4b9fe8ad684ffca4889776d8a168af01,
-    type: 3}
 --- !u!114 &9198899965536013240
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -445,7 +443,7 @@ MonoBehaviour:
   frequency: 4
   initialAlpha: 0.39
   zPositionOffset: 0
---- !u!95 &695967003820853151
+--- !u!95 &5494646599420085304
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0
@@ -455,7 +453,7 @@ Animator:
   m_GameObject: {fileID: 9198899965536013235}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 151cb59f57726f845b2e8fc7643745d5, type: 2}
+  m_Controller: {fileID: 9100000, guid: c8fee8ae22532344ca0d65c16207b0bd, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

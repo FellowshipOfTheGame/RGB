@@ -1,13 +1,13 @@
 fileFormatVersion: 2
-guid: f182f407c8f01be4a8546810994643df
+guid: c2ab8ddafe6e81146a60d27f7069d0a4
 TextureImporter:
   fileIDToRecycleName:
-    21300000: CrystalFoe3 dano G_0
-    21300002: CrystalFoe3 dano G_1
-    21300004: CrystalFoe3 dano G_2
-    21300006: CrystalFoe3 dano G_3
-    21300008: CrystalFoe3 dano G_4
-    21300010: CrystalFoe3 dano G_5
+    21300000: CrystalFoe2 - dano G_0
+    21300002: CrystalFoe2 - dano G_1
+    21300004: CrystalFoe2 - dano G_2
+    21300006: CrystalFoe2 - dano G_3
+    21300008: CrystalFoe2 - dano G_4
+    21300010: CrystalFoe2 - dano G_5
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -101,7 +101,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: CrystalFoe3 dano G_0
+      name: CrystalFoe2 - dano G_0
       rect:
         serializedVersion: 2
         x: 0
@@ -115,13 +115,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f842d4d4f09c11a4fbe1742c45505903
+      spriteID: b70daa855935b28489033a1a2f572cae
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CrystalFoe3 dano G_1
+      name: CrystalFoe2 - dano G_1
       rect:
         serializedVersion: 2
         x: 64
@@ -135,13 +135,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2c2f350de406d5f45967827fc718ae90
+      spriteID: 783e5c41effaece4d97537c4a2ef1cfe
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CrystalFoe3 dano G_2
+      name: CrystalFoe2 - dano G_2
       rect:
         serializedVersion: 2
         x: 128
@@ -155,13 +155,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 93afcaa053c182d42abdebbc461187e6
+      spriteID: 5374c04bdca657842a2a8d40cfeb1c3b
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CrystalFoe3 dano G_3
+      name: CrystalFoe2 - dano G_3
       rect:
         serializedVersion: 2
         x: 192
@@ -175,13 +175,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 250db4a15ff88a84d85a3147cb49c695
+      spriteID: 19428238d1d09824c87ba5bdc30fb728
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CrystalFoe3 dano G_4
+      name: CrystalFoe2 - dano G_4
       rect:
         serializedVersion: 2
         x: 256
@@ -195,13 +195,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ece938d1ef8b7fd40973f374d5b90c00
+      spriteID: efe08b54331bb814f9d5afba20791ebb
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CrystalFoe3 dano G_5
+      name: CrystalFoe2 - dano G_5
       rect:
         serializedVersion: 2
         x: 320
@@ -215,7 +215,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 24a7611dfe438b74fa0f6e55af49811c
+      spriteID: 46488585936c5594091599a45f021c35
       vertices: []
       indices: 
       edges: []
@@ -223,7 +223,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 2d72b369a59f3914ea7b2b103a32fd0a
+    spriteID: c441e8ff94f7f314aa261bb8c545c723
     vertices: []
     indices: 
     edges: []

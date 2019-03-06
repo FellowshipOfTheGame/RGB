@@ -180,8 +180,6 @@ MonoBehaviour:
   shield: {fileID: 0}
   killScore: 10
   killMoney: 10
-  explosion: {fileID: 4719576999491915415, guid: 4b9fe8ad684ffca4889776d8a168af01,
-    type: 3}
 --- !u!114 &6075102585174379314
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -390,7 +388,7 @@ Animator:
   m_GameObject: {fileID: 6075102585174379321}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 151cb59f57726f845b2e8fc7643745d5, type: 2}
+  m_Controller: {fileID: 9100000, guid: fb288437d4be349479f5eb66ad635aa7, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
