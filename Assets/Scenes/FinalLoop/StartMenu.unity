@@ -545,8 +545,8 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "Development:\n\tGabriel \"Lombardi\" Arantes\n\tGiovanni \"GIO\" Meloni\n\tRafael
-    Miranda\nArt:\n\tLeonardo Pereira\n\tRafael \"Lag\" Clerici\n\tThiago Carvalho\nMusic:\n\tThiago
-    Carvalho"
+    Miranda\nArt:\n\tLeonardo Pereira\n\tRafael \"Lag\" Clerici\n\tThiago Carvalho\nMusic:\n\tHenrique
+    Lecco"
 --- !u!222 &450737432
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1439,12 +1439,12 @@ MonoBehaviour:
   m_pauseButton: 8
   m_triggMinRatio: 0.3
   m_debugMode: 1
-  m_shoot: Space
-  m_changeF: X
-  m_changeB: C
-  m_cancel: M
-  m_special: Z
-  m_pause: P
+  m_shootKey: 32
+  m_changeFKey: 101
+  m_changeBKey: 113
+  m_cancelKey: 99
+  m_specialKey: 304
+  m_pauseKey: 112
 --- !u!1 &1393281237
 GameObject:
   m_ObjectHideFlags: 0
@@ -1526,12 +1526,12 @@ MonoBehaviour:
   m_pauseButton: 8
   m_triggMinRatio: 0.3
   m_debugMode: 1
-  m_shoot: Space
-  m_changeF: E
-  m_changeB: Q
-  m_cancel: M
-  m_special: SPACE
-  m_pause: P
+  m_shootKey: 32
+  m_changeFKey: 101
+  m_changeBKey: 113
+  m_cancelKey: 99
+  m_specialKey: 304
+  m_pauseKey: 112
 --- !u!1 &1525755276
 GameObject:
   m_ObjectHideFlags: 0
