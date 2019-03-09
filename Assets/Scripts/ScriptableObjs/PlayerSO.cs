@@ -11,8 +11,10 @@ public class PlayerSO : SingletonSO<PlayerSO>
     {
         private int score;
         private int money;
+        private string name;
         public int Score { get => score; set => score = value; }
         public int Money { get => money; set => money = value; }
+        public string Name { get => name; set => name = value; }
         public ShipInventory[] inventories;
     }
 
