@@ -21,15 +21,15 @@ public class PauseController : MonoBehaviour
         {
             if (Time.timeScale != 0)
             {
-                //foreach (GameObject p in m_PauseItens)
-                    //p.SetActive(true);
+                foreach (GameObject p in m_PauseItens)
+                    p.SetActive(true);
                 Time.timeScale = 0;
             }
             else
             {
                 Time.timeScale = 1;
-                //foreach (GameObject p in m_PauseItens)
-                    //p.SetActive(false);
+                foreach (GameObject p in m_PauseItens)
+                    p.SetActive(false);
             }
         }
     }
