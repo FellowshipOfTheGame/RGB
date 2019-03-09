@@ -6,6 +6,7 @@ using UnityEngine;
 /// Generator-specific equipment data.
 /// </summary>
 [CreateAssetMenu(fileName = "Generator", menuName = "Generator")]
+[System.Serializable]
 public class GeneratorSO : EquipmentSO
 {
     public EquipmentProperty capacity;

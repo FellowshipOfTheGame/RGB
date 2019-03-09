@@ -6,6 +6,7 @@ using UnityEngine;
 /// Weapon-specific equipment data.
 /// </summary>
 [CreateAssetMenu]
+[System.Serializable]
 public class WeaponSO : EquipmentSO
 {
     public EquipmentProperty fireRate;

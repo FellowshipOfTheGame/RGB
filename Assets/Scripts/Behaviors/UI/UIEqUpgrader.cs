@@ -35,6 +35,12 @@ public class UIEqUpgrader : MonoBehaviour
         
     }
 
+    private void OnDestroy()
+    {
+        transform.parent.GetComponent<UIScroller>().OnIndexChange -= OnIndexChange;
+        if (equipmentData != null) equipmentData.OnLevelUpdate -= OnUpgrade;
+    }
+
     private void UpdateDescription ()
     {
         if (equipmentData == null)

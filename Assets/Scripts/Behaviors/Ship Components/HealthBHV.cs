@@ -38,8 +38,35 @@ public class HealthBHV : MonoBehaviour
     /// <summary>
     /// Adds damage to the HealthBHV component.
     /// </summary>
-    public bool TakeDamage (float damage)
+    public bool TakeDamage (float damage, int shipColor)
     {    
+        if (invincible || dead)
+        {
+            return false;
+        }
+        else
+        {
+            if (this.gameObject.tag == "Enemy")
+            {
+                Debug.Log("Damaged");
+                if(shipColor == 0)
+                    GetComponent<Animator>().SetTrigger("RedDamage");
+                else if (shipColor == 1)
+                    GetComponent<Animator>().SetTrigger("BlueDamage");
+                else
+                    GetComponent<Animator>().SetTrigger("GreenDamage");
+            }
+            health -= damage;
+            if (health <= 0)
+            {
+                Kill();
+            }
+            return true;
+        }
+    }
+
+    public bool TakeDamage(float damage)
+    {
         if (invincible || dead)
         {
             return false;
@@ -60,11 +87,20 @@ public class HealthBHV : MonoBehaviour
     {
         dead = true;
         // animãção, etc
+        
         Debug.Log("Killed!");
         OnKilled?.Invoke(this); // triggers event
-        Destroy(gameObject);//, 2*Time.deltaTime);
-        Player.Instance.AddScore(killScore);
-        Player.Instance.AddMoney(killMoney);
+        if (this.gameObject.tag == "Enemy")
+        {
+            GetComponent<Animator>().SetTrigger("Explode");
+            Destroy(gameObject, GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length-0.4f);
+        }
+        else
+        {
+            Destroy(gameObject);//, 2*Time.deltaTime);
+        }
+        PlayerSO.Instance.AddScore(killScore);
+        PlayerSO.Instance.AddMoney(killMoney);
     }
 
     private void MakeInvulnerable(float time)
@@ -85,7 +121,7 @@ public class HealthBHV : MonoBehaviour
         }
         shield.gameObject.SetActive(false);
     }
-
+    
     public void SetInvulnerability(float time)
     {
         StartCoroutine(RunInvulnerability(time));

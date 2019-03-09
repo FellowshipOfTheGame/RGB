@@ -106,7 +106,19 @@ public class ProjectileBHV : SpaceObjBHV
             HealthBHV otherHealth = other.GetComponent<HealthBHV>();
             if (otherHealth != null)
             {
-                otherHealth.TakeDamage(damage);
+                if (other.tag == "Enemy")
+                {
+                    int shipColor;
+                    if (this.name.Contains("Att"))
+                        shipColor = 0;
+                    else if (this.name.Contains("Def"))
+                        shipColor = 1;
+                    else
+                        shipColor = 2;
+                    otherHealth.TakeDamage(damage, shipColor);
+                }
+                else
+                    otherHealth.TakeDamage(damage);
             }
             ApplyStatusEffects (other);
         }
