@@ -9632,6 +9632,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 024dd8614846c3d46b0134eefb2b7818, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gambiarra: {fileID: 11400000, guid: 2f055dc42b04c7344b3334e8daf4eaf6, type: 2}
   m_changeButtonF: 13
   m_changeButtonB: 10
   m_shootButton: 2

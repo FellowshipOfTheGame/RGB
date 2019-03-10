@@ -5,6 +5,8 @@ using XInputDotNetPure; // Required in C#
 
 public class InputMgr : MonoBehaviour
 {
+
+    public PlayerSO gambiarra; //FIX ME
     // --------------------------------------- ENUMS ------------------------------------- //
     public enum eAxis
     {
