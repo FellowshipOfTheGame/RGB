@@ -16,7 +16,7 @@ public class GameConfig : SingletonSO<GameConfig>
         //public int gameVersion;
     }
 
-    public bool debugMode = true;
+    public bool debugMode = false;
     public bool resetOnStart = false;
     public int defaultEquipmentLevel = 1;
 
