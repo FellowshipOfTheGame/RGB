@@ -1886,8 +1886,8 @@ MonoBehaviour:
   lerpFactor: 0.1
   leftKey: 113
   rightKey: 101
-  leftButton: 0
-  rightButton: 0
+  leftButton: 4
+  rightButton: 3
   layoutGroup: {fileID: 0}
   currentIndex: 1
   targetPosition: {x: 0, y: 0}
@@ -4974,8 +4974,10 @@ MonoBehaviour:
   m_specialButton: 0
   m_cancelButton: 1
   m_pauseButton: 8
+  m_leftButton: 4
+  m_rightButton: 5
   m_triggMinRatio: 0.3
-  m_debugMode: 1
+  m_debugMode: 0
   m_shootKey: 32
   m_changeFKey: 101
   m_changeBKey: 113
@@ -5322,7 +5324,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startIndex: 1
-  lerpFactor: 0.2
+  lerpFactor: 0.1
   leftKey: 276
   rightKey: 275
   leftButton: 5

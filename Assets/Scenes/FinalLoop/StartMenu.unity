@@ -1883,7 +1883,7 @@ MonoBehaviour:
   m_cancelButton: 1
   m_pauseButton: 8
   m_triggMinRatio: 0.3
-  m_debugMode: 1
+  m_debugMode: 0
   m_shootKey: 32
   m_changeFKey: 101
   m_changeBKey: 113

@@ -54,8 +54,11 @@ public class UIScroller : MonoBehaviour
         {
             return;
         }
+
+        if (InputMgr.GetButton(1,leftButton) || InputMgr.GetButton(1, rightButton))
+
         
-        if (Input.GetKeyDown(leftKey) || InputMgr.GetDebugKeyDown(leftButton))
+        if (Input.GetKeyDown(leftKey) || InputMgr.GetKeyDown(1,leftButton))
         {
             //move to left element
             if (currentIndex > 0)
@@ -65,7 +68,7 @@ public class UIScroller : MonoBehaviour
                 OnIndexChange?.Invoke(currentIndex + 1);
             }
         }
-        if (Input.GetKeyDown(rightKey) || InputMgr.GetDebugKeyDown(rightButton))
+        if (Input.GetKeyDown(rightKey) || InputMgr.GetKeyDown(1,rightButton))
         {
             //move to right element
             if (currentIndex < transform.childCount - 1)

@@ -59,10 +59,13 @@ public class InputMgr : MonoBehaviour
     public eXBoxButton m_cancelButton;
     public eXBoxButton m_pauseButton;
 
+    public eXBoxButton m_leftButton;
+    public eXBoxButton m_rightButton;
+
     public float m_triggMinRatio = .3f;
 
     [Header("Debug")]
-    public bool m_debugMode = true;
+    public bool m_debugMode;
 
     //public string m_shoot   = "Space";
     //public string m_changeF = "X";
@@ -91,6 +94,8 @@ public class InputMgr : MonoBehaviour
     // --------------------------------- PRIVATE ATTRIBUTES ------------------------------ //
     private static InputMgr m_manager = null;
     private static int      Count;
+    private ButtonState    state;
+    private ButtonState    old_state;
 
     // ======================================================================================
     // PUBLIC MEMBERS
@@ -106,6 +111,12 @@ public class InputMgr : MonoBehaviour
         m_cancel = m_cancelKey;
         m_special = m_specialKey;
         m_pause = m_pauseKey;
+        m_manager.state = ButtonState.Released;
+        m_manager.old_state = ButtonState.Released;
+        if (!GamePad.GetState(PlayerIndex.One).IsConnected)
+            m_manager.m_debugMode = true;
+        else
+            m_manager.m_debugMode = false;
     }
     
     // ======================================================================================
@@ -141,6 +152,10 @@ public class InputMgr : MonoBehaviour
                 return GetButton(gamePadState, m_manager.m_cancelButton);
             case eButton.PAUSE:
                 return GetButton(gamePadState, m_manager.m_pauseButton);
+            case eButton.LEFT:
+                return GetButton(gamePadState, m_manager.m_leftButton);
+            case eButton.RIGHT:
+                return GetButton(gamePadState, m_manager.m_rightButton);
         }
 
         return false;
@@ -163,57 +178,152 @@ public class InputMgr : MonoBehaviour
 #else
         GamePadState gamePadState = GamePad.GetState((PlayerIndex)(_player - 1));
 
-        if(Count >= 1)
+        //GAMBIARRA EXTREMA ARRUMAR DEPOIS URGENTEMENTE
+        if(!GetButton(gamePadState, m_manager.m_shootButton))
         {
-            return false;
+            if(!GetButton(gamePadState, m_manager.m_changeButtonF))
+            {
+                if (!GetButton(gamePadState, m_manager.m_changeButtonB))
+                {
+                    if (!GetButton(gamePadState, m_manager.m_specialButton))
+                    {
+                        if (!GetButton(gamePadState, m_manager.m_cancelButton))
+                        {
+                            if (!GetButton(gamePadState, m_manager.m_pauseButton))
+                            {
+                                if (!GetButton(gamePadState, m_manager.m_leftButton))
+                                {
+                                    if (!GetButton(gamePadState, m_manager.m_rightButton))
+                                    {
+                                        m_manager.state = ButtonState.Released;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
 
+        if (m_manager.state == ButtonState.Released)
+            m_manager.old_state = ButtonState.Released;
+        
         switch (_button)
         {
             case eButton.ATTACK:
-                Count += 1;
                 if (GetButton(gamePadState, m_manager.m_shootButton))
-                    return true;
+                {
+                    m_manager.state = ButtonState.Pressed;
+                    if (m_manager.old_state == ButtonState.Released)
+                    {
+                        m_manager.old_state = m_manager.state;
+                        return true;
+                    }
+                    else
+                        return false;
+                }
                 else
-                    Count = 0;
-                return false;
+                    return false;
             case eButton.CHANGEF:
-                Count += 1;
                 if (GetButton(gamePadState, m_manager.m_changeButtonF))
-                    return true;
+                {
+                    m_manager.state = ButtonState.Pressed;
+                    if (m_manager.old_state == ButtonState.Released)
+                    {
+                        m_manager.old_state = m_manager.state;
+                        return true;
+                    }
+                    else
+                        return false;
+                }
                 else
-                    Count = 0;
-                return false;
+                    return false;
             case eButton.CHANGEB:
-                Count += 1;
                 if (GetButton(gamePadState, m_manager.m_changeButtonB))
-                    return true;
+                {
+                    m_manager.state = ButtonState.Pressed;
+                    if (m_manager.old_state == ButtonState.Released)
+                    {
+                        m_manager.old_state = m_manager.state;
+                        return true;
+                    }
+                    else
+                        return false;
+                }
                 else
-                    Count = 0;
-                return false;
+                    return false;
             case eButton.SPECIAL:
-                Count += 1;
                 if (GetButton(gamePadState, m_manager.m_specialButton))
-                    return true;
+                {
+                    m_manager.state = ButtonState.Pressed;
+                    if (m_manager.old_state == ButtonState.Released)
+                    {
+                        m_manager.old_state = m_manager.state;
+                        return true;
+                    }
+                    else
+                        return false;
+                }
                 else
-                    Count = 0;
-                return false;
+                    return false;
             case eButton.CANCEL:
-                Count += 1;
                 if (GetButton(gamePadState, m_manager.m_cancelButton))
-                    return true;
+                {
+                    m_manager.state = ButtonState.Pressed;
+                    if (m_manager.old_state == ButtonState.Released)
+                    {
+                        m_manager.old_state = m_manager.state;
+                        return true;
+                    }
+                    else
+                        return false;
+                }
                 else
-                    Count = 0;
-                return false;
+                    return false;
             case eButton.PAUSE:
-                Count += 1;
                 if (GetButton(gamePadState, m_manager.m_pauseButton))
-                    return true;
+                {
+                    m_manager.state = ButtonState.Pressed;
+                    if (m_manager.old_state == ButtonState.Released)
+                    {
+                        m_manager.old_state = m_manager.state;
+                        return true;
+                    }
+                    else
+                        return false;
+                }
                 else
-                    Count = 0;
-                return false;
+                    return false;
+            case eButton.LEFT:
+                if (GetButton(gamePadState, m_manager.m_leftButton))
+                {
+                    m_manager.state = ButtonState.Pressed;
+                    if (m_manager.old_state == ButtonState.Released)
+                    {
+                        m_manager.old_state = m_manager.state;
+                        return true;
+                    }
+                    else
+                        return false;
+                }
+                else
+                    return false;
+            case eButton.RIGHT:
+                if (GetButton(gamePadState, m_manager.m_rightButton))
+                {
+                    m_manager.state = ButtonState.Pressed;
+                    if (m_manager.old_state == ButtonState.Released)
+                    {
+                        m_manager.old_state = m_manager.state;
+                        return true;
+                    }
+                    else
+                        return false;
+                }
+                else
+                    return false;
         }
-
+        
         return false;
 #endif
     }
