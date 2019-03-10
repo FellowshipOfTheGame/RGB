@@ -48,7 +48,7 @@ public class HealthBHV : MonoBehaviour
         {
             if (this.gameObject.tag == "Enemy")
             {
-                Debug.Log("Damaged");
+                //Debug.Log("Damaged");
                 if(shipColor == 0)
                     GetComponent<Animator>().SetTrigger("RedDamage");
                 else if (shipColor == 1)
@@ -92,8 +92,8 @@ public class HealthBHV : MonoBehaviour
         OnKilled?.Invoke(this); // triggers event
         if (this.gameObject.tag == "Enemy")
         {
+            GetComponent<BoxCollider2D>().enabled = false;
             GetComponent<Animator>().SetTrigger("Explode");
-            Destroy(gameObject, GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length-0.4f);
         }
         else
         {
@@ -101,6 +101,11 @@ public class HealthBHV : MonoBehaviour
         }
         PlayerSO.Instance.AddScore(killScore);
         PlayerSO.Instance.AddMoney(killMoney);
+    }
+
+    public void DestroyEnemy()
+    {
+        Destroy(gameObject);
     }
 
     private void MakeInvulnerable(float time)

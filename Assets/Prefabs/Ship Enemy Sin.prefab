@@ -178,8 +178,8 @@ MonoBehaviour:
   health: 20
   invincible: 0
   shield: {fileID: 0}
-  killScore: 10
-  killMoney: 10
+  killScore: 20
+  killMoney: 20
 --- !u!114 &6075102585174379314
 MonoBehaviour:
   m_ObjectHideFlags: 0

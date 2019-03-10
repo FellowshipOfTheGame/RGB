@@ -97,6 +97,7 @@ public class ProjectileBHV : SpaceObjBHV
     /// </summary>
     protected virtual void Impact (Collider2D other = null)
     {
+        int shipColor;
         if (destroyOnImpact)
         {
             Destroy(gameObject);
@@ -108,7 +109,6 @@ public class ProjectileBHV : SpaceObjBHV
             {
                 if (other.tag == "Enemy")
                 {
-                    int shipColor;
                     if (this.name.Contains("Att"))
                         shipColor = 0;
                     else if (this.name.Contains("Def"))

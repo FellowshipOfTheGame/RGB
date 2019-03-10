@@ -178,7 +178,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: f90fd2042c0b0334e85ec8202be2257d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -227,8 +227,6 @@ MonoBehaviour:
   shield: {fileID: 0}
   killScore: 10
   killMoney: 10
-  explosion: {fileID: 4719576999491915415, guid: 4b9fe8ad684ffca4889776d8a168af01,
-    type: 3}
 --- !u!114 &9198899965536013240
 MonoBehaviour:
   m_ObjectHideFlags: 0
