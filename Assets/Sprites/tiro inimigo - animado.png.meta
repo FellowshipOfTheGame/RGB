@@ -107,7 +107,7 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 15
+        width: 17
         height: 15
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -116,7 +116,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 065184bc81ae49e4681fc28867605b92
+      spriteID: 01b6e478eb73173488b94d5f1e65a2c3
       vertices: []
       indices: 
       edges: []
@@ -125,9 +125,9 @@ TextureImporter:
       name: tiro inimigo - animado_1
       rect:
         serializedVersion: 2
-        x: 15
+        x: 17
         y: 0
-        width: 15
+        width: 17
         height: 15
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -136,7 +136,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 93383d264eff46b4e9942ed6eef952b9
+      spriteID: 3920db983c6498043a0a78dd9780f0ea
       vertices: []
       indices: 
       edges: []
@@ -145,9 +145,9 @@ TextureImporter:
       name: tiro inimigo - animado_2
       rect:
         serializedVersion: 2
-        x: 30
+        x: 34
         y: 0
-        width: 15
+        width: 17
         height: 15
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -156,7 +156,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b72ed3365e781fa49b53ae845a5ce546
+      spriteID: 1e9161704a5467d4faf5f3bd256a74fb
       vertices: []
       indices: 
       edges: []
@@ -165,9 +165,9 @@ TextureImporter:
       name: tiro inimigo - animado_3
       rect:
         serializedVersion: 2
-        x: 45
+        x: 51
         y: 0
-        width: 15
+        width: 17
         height: 15
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -176,7 +176,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2847220cdc6dbf4479a4f7576886106d
+      spriteID: 8ac1a5381732814418114798d5842f60
       vertices: []
       indices: 
       edges: []
@@ -185,9 +185,9 @@ TextureImporter:
       name: tiro inimigo - animado_4
       rect:
         serializedVersion: 2
-        x: 60
+        x: 68
         y: 0
-        width: 15
+        width: 17
         height: 15
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -196,7 +196,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 244b872feeac5bd4384ad2836b6fe2f9
+      spriteID: 76e6c4ca44ec0fe438af368a984b394f
       vertices: []
       indices: 
       edges: []
@@ -205,9 +205,9 @@ TextureImporter:
       name: tiro inimigo - animado_5
       rect:
         serializedVersion: 2
-        x: 75
+        x: 85
         y: 0
-        width: 15
+        width: 17
         height: 15
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -216,7 +216,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 98a6cbc15f9feb54685263418c687210
+      spriteID: 8fb9e3d382e790041a01c7a404e0903d
       vertices: []
       indices: 
       edges: []
@@ -225,9 +225,9 @@ TextureImporter:
       name: tiro inimigo - animado_6
       rect:
         serializedVersion: 2
-        x: 90
+        x: 102
         y: 0
-        width: 15
+        width: 17
         height: 15
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -236,7 +236,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d4181d3432dbe6149b11b31702ebd171
+      spriteID: 3f9550f632f1e0a489185dd51fe38f76
       vertices: []
       indices: 
       edges: []
@@ -244,7 +244,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 3f3ba34957702e34d869f72194d93115
+    spriteID: 
     vertices: []
     indices: 
     edges: []
