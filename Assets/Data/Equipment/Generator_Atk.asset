@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Generator_Atk
   m_EditorClassIdentifier: 
   equipmentName: Generator
-  sprite: {fileID: 21300000, guid: 4eadeae5efdb4cf49af39a19049b463b, type: 3}
+  sprite: {fileID: 21300000, guid: ec6b20248365d164fb4f617228882cf6, type: 3}
   childrenEquipments: []
   level: 1
   maxLevel: 10
