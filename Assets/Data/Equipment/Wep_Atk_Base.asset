@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Wep_Atk_Base
   m_EditorClassIdentifier: 
   equipmentName: Weapon
-  sprite: {fileID: 21300000, guid: 0fe7634257e6ede40b09beacfa12bdb6, type: 3}
+  sprite: {fileID: 21300000, guid: 9b69b1986aaba954e83701527216310b, type: 3}
   childrenEquipments: []
   level: 1
   maxLevel: 10
