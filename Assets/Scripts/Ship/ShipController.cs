@@ -373,6 +373,7 @@ public class ShipController : MonoBehaviour
         {
             //FIXME: move to a more adequate place
             GetComponent<Leaderboard>().CheckForHighScore();
+            PlayerSO.Instance.ResetScore();
             LoadUpgradeScene();
             return;
         }

@@ -46,6 +46,11 @@ public class PlayerSO : SingletonSO<PlayerSO>
         OnValueChanged?.Invoke();
     }
 
+    public void ResetScore()
+    {
+        playerData.Score = 0;
+    }
+
     public void ResetScoreAndMoney()
     {
         playerData.Score = 0;
